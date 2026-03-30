@@ -264,7 +264,9 @@ namespace Aetheros.OneM2M.Api
 			request.Respond += (o, e) => tcs.SetResult(e.Response);
 			request.Rejected += (o, e) => tcs.SetException(new CoapRequestException(128));
 			request.TimedOut += (o, e) => tcs.SetException(new CoapRequestException(164));
-			request.Send(endPoint ?? EndPointManager.Default);
+			//  MRN: EndpointManager is internal class.  Compile error when using nuget version of CoAP.NET 
+			request.Send(endPoint);//?? EndPointManager.Default);
+
 
 			return tcs.Task;
 		}

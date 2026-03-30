@@ -5,9 +5,11 @@
     <LangVersion>latest</LangVersion>
 	  <GenerateFullPaths>true</GenerateFullPaths>
 	  <Nullable>enable</Nullable>
+    <Version>0.0.3</Version>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="CoAP.NET" Version="1.0.4" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
     <PackageReference Include="System.Reactive.Linq" Version="6.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
@@ -18,10 +20,11 @@
     <ProjectReference Include="..\Aetheros.Schema.OneM2M\Aetheros.Schema.OneM2M.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
+  <!-- Using the nuget package -->
+  <!-- <ItemGroup>
     <Reference Include="CoAP.NET">
       <HintPath>..\Libraries\CoAP.NET.dll</HintPath>
     </Reference>
-  </ItemGroup>
+  </ItemGroup> -->
 
 </Project>
