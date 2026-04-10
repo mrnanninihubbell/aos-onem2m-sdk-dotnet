@@ -18,7 +18,7 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("permittedMediaTypes", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("permittedMediaTypes", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum PermittedMediaTypes
 	{
 		[XmlEnumAttribute("application/xml")]
@@ -33,20 +33,20 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("dmd", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("dmd", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("dmd")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class DeliveryMetaData
 	{
 		[JsonPropertyAttribute("tcop")]
-		[XmlElementAttribute("tcop", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("tcop", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool TracingOption { get; set; }
 
 		[JsonPropertyAttribute("tcin")]
-		[XmlElementAttribute("tcin", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("tcin", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> TracingInfo { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die TracingInfo-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the TracingInfo collection is empty.</para>
@@ -61,20 +61,20 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("arq", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("arq", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("arq")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class AggregatedRequest<TPrimitiveContent> where TPrimitiveContent : PrimitiveContent
 	{
 		[JsonPropertyAttribute("req")]
-		[XmlElementAttribute("req", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("req", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<AggregatedRequestRequest<TPrimitiveContent>> Request { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("AggregatedRequestRequest", Namespace="http://www.onem2m.org/xml/protocols", AnonymousType=true)]
+	[XmlTypeAttribute("AggregatedRequestRequest", Namespace = "http://www.onem2m.org/xml/protocols", AnonymousType = true)]
 	[JsonObjectAttribute("AggregatedRequestRequest")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -84,9 +84,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("op", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("op", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Operation OperationValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Operation-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the Operation property is specified.</para>
@@ -114,26 +114,26 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("to")]
-		[XmlElementAttribute("to", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("to", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string To { get; set; }
 
 		[JsonPropertyAttribute("fr")]
-		[XmlElementAttribute("fr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("fr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string From { get; set; }
 
 		[JsonPropertyAttribute("rqi")]
-		[XmlElementAttribute("rqi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token")]
+		[XmlElementAttribute("rqi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "token")]
 		public string RequestIdentifier { get; set; }
 
 		[JsonPropertyAttribute("pc")]
-		[XmlElementAttribute("pc", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-	public TPrimitiveContent PrimitiveContent { get; set; }
+		[XmlElementAttribute("pc", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		public TPrimitiveContent PrimitiveContent { get; set; }
 
 		[JsonPropertyAttribute("mi")]
-		[XmlElementAttribute("mi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public MetaInformation MetaInformation { get; set; }
 	}
-	
+
 	/// <summary>
 	/// <para>Used for Operation parameter in request and operation attribute in &lt;request&gt; resource as well as resource as well as operationMonitor</para>
 	/// </summary>
@@ -141,7 +141,7 @@ namespace Aetheros.Schema.OneM2M
 		"; resource as well as resource as well as operationMonitor")]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("op", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("op", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum Operation
 	{
 		[XmlEnumAttribute("1")]
@@ -162,7 +162,7 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("pc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("pc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("pc")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -176,7 +176,7 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("mi", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("mi", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("mi")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -186,9 +186,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("ty", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ty", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ResourceType ResourceTypeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ResourceType-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ResourceType property is specified.</para>
@@ -216,16 +216,16 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("nm")]
-		[XmlElementAttribute("nm", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="NCName")]
+		[XmlElementAttribute("nm", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "NCName")]
 		public string Name { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("ot", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("ot", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset OriginatingTimestampValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die OriginatingTimestamp-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the OriginatingTimestamp property is specified.</para>
@@ -253,32 +253,32 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("rqet")]
-		[XmlElementAttribute("rqet", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("rqet", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public string RequestExpirationTimestamp { get; set; }
 
 		[JsonPropertyAttribute("rset")]
-		[XmlElementAttribute("rset", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("rset", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public string ResultExpirationTimestamp { get; set; }
 
 		[JsonPropertyAttribute("oet")]
-		[XmlElementAttribute("oet", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("oet", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public string OperationExecutionTime { get; set; }
 
 		[JsonPropertyAttribute("rt")]
-		[XmlElementAttribute("rt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("rt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ResponseTypeInfo ResponseType { get; set; }
 
 		[JsonPropertyAttribute("rp")]
-		[XmlElementAttribute("rp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("rp", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public string ResultPersistence { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("rcn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("rcn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ResultContent ResultContentValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ResultContent-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ResultContent property is specified.</para>
@@ -306,16 +306,16 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("ec")]
-		[XmlElementAttribute("ec", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ec", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public string EventCategory { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("da", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("da", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool DeliveryAggregationValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die DeliveryAggregation-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the DeliveryAggregation property is specified.</para>
@@ -343,20 +343,20 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("gid")]
-		[XmlElementAttribute("gid", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("gid", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string GroupRequestIdentifier { get; set; }
 
 		[JsonPropertyAttribute("fc")]
-		[XmlElementAttribute("fc", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("fc", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public FilterCriteria FilterCriteria { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("drt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("drt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public DiscResType DiscoveryResultTypeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die DiscoveryResultType-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the DiscoveryResultType property is specified.</para>
@@ -386,7 +386,7 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("ty", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("ty", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum ResourceType
 	{
 		[XmlEnumAttribute("1")]
@@ -542,7 +542,7 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("responseTypeInfo", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("responseTypeInfo", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("responseTypeInfo")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -552,9 +552,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("rtv", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("rtv", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ResponseType ResponseTypeValueValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ResponseTypeValue-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ResponseTypeValue property is specified.</para>
@@ -582,10 +582,10 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("nu")]
-		[XmlElementAttribute("nu", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("nu", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> NotificationURI { get; set; }
 	}
-	
+
 	/// <summary>
 	/// <para>Used for rt parameter in request and operation attribute in &lt;request&gt; resource</para>
 	/// </summary>
@@ -593,7 +593,7 @@ namespace Aetheros.Schema.OneM2M
 		"rce")]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("rt", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("rt", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum ResponseType
 	{
 		[XmlEnumAttribute("1")]
@@ -608,14 +608,14 @@ namespace Aetheros.Schema.OneM2M
 		[XmlEnumAttribute("4")]
 		FlexBlocking = 4,
 	}
-	
+
 	/// <summary>
 	/// <para>Used for Result Content parameter in request.</para>
 	/// </summary>
 	[System.ComponentModel.DescriptionAttribute("Used for Result Content parameter in request.")]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("rcn", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("rcn", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum ResultContent
 	{
 		[XmlEnumAttribute("0")]
@@ -648,7 +648,7 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("fc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("fc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("fc")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -658,9 +658,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("crb", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("crb", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset CreatedBeforeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die CreatedBefore-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the CreatedBefore property is specified.</para>
@@ -691,9 +691,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("cra", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("cra", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset CreatedAfterValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die CreatedAfter-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the CreatedAfter property is specified.</para>
@@ -724,9 +724,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("ms", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("ms", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset ModifiedSinceValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ModifiedSince-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ModifiedSince property is specified.</para>
@@ -757,9 +757,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("us", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("us", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset UnmodifiedSinceValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die UnmodifiedSince-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the UnmodifiedSince property is specified.</para>
@@ -790,9 +790,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("sts", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sts", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long StateTagSmallerValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die StateTagSmaller-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the StateTagSmaller property is specified.</para>
@@ -823,9 +823,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("stb", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("stb", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long StateTagBiggerValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die StateTagBigger-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the StateTagBigger property is specified.</para>
@@ -856,9 +856,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("exb", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("exb", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset ExpireBeforeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ExpireBefore-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ExpireBefore property is specified.</para>
@@ -889,9 +889,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("exa", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("exa", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset ExpireAfterValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ExpireAfter-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ExpireAfter property is specified.</para>
@@ -919,9 +919,9 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("lbl")]
-		[XmlElementAttribute("lbl", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token")]
+		[XmlElementAttribute("lbl", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "token")]
 		public ICollection<string> Labels { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Labels-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Labels collection is empty.</para>
@@ -934,9 +934,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool LabelsSpecified => (this.Labels.Count != 0);
 
 		[JsonPropertyAttribute("ty")]
-		[XmlElementAttribute("ty", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ty", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<ResourceType> ResourceType { get; set; } = System.Array.Empty<ResourceType>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ResourceType-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ResourceType collection is empty.</para>
@@ -952,9 +952,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("sza", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sza", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long SizeAboveValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SizeAbove-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the SizeAbove property is specified.</para>
@@ -985,9 +985,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("szb", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("szb", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long SizeBelowValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SizeBelow-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the SizeBelow property is specified.</para>
@@ -1013,15 +1013,15 @@ namespace Aetheros.Schema.OneM2M
 				this.SizeBelowValueSpecified = value.HasValue;
 			}
 		}
-		
+
 		/// <summary>
 		/// <para xml:lang="en">Pattern: [\w/!#$^_.+&\-]+.</para>
 		/// </summary>
 		[System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[\\w/!#$^_.+&\\-]+")]
 		[JsonPropertyAttribute("cty")]
-		[XmlElementAttribute("cty", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("cty", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public ICollection<string> ContentType { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ContentType-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ContentType collection is empty.</para>
@@ -1034,9 +1034,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ContentTypeSpecified => (this.ContentType.Count != 0);
 
 		[JsonPropertyAttribute("atr")]
-		[XmlElementAttribute("atr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("atr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Attribute> Attribute { get; set; } = System.Array.Empty<Attribute>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Attribute-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Attribute collection is empty.</para>
@@ -1052,9 +1052,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("fu", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("fu", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public FilterUsage FilterUsageValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die FilterUsage-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the FilterUsage property is specified.</para>
@@ -1085,9 +1085,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("lim", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("lim", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long LimitValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Limit-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the Limit property is specified.</para>
@@ -1115,9 +1115,9 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("smf")]
-		[XmlElementAttribute("smf", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("smf", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public ICollection<string> SemanticsFilter { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticsFilter-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticsFilter collection is empty.</para>
@@ -1133,9 +1133,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("fo", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("fo", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool FilterOperationValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die FilterOperation-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the FilterOperation property is specified.</para>
@@ -1166,9 +1166,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("cfs", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cfs", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ContentFilterSyntax ContentFilterSyntaxValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ContentFilterSyntax-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ContentFilterSyntax property is specified.</para>
@@ -1196,16 +1196,16 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("cfq")]
-		[XmlElementAttribute("cfq", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("cfq", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string ContentFilterQuery { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("lvl", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("lvl", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long LevelValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Level-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the Level property is specified.</para>
@@ -1236,9 +1236,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("ofst", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ofst", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long OffsetValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Offset-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the Offset property is specified.</para>
@@ -1268,28 +1268,28 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("atr", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("atr", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("atr")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class Attribute
 	{
 		[JsonPropertyAttribute("nm")]
-		[XmlElementAttribute("nm", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="NCName")]
+		[XmlElementAttribute("nm", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "NCName")]
 		public string Name { get; set; }
 
 		[JsonPropertyAttribute("val")]
-		[XmlElementAttribute("val", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("val", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public object Value { get; set; }
 	}
-	
+
 	/// <summary>
 	/// <para>Used in filterCriteria</para>
 	/// </summary>
 	[System.ComponentModel.DescriptionAttribute("Used in filterCriteria")]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("fu", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("fu", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum FilterUsage
 	{
 		[XmlEnumAttribute("1")]
@@ -1301,27 +1301,27 @@ namespace Aetheros.Schema.OneM2M
 		[XmlEnumAttribute("3")]
 		OnDemandDiscovery = 3,
 	}
-	
+
 	/// <summary>
 	/// <para>Used for contentFilterSyntax element in Filter Criteria primitive parameter</para>
 	/// </summary>
 	[System.ComponentModel.DescriptionAttribute("Used for contentFilterSyntax element in Filter Criteria primitive parameter")]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("cfs", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("cfs", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum ContentFilterSyntax
 	{
 		[XmlEnumAttribute("1")]
 		JsonPathSyntax = 1,
 	}
-	
+
 	/// <summary>
 	/// <para>Used in &lt;request&gt;</para>
 	/// </summary>
 	[System.ComponentModel.DescriptionAttribute("Used in &lt;request&gt;")]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("discResType", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("discResType", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum DiscResType
 	{
 		[XmlEnumAttribute("1")]
@@ -1333,7 +1333,7 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("scheduleEntries", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("scheduleEntries", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("scheduleEntries")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1344,29 +1344,29 @@ namespace Aetheros.Schema.OneM2M
 		/// </summary>
 		[System.ComponentModel.DataAnnotations.RegularExpressionAttribute(@"(([*]|[1-5]?\d([,-/][1-5]?\d)*)\s+){2}([*]|((1?\d|2[0-3])([,-/](1?\d|2[0-3]))*))\s+([*]|(([1-9]|1\d|2\d|3[01])([,-/]([1-9]|1\d|2\d|3[01]))*))\s+([*]|(([1-9]|1[0-2])([,-/]([1-9]|1[0-2]))*))\s+([*]|([0-6]([,-/][0-6])*))\s+([*]|([2-9]\d\d\d)(([,-]([2-9]\d\d\d)([/][\d]?[\d]?[\d]?[\d])?)*))")]
 		[JsonPropertyAttribute("sce")]
-		[XmlElementAttribute("sce", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("sce", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public ICollection<string> ScheduleEntry { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("actionStatus", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("actionStatus", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("actionStatus")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class ActionStatus
 	{
 		[JsonPropertyAttribute("ac")]
-		[XmlElementAttribute("ac", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("ac", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string Action { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("sus", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sus", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Status StatusValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Status-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the Status property is specified.</para>
@@ -1393,14 +1393,14 @@ namespace Aetheros.Schema.OneM2M
 			}
 		}
 	}
-	
+
 	/// <summary>
 	/// <para>This is used for [software], [firmware] resources.</para>
 	/// </summary>
 	[System.ComponentModel.DescriptionAttribute("This is used for [software], [firmware] resources.")]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("sus", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("sus", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum Status
 	{
 		[XmlEnumAttribute("1")]
@@ -1415,33 +1415,33 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("anyArgType", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("anyArgType", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("anyArgType")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class AnyArgType
 	{
 		[JsonPropertyAttribute("nm")]
-		[XmlElementAttribute("nm", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="NCName")]
+		[XmlElementAttribute("nm", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "NCName")]
 		public string Name { get; set; }
 
 		[JsonPropertyAttribute("val")]
-		[XmlElementAttribute("val", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("val", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public object Value { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("resetArgsType", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("resetArgsType", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("resetArgsType")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class ResetArgsType
 	{
 		[JsonPropertyAttribute("any")]
-		[XmlElementAttribute("any", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("any", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<AnyArgType> AnyArg { get; set; } = System.Array.Empty<AnyArgType>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AnyArg-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AnyArg collection is empty.</para>
@@ -1456,16 +1456,16 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("rebootArgsType", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("rebootArgsType", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("rebootArgsType")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class RebootArgsType
 	{
 		[JsonPropertyAttribute("any")]
-		[XmlElementAttribute("any", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("any", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<AnyArgType> AnyArg { get; set; } = System.Array.Empty<AnyArgType>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AnyArg-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AnyArg collection is empty.</para>
@@ -1480,32 +1480,32 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("uploadArgsType", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("uploadArgsType", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("uploadArgsType")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class UploadArgsType
 	{
 		[JsonPropertyAttribute("ftyp")]
-		[XmlElementAttribute("ftyp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("ftyp", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string FileType { get; set; }
 
 		[JsonPropertyAttribute("url")]
-		[XmlElementAttribute("url", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("url", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string URL { get; set; }
 
 		[JsonPropertyAttribute("unm")]
-		[XmlElementAttribute("unm", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("unm", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string Username { get; set; }
 
 		[JsonPropertyAttribute("pwd")]
-		[XmlElementAttribute("pwd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("pwd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string Password { get; set; }
 
 		[JsonPropertyAttribute("any")]
-		[XmlElementAttribute("any", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("any", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<AnyArgType> AnyArg { get; set; } = System.Array.Empty<AnyArgType>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AnyArg-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AnyArg collection is empty.</para>
@@ -1520,56 +1520,56 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("downloadArgsType", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("downloadArgsType", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("downloadArgsType")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class DownloadArgsType
 	{
 		[JsonPropertyAttribute("ftyp")]
-		[XmlElementAttribute("ftyp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("ftyp", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string FileType { get; set; }
 
 		[JsonPropertyAttribute("url")]
-		[XmlElementAttribute("url", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("url", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string URL { get; set; }
 
 		[JsonPropertyAttribute("unm")]
-		[XmlElementAttribute("unm", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("unm", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string Username { get; set; }
 
 		[JsonPropertyAttribute("pwd")]
-		[XmlElementAttribute("pwd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("pwd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string Password { get; set; }
 
 		[JsonPropertyAttribute("fsi")]
-		[XmlElementAttribute("fsi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("fsi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long Filesize { get; set; }
 
 		[JsonPropertyAttribute("tgf")]
-		[XmlElementAttribute("tgf", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("tgf", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string TargetFile { get; set; }
 
 		[JsonPropertyAttribute("dss")]
-		[XmlElementAttribute("dss", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("dss", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long DelaySeconds { get; set; }
 
 		[JsonPropertyAttribute("surl")]
-		[XmlElementAttribute("surl", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("surl", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string SuccessURL { get; set; }
 
 		[JsonPropertyAttribute("stt")]
-		[XmlElementAttribute("stt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("stt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset StartTime { get; set; }
 
 		[JsonPropertyAttribute("cpt")]
-		[XmlElementAttribute("cpt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("cpt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset CompleteTime { get; set; }
 
 		[JsonPropertyAttribute("any")]
-		[XmlElementAttribute("any", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("any", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<AnyArgType> AnyArg { get; set; } = System.Array.Empty<AnyArgType>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AnyArg-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AnyArg collection is empty.</para>
@@ -1584,36 +1584,36 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("softwareInstallArgsType", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("softwareInstallArgsType", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("softwareInstallArgsType")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class SoftwareInstallArgsType
 	{
 		[JsonPropertyAttribute("url")]
-		[XmlElementAttribute("url", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("url", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string URL { get; set; }
 
 		[JsonPropertyAttribute("uuid")]
-		[XmlElementAttribute("uuid", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("uuid", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string UUID { get; set; }
 
 		[JsonPropertyAttribute("unm")]
-		[XmlElementAttribute("unm", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("unm", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string Username { get; set; }
 
 		[JsonPropertyAttribute("pwd")]
-		[XmlElementAttribute("pwd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("pwd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string Password { get; set; }
 
 		[JsonPropertyAttribute("eer")]
-		[XmlElementAttribute("eer", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("eer", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string ExecutionEnvRef { get; set; }
 
 		[JsonPropertyAttribute("any")]
-		[XmlElementAttribute("any", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("any", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<AnyArgType> AnyArg { get; set; } = System.Array.Empty<AnyArgType>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AnyArg-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AnyArg collection is empty.</para>
@@ -1628,40 +1628,40 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("softwareUpdateArgsType", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("softwareUpdateArgsType", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("softwareUpdateArgsType")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class SoftwareUpdateArgsType
 	{
 		[JsonPropertyAttribute("uuid")]
-		[XmlElementAttribute("uuid", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("uuid", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string UUID { get; set; }
 
 		[JsonPropertyAttribute("vr")]
-		[XmlElementAttribute("vr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("vr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string Version { get; set; }
 
 		[JsonPropertyAttribute("url")]
-		[XmlElementAttribute("url", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("url", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string URL { get; set; }
 
 		[JsonPropertyAttribute("unm")]
-		[XmlElementAttribute("unm", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("unm", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string Username { get; set; }
 
 		[JsonPropertyAttribute("pwd")]
-		[XmlElementAttribute("pwd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("pwd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string Password { get; set; }
 
 		[JsonPropertyAttribute("eer")]
-		[XmlElementAttribute("eer", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("eer", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string ExecutionEnvRef { get; set; }
 
 		[JsonPropertyAttribute("any")]
-		[XmlElementAttribute("any", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("any", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<AnyArgType> AnyArg { get; set; } = System.Array.Empty<AnyArgType>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AnyArg-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AnyArg collection is empty.</para>
@@ -1676,28 +1676,28 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("softwareUninstallArgsType", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("softwareUninstallArgsType", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("softwareUninstallArgsType")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class SoftwareUninstallArgsType
 	{
 		[JsonPropertyAttribute("uuid")]
-		[XmlElementAttribute("uuid", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("uuid", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string UUID { get; set; }
 
 		[JsonPropertyAttribute("vr")]
-		[XmlElementAttribute("vr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("vr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string Version { get; set; }
 
 		[JsonPropertyAttribute("eer")]
-		[XmlElementAttribute("eer", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("eer", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string ExecutionEnvRef { get; set; }
 
 		[JsonPropertyAttribute("any")]
-		[XmlElementAttribute("any", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("any", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<AnyArgType> AnyArg { get; set; } = System.Array.Empty<AnyArgType>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AnyArg-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AnyArg collection is empty.</para>
@@ -1712,16 +1712,16 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("execReqArgsListType", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("execReqArgsListType", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("execReqArgsListType")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class ExecReqArgsListType
 	{
 		[JsonPropertyAttribute("rst")]
-		[XmlElementAttribute("rst", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("rst", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<ResetArgsType> Reset { get; set; } = System.Array.Empty<ResetArgsType>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Reset-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Reset collection is empty.</para>
@@ -1734,9 +1734,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ResetSpecified => (this.Reset.Count != 0);
 
 		[JsonPropertyAttribute("rbo")]
-		[XmlElementAttribute("rbo", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("rbo", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<RebootArgsType> Reboot { get; set; } = System.Array.Empty<RebootArgsType>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Reboot-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Reboot collection is empty.</para>
@@ -1749,9 +1749,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool RebootSpecified => (this.Reboot.Count != 0);
 
 		[JsonPropertyAttribute("uld")]
-		[XmlElementAttribute("uld", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("uld", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<UploadArgsType> Upload { get; set; } = System.Array.Empty<UploadArgsType>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Upload-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Upload collection is empty.</para>
@@ -1764,9 +1764,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool UploadSpecified => (this.Upload.Count != 0);
 
 		[JsonPropertyAttribute("dld")]
-		[XmlElementAttribute("dld", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("dld", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<DownloadArgsType> Download { get; set; } = System.Array.Empty<DownloadArgsType>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Download-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Download collection is empty.</para>
@@ -1779,9 +1779,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool DownloadSpecified => (this.Download.Count != 0);
 
 		[JsonPropertyAttribute("swin")]
-		[XmlElementAttribute("swin", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("swin", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<SoftwareInstallArgsType> SoftwareInstall { get; set; } = System.Array.Empty<SoftwareInstallArgsType>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SoftwareInstall-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SoftwareInstall collection is empty.</para>
@@ -1794,9 +1794,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SoftwareInstallSpecified => (this.SoftwareInstall.Count != 0);
 
 		[JsonPropertyAttribute("swup")]
-		[XmlElementAttribute("swup", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("swup", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<SoftwareUpdateArgsType> SoftwareUpdate { get; set; } = System.Array.Empty<SoftwareUpdateArgsType>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SoftwareUpdate-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SoftwareUpdate collection is empty.</para>
@@ -1809,9 +1809,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SoftwareUpdateSpecified => (this.SoftwareUpdate.Count != 0);
 
 		[JsonPropertyAttribute("swun")]
-		[XmlElementAttribute("swun", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("swun", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<SoftwareUninstallArgsType> SoftwareUninstall { get; set; } = System.Array.Empty<SoftwareUninstallArgsType>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SoftwareUninstall-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SoftwareUninstall collection is empty.</para>
@@ -1826,7 +1826,7 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("mgmtLinkRef", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("mgmtLinkRef", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("mgmtLinkRef")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1837,20 +1837,20 @@ namespace Aetheros.Schema.OneM2M
 		/// <para xml:lang="en">Gets or sets the text value.</para>
 		/// </summary>
 		[JsonPropertyAttribute("val")]
-		[XmlTextAttribute(DataType="anyURI")]
+		[XmlTextAttribute(DataType = "anyURI")]
 		public string Value { get; set; }
 
 		[JsonPropertyAttribute("nm")]
-		[XmlAttributeAttribute("nm", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="NCName")]
+		[XmlAttributeAttribute("nm", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "NCName")]
 		public string Name { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlAttributeAttribute("typ", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlAttributeAttribute("typ", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public MgmtDefinition TypeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Type-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the Type property is specified.</para>
@@ -1877,14 +1877,14 @@ namespace Aetheros.Schema.OneM2M
 			}
 		}
 	}
-	
+
 	/// <summary>
 	/// <para>This is used for mgmtObj resource.</para>
 	/// </summary>
 	[System.ComponentModel.DescriptionAttribute("This is used for mgmtObj resource.")]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("mgd", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("mgd", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum MgmtDefinition
 	{
 		[XmlEnumAttribute("0")]
@@ -1974,16 +1974,16 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("setOfAcrs", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("setOfAcrs", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("setOfAcrs")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class SetOfAcrs
 	{
 		[JsonPropertyAttribute("acr")]
-		[XmlElementAttribute("acr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("acr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<AccessControlRule> AccessControlRule { get; set; } = System.Array.Empty<AccessControlRule>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AccessControlRule-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AccessControlRule collection is empty.</para>
@@ -1998,23 +1998,23 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("acr", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("acr", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("acr")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class AccessControlRule
 	{
 		[JsonPropertyAttribute("acor")]
-		[XmlElementAttribute("acor", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("acor", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> AccessControlOriginators { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("acop", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("acop", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public AccessControlOperations AccessControlOperationsValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AccessControlOperations-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the AccessControlOperations property is specified.</para>
@@ -2042,9 +2042,9 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("acco")]
-		[XmlElementAttribute("acco", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("acco", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<AccessControlRuleAccessControlContexts> AccessControlContexts { get; set; } = System.Array.Empty<AccessControlRuleAccessControlContexts>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AccessControlContexts-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AccessControlContexts collection is empty.</para>
@@ -2060,9 +2060,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("acaf", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("acaf", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool AccessControlAuthenticationFlagValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AccessControlAuthenticationFlag-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the AccessControlAuthenticationFlag property is specified.</para>
@@ -2089,14 +2089,14 @@ namespace Aetheros.Schema.OneM2M
 			}
 		}
 	}
-	
+
 	/// <summary>
 	/// <para>Shall be considered for access control policy check by the CSE</para>
 	/// </summary>
 	[System.ComponentModel.DescriptionAttribute("Shall be considered for access control policy check by the CSE")]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("acop", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("acop", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum AccessControlOperations
 	{
 		[XmlEnumAttribute("1")]
@@ -2291,7 +2291,7 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("AccessControlRuleAccessControlContexts", Namespace="http://www.onem2m.org/xml/protocols", AnonymousType=true)]
+	[XmlTypeAttribute("AccessControlRuleAccessControlContexts", Namespace = "http://www.onem2m.org/xml/protocols", AnonymousType = true)]
 	[JsonObjectAttribute("AccessControlRuleAccessControlContexts")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2302,9 +2302,9 @@ namespace Aetheros.Schema.OneM2M
 		/// </summary>
 		[System.ComponentModel.DataAnnotations.RegularExpressionAttribute(@"(([*]|[1-5]?\d([,-/][1-5]?\d)*)\s+){2}([*]|((1?\d|2[0-3])([,-/](1?\d|2[0-3]))*))\s+([*]|(([1-9]|1\d|2\d|3[01])([,-/]([1-9]|1\d|2\d|3[01]))*))\s+([*]|(([1-9]|1[0-2])([,-/]([1-9]|1[0-2]))*))\s+([*]|([0-6]([,-/][0-6])*))\s+([*]|([2-9]\d\d\d)(([,-]([2-9]\d\d\d)([/][\d]?[\d]?[\d]?[\d])?)*))")]
 		[JsonPropertyAttribute("accessControlWindow")]
-		[XmlElementAttribute("accessControlWindow", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("accessControlWindow", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public ICollection<string> AccessControlWindow { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AccessControlWindow-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AccessControlWindow collection is empty.</para>
@@ -2317,17 +2317,17 @@ namespace Aetheros.Schema.OneM2M
 		public bool AccessControlWindowSpecified => (this.AccessControlWindow.Count != 0);
 
 		[JsonPropertyAttribute("acip")]
-		[XmlElementAttribute("acip", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("acip", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public AccessControlRuleAccessControlContextsAccessControlIpAddresses AccessControlIpAddresses { get; set; }
 
 		[JsonPropertyAttribute("aclr")]
-		[XmlElementAttribute("aclr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("aclr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public LocationRegion AccessControlLocationRegion { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("AccessControlRuleAccessControlContextsAccessControlIpAddresses", Namespace="http://www.onem2m.org/xml/protocols", AnonymousType=true)]
+	[XmlTypeAttribute("AccessControlRuleAccessControlContextsAccessControlIpAddresses", Namespace = "http://www.onem2m.org/xml/protocols", AnonymousType = true)]
 	[JsonObjectAttribute("AccessControlRuleAccessControlContextsAccessControlIpAddresses")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2342,9 +2342,9 @@ namespace Aetheros.Schema.OneM2M
 			"\\.(25[0-5]|2[0-4][0-9]|[0-1]?[0-9]?[0-9])\\.(25[0-5]|2[0-4][0-9]|[0-1]?[0-9]?[0-9" +
 			"])(/([0-9]|[1-2][0-9]|3[0-2]))?)|([0-9A-Fa-f]{8}(/([0-9]|[1-2][0-9]|3[0-2]))?)")]
 		[JsonPropertyAttribute("ipv4")]
-		[XmlElementAttribute("ipv4", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token")]
+		[XmlElementAttribute("ipv4", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "token")]
 		public ICollection<string> Ipv4Addresses { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Ipv4Addresses-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Ipv4Addresses collection is empty.</para>
@@ -2355,7 +2355,7 @@ namespace Aetheros.Schema.OneM2M
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
 		public bool Ipv4AddressesSpecified => (this.Ipv4Addresses.Count != 0);
-		
+
 		/// <summary>
 		/// <para>An IP version 6 address, based on RFC 1884, with optional CIDR suffix
 		///				in the range /0 ... /128.</para>
@@ -2363,9 +2363,9 @@ namespace Aetheros.Schema.OneM2M
 		/// </summary>
 		[System.ComponentModel.DataAnnotations.RegularExpressionAttribute(@"([0-9A-Fa-f]{1,4}(:[0-9A-Fa-f]{1,4}){7}(/([0-9]|[1-9][0-9]|1[0-1][0-9]|12[0-8]))?)|(:(:[0-9A-Fa-f]{1,4}){1,7})|(([0-9A-Fa-f]{1,4}:){1,6}(:[0-9A-Fa-f]{1,4}){1}(/([0-9]|[1-9][0-9]|1[0-1][0-9]|12[0-8]))?)|(([0-9A-Fa-f]{1,4}:){1,5}(:[0-9A-Fa-f]{1,4}){1,2}(/([0-9]|[1-9][0-9]|1[0-1][0-9]|12[0-8]))?)|(([0-9A-Fa-f]{1,4}:){1,4}(:[0-9A-Fa-f]{1,4}){1,3}(/([0-9]|[1-9][0-9]|1[0-1][0-9]|12[0-8]))?)|(([0-9A-Fa-f]{1,4}:){1,3}(:[0-9A-Fa-f]{1,4}){1,4}(/([0-9]|[1-9][0-9]|1[0-1][0-9]|12[0-8]))?)|(([0-9A-Fa-f]{1,4}:){1,2}(:[0-9A-Fa-f]{1,4}){1,5}(/([0-9]|[1-9][0-9]|1[0-1][0-9]|12[0-8]))?)|(([0-9A-Fa-f]{1,4}:){1}(:[0-9A-Fa-f]{1,4}){1,6}(/([0-9]|[1-9][0-9]|1[0-1][0-9]|12[0-8]))?)|(([0-9A-Fa-f]{1,4}:){1,7}:(/([0-9]|[1-9][0-9]|1[0-1][0-9]|12[0-8]))?)|(((:(:0{1,4}){0,3}(:(0{1,4}|[fF]{4}))?)|(0{1,4}:(:0{1,4}){0,2}(:(0{1,4}|[fF]{4}))?)|((0{1,4}:){2}(:0{1,4})?(:(0{1,4}|[fF]{4}))?)|((0{1,4}:){3}(:(0{1,4}|[fF]{4}))?)|((0{1,4}:){4}(0{1,4}|[fF]{4})?)):(25[0-5]|2[0-4][0-9]|[0-1]?[0-9]?[0-9])\.(25[0-5]|2[0-4][0-9]|[0-1]?[0-9]?[0-9])\.(25[0-5]|2[0-4][0-9]|[0-1]?[0-9]?[0-9])\.(25[0-5]|2[0-4][0-9]|[0-1]?[0-9]?[0-9]))|(::(/0)?)")]
 		[JsonPropertyAttribute("ipv6")]
-		[XmlElementAttribute("ipv6", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token")]
+		[XmlElementAttribute("ipv6", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "token")]
 		public ICollection<string> Ipv6Addresses { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Ipv6Addresses-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Ipv6Addresses collection is empty.</para>
@@ -2380,7 +2380,7 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("locationRegion", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("locationRegion", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("locationRegion")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2392,9 +2392,9 @@ namespace Aetheros.Schema.OneM2M
 		/// </summary>
 		[System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[A-Z]{2}")]
 		[JsonPropertyAttribute("accc")]
-		[XmlElementAttribute("accc", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("accc", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public ICollection<string> CountryCode { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die CountryCode-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the CountryCode collection is empty.</para>
@@ -2407,9 +2407,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool CountryCodeSpecified => (this.CountryCode.Count != 0);
 
 		[JsonPropertyAttribute("accr")]
-		[XmlElementAttribute("accr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="float")]
+		[XmlElementAttribute("accr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "float")]
 		public ICollection<float> CircRegion { get; set; } = System.Array.Empty<System.Single>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die CircRegion-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the CircRegion collection is empty.</para>
@@ -2424,7 +2424,7 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("childResourceRef", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("childResourceRef", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("childResourceRef")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2435,20 +2435,20 @@ namespace Aetheros.Schema.OneM2M
 		/// <para xml:lang="en">Gets or sets the text value.</para>
 		/// </summary>
 		[JsonPropertyAttribute("val")]
-		[XmlTextAttribute(DataType="anyURI")]
+		[XmlTextAttribute(DataType = "anyURI")]
 		public string Value { get; set; }
 
 		[JsonPropertyAttribute("nm")]
-		[XmlAttributeAttribute("nm", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="NCName")]
+		[XmlAttributeAttribute("nm", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "NCName")]
 		public string Name { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlAttributeAttribute("typ", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlAttributeAttribute("typ", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ResourceType TypeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Type-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the Type property is specified.</para>
@@ -2476,13 +2476,13 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("spid")]
-		[XmlAttributeAttribute("spid", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlAttributeAttribute("spid", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string SpecializationID { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("ors", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("ors", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("ors")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2492,9 +2492,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("rsc", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("rsc", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ResponseStatusCode ResponseStatusCodeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ResponseStatusCode-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ResponseStatusCode property is specified.</para>
@@ -2522,28 +2522,28 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("rqi")]
-		[XmlElementAttribute("rqi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token")]
+		[XmlElementAttribute("rqi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "token")]
 		public string RequestIdentifier { get; set; }
 
 		[JsonPropertyAttribute("pc")]
-		[XmlElementAttribute("pc", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-	public TPrimitiveContent PrimitiveContent { get; set; }
+		[XmlElementAttribute("pc", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		public TPrimitiveContent PrimitiveContent { get; set; }
 
 		[JsonPropertyAttribute("to")]
-		[XmlElementAttribute("to", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("to", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string To { get; set; }
 
 		[JsonPropertyAttribute("fr")]
-		[XmlElementAttribute("fr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("fr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string From { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("ot", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("ot", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset OriginatingTimestampValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die OriginatingTimestamp-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the OriginatingTimestamp property is specified.</para>
@@ -2571,20 +2571,20 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("rset")]
-		[XmlElementAttribute("rset", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("rset", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public string ResultExpirationTimestamp { get; set; }
 
 		[JsonPropertyAttribute("ec")]
-		[XmlElementAttribute("ec", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ec", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public string EventCategory { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("cnst", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cnst", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ContentStatus ContentStatusValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ContentStatus-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ContentStatus property is specified.</para>
@@ -2615,9 +2615,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("cnot", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cnot", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long ContentOffsetValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ContentOffset-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ContentOffset property is specified.</para>
@@ -2647,7 +2647,7 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("rsc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("rsc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum ResponseStatusCode
 	{
 		[XmlEnumAttribute("1000")]
@@ -2803,14 +2803,14 @@ namespace Aetheros.Schema.OneM2M
 		[XmlEnumAttribute("6029")]
 		MgmtCommandNotCancellable = 6029,
 	}
-	
+
 	/// <summary>
 	/// <para>Used for periodicIndicator attribute of trafficPattern resource</para>
 	/// </summary>
 	[System.ComponentModel.DescriptionAttribute("Used for periodicIndicator attribute of trafficPattern resource")]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("cnst", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("cnst", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum ContentStatus
 	{
 		[XmlEnumAttribute("1")]
@@ -2822,37 +2822,37 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("conr", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("conr", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("conr")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class ContentRef
 	{
 		[JsonPropertyAttribute("urir")]
-		[XmlElementAttribute("urir", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("urir", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<ContentRefURIReference> URIReference { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("ContentRefURIReference", Namespace="http://www.onem2m.org/xml/protocols", AnonymousType=true)]
+	[XmlTypeAttribute("ContentRefURIReference", Namespace = "http://www.onem2m.org/xml/protocols", AnonymousType = true)]
 	[JsonObjectAttribute("ContentRefURIReference")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class ContentRefURIReference
 	{
 		[JsonPropertyAttribute("nm")]
-		[XmlElementAttribute("nm", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="NCName")]
+		[XmlElementAttribute("nm", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "NCName")]
 		public string Name { get; set; }
 
 		[JsonPropertyAttribute("uri")]
-		[XmlElementAttribute("uri", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("uri", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string URI { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("deletionContexts", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("deletionContexts", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("deletionContexts")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2863,9 +2863,9 @@ namespace Aetheros.Schema.OneM2M
 		/// </summary>
 		[System.ComponentModel.DataAnnotations.RegularExpressionAttribute(@"(([*]|[1-5]?\d([,-/][1-5]?\d)*)\s+){2}([*]|((1?\d|2[0-3])([,-/](1?\d|2[0-3]))*))\s+([*]|(([1-9]|1\d|2\d|3[01])([,-/]([1-9]|1\d|2\d|3[01]))*))\s+([*]|(([1-9]|1[0-2])([,-/]([1-9]|1[0-2]))*))\s+([*]|([0-6]([,-/][0-6])*))\s+([*]|([2-9]\d\d\d)(([,-]([2-9]\d\d\d)([/][\d]?[\d]?[\d]?[\d])?)*))")]
 		[JsonPropertyAttribute("tod")]
-		[XmlElementAttribute("tod", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("tod", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public ICollection<string> TimeOfDay { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die TimeOfDay-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the TimeOfDay collection is empty.</para>
@@ -2878,9 +2878,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool TimeOfDaySpecified => (this.TimeOfDay.Count != 0);
 
 		[JsonPropertyAttribute("lr")]
-		[XmlElementAttribute("lr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("lr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<LocationRegion> LocationRegions { get; set; } = System.Array.Empty<LocationRegion>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die LocationRegions-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the LocationRegions collection is empty.</para>
@@ -2895,70 +2895,70 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("md", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("md", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("md")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class MissingData
 	{
 		[JsonPropertyAttribute("num")]
-		[XmlElementAttribute("num", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("num", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long Number { get; set; }
 
 		[JsonPropertyAttribute("dur")]
-		[XmlElementAttribute("dur", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="duration")]
+		[XmlElementAttribute("dur", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "duration")]
 		public System.TimeSpan Duration { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("receiverESPrimRandObject", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("receiverESPrimRandObject", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("receiverESPrimRandObject")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class ReceiverESPrimRandObject
 	{
 		[JsonPropertyAttribute("esri")]
-		[XmlElementAttribute("esri", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="NCName")]
+		[XmlElementAttribute("esri", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "NCName")]
 		public string EsprimRandID { get; set; }
 
 		[JsonPropertyAttribute("esrv")]
-		[XmlElementAttribute("esrv", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="NCName")]
+		[XmlElementAttribute("esrv", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "NCName")]
 		public string EsprimRandValue { get; set; }
 
 		[JsonPropertyAttribute("esrx")]
-		[XmlElementAttribute("esrx", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("esrx", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public string EsprimRandExpiry { get; set; }
 
 		[JsonPropertyAttribute("esks")]
-		[XmlElementAttribute("esks", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("esks", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<EsprimKeyGenAlgID> EsprimKeyGenAlgIDs { get; set; }
 
 		[JsonPropertyAttribute("espa")]
-		[XmlElementAttribute("espa", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("espa", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<EsprimProtocolAndAlgID> EsprimProtocolAndAlgIDs { get; set; }
 	}
-	
+
 	/// <summary>
 	/// <para>Used in m2msec:receiverESPrimRandObject and m2m:originatorESPrimRandObject</para>
 	/// </summary>
 	[System.ComponentModel.DescriptionAttribute("Used in m2msec:receiverESPrimRandObject and m2m:originatorESPrimRandObject")]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("esk", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("esk", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum EsprimKeyGenAlgID
 	{
 		[XmlEnumAttribute("1")]
 		HmacSha256 = 1,
 	}
-	
+
 	/// <summary>
 	/// <para>Used in m2m:receiveEr2ERandObject and m2msec:originatorESPrimRandObject</para>
 	/// </summary>
 	[System.ComponentModel.DescriptionAttribute("Used in m2m:receiveEr2ERandObject and m2msec:originatorESPrimRandObject")]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("esprimProtocolAndAlgID", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("esprimProtocolAndAlgID", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum EsprimProtocolAndAlgID
 	{
 		[XmlEnumAttribute("10")]
@@ -2973,31 +2973,31 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("originatorESPrimRandObject", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("originatorESPrimRandObject", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("originatorESPrimRandObject")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class OriginatorESPrimRandObject
 	{
 		[JsonPropertyAttribute("esri")]
-		[XmlElementAttribute("esri", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="NCName")]
+		[XmlElementAttribute("esri", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "NCName")]
 		public string EsprimRandID { get; set; }
 
 		[JsonPropertyAttribute("esrv")]
-		[XmlElementAttribute("esrv", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="NCName")]
+		[XmlElementAttribute("esrv", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "NCName")]
 		public string EsprimRandValue { get; set; }
 
 		[JsonPropertyAttribute("esrx")]
-		[XmlElementAttribute("esrx", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("esrx", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public string EsprimRandExpiry { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("esks", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("esks", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public EsprimKeyGenAlgID EsprimKeyGenAlgIDsValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die EsprimKeyGenAlgIDs-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the EsprimKeyGenAlgIDs property is specified.</para>
@@ -3025,26 +3025,26 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("espa")]
-		[XmlElementAttribute("espa", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("espa", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<EsprimProtocolAndAlgID> EsprimProtocolAndAlgIDs { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("esi", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("esi", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("esi")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class E2ESecInfo
 	{
 		[JsonPropertyAttribute("esf")]
-		[XmlElementAttribute("esf", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("esf", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Suid> SupportedE2ESecFeatures { get; set; }
 
 		[JsonPropertyAttribute("escert")]
-		[XmlElementAttribute("escert", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary")]
+		[XmlElementAttribute("escert", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "base64Binary")]
 		public ICollection<byte[]> Certificates { get; set; } = System.Array.Empty<System.Byte[]>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Certificates-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Certificates collection is empty.</para>
@@ -3057,17 +3057,17 @@ namespace Aetheros.Schema.OneM2M
 		public bool CertificatesSpecified => (this.Certificates.Count != 0);
 
 		[JsonPropertyAttribute("esro")]
-		[XmlElementAttribute("esro", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("esro", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ReceiverESPrimRandObject SharedReceiverESPrimRandObject { get; set; }
 	}
-	
+
 	/// <summary>
 	/// <para>Used for m2m:e2eSecInfo and other security features in TS-0003</para>
 	/// </summary>
 	[System.ComponentModel.DescriptionAttribute("Used for m2m:e2eSecInfo and other security features in TS-0003")]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("suid", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("suid", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum Suid
 	{
 		[XmlEnumAttribute("10")]
@@ -3136,16 +3136,16 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("tokenPermission", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("tokenPermission", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("tokenPermission")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class TokenPermission
 	{
 		[JsonPropertyAttribute("ris")]
-		[XmlElementAttribute("ris", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("ris", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> ResourceIDs { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ResourceIDs-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ResourceIDs collection is empty.</para>
@@ -3159,10 +3159,10 @@ namespace Aetheros.Schema.OneM2M
 
 		[JsonPropertyAttribute("pv")]
 		[JsonConverter(typeof(JsonArrayItem<AccessControlRule>), "acr")]
-		[XmlArrayAttribute("pv", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-		[XmlArrayItemAttribute("acr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayAttribute("pv", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayItemAttribute("acr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<AccessControlRule> Privileges { get; set; } = System.Array.Empty<AccessControlRule>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Privileges-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Privileges collection is empty.</para>
@@ -3173,15 +3173,15 @@ namespace Aetheros.Schema.OneM2M
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
 		public bool PrivilegesSpecified => (this.Privileges.Count != 0);
-		
+
 		/// <summary>
 		/// <para xml:lang="en">Pattern: ([a-zA-Z0-9\.\-,_]*)@([A-Za-z0-9\-_]*)(\.([A-Za-z0-9\-_])*)*.</para>
 		/// </summary>
 		[System.ComponentModel.DataAnnotations.RegularExpressionAttribute("([a-zA-Z0-9\\.\\-,_]*)@([A-Za-z0-9\\-_]*)(\\.([A-Za-z0-9\\-_])*)*")]
 		[JsonPropertyAttribute("rids")]
-		[XmlElementAttribute("rids", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("rids", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public ICollection<string> RoleIDs { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die RoleIDs-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the RoleIDs collection is empty.</para>
@@ -3196,16 +3196,16 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("tokenPermissions", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("tokenPermissions", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("tokenPermissions")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class TokenPermissions
 	{
 		[JsonPropertyAttribute("pm")]
-		[XmlElementAttribute("pm", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("pm", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<TokenPermission> Permission { get; set; } = System.Array.Empty<TokenPermission>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Permission-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Permission collection is empty.</para>
@@ -3220,48 +3220,48 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("tokenClaimSet", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("tokenClaimSet", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("tokenClaimSet")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class TokenClaimSet
 	{
 		[JsonPropertyAttribute("vr")]
-		[XmlElementAttribute("vr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("vr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string Version { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="en">Pattern: ([a-zA-Z0-9\.\-,_]*)@([A-Za-z0-9\-_]*)(\.([A-Za-z0-9\-_])*)*.</para>
 		/// </summary>
 		[System.ComponentModel.DataAnnotations.RegularExpressionAttribute("([a-zA-Z0-9\\.\\-,_]*)@([A-Za-z0-9\\-_]*)(\\.([A-Za-z0-9\\-_])*)*")]
 		[JsonPropertyAttribute("tkid")]
-		[XmlElementAttribute("tkid", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("tkid", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string TokenID { get; set; }
 
 		[JsonPropertyAttribute("tkhd")]
-		[XmlElementAttribute("tkhd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("tkhd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string Holder { get; set; }
 
 		[JsonPropertyAttribute("tkis")]
-		[XmlElementAttribute("tkis", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("tkis", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string Issuer { get; set; }
 
 		[JsonPropertyAttribute("tknb")]
-		[XmlElementAttribute("tknb", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("tknb", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset NotBefore { get; set; }
 
 		[JsonPropertyAttribute("tkna")]
-		[XmlElementAttribute("tkna", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("tkna", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset NotAfter { get; set; }
 
 		[JsonPropertyAttribute("tknm")]
-		[XmlElementAttribute("tknm", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("tknm", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string TokenName { get; set; }
 
 		[JsonPropertyAttribute("tkau")]
-		[XmlElementAttribute("tkau", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("tkau", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> Audience { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Audience-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Audience collection is empty.</para>
@@ -3275,10 +3275,10 @@ namespace Aetheros.Schema.OneM2M
 
 		[JsonPropertyAttribute("tkps")]
 		[JsonConverter(typeof(JsonArrayItem<TokenPermission>), "pm")]
-		[XmlArrayAttribute("tkps", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-		[XmlArrayItemAttribute("pm", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayAttribute("tkps", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayItemAttribute("pm", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<TokenPermission> Permissions { get; set; } = System.Array.Empty<TokenPermission>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Permissions-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Permissions collection is empty.</para>
@@ -3291,47 +3291,47 @@ namespace Aetheros.Schema.OneM2M
 		public bool PermissionsSpecified => (this.Permissions.Count != 0);
 
 		[JsonPropertyAttribute("tkex")]
-		[XmlElementAttribute("tkex", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("tkex", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string Extension { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("dynAuthLocalTokenIdAssignments", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("dynAuthLocalTokenIdAssignments", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("dynAuthLocalTokenIdAssignments")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class DynAuthLocalTokenIdAssignments
 	{
 		[JsonPropertyAttribute("ltia")]
-		[XmlElementAttribute("ltia", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ltia", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<DynAuthLocalTokenIdAssignmentsLocalTokenIdAssignment> LocalTokenIdAssignment { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("DynAuthLocalTokenIdAssignmentsLocalTokenIdAssignment", Namespace="http://www.onem2m.org/xml/protocols", AnonymousType=true)]
+	[XmlTypeAttribute("DynAuthLocalTokenIdAssignmentsLocalTokenIdAssignment", Namespace = "http://www.onem2m.org/xml/protocols", AnonymousType = true)]
 	[JsonObjectAttribute("DynAuthLocalTokenIdAssignmentsLocalTokenIdAssignment")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class DynAuthLocalTokenIdAssignmentsLocalTokenIdAssignment
 	{
 		[JsonPropertyAttribute("lti")]
-		[XmlElementAttribute("lti", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="NCName")]
+		[XmlElementAttribute("lti", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "NCName")]
 		public string LocalTokenID { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="en">Pattern: ([a-zA-Z0-9\.\-,_]*)@([A-Za-z0-9\-_]*)(\.([A-Za-z0-9\-_])*)*.</para>
 		/// </summary>
 		[System.ComponentModel.DataAnnotations.RegularExpressionAttribute("([a-zA-Z0-9\\.\\-,_]*)@([A-Za-z0-9\\-_]*)(\\.([A-Za-z0-9\\-_])*)*")]
 		[JsonPropertyAttribute("tkid")]
-		[XmlElementAttribute("tkid", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("tkid", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string TokenID { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("dynAuthTokenSummary", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("dynAuthTokenSummary", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("dynAuthTokenSummary")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3342,25 +3342,25 @@ namespace Aetheros.Schema.OneM2M
 		/// </summary>
 		[System.ComponentModel.DataAnnotations.RegularExpressionAttribute("([a-zA-Z0-9\\.\\-,_]*)@([A-Za-z0-9\\-_]*)(\\.([A-Za-z0-9\\-_])*)*")]
 		[JsonPropertyAttribute("tkid")]
-		[XmlElementAttribute("tkid", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("tkid", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string TokenID { get; set; }
 
 		[JsonPropertyAttribute("tknb")]
-		[XmlElementAttribute("tknb", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("tknb", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset NotBefore { get; set; }
 
 		[JsonPropertyAttribute("tkna")]
-		[XmlElementAttribute("tkna", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("tkna", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset NotAfter { get; set; }
 
 		[JsonPropertyAttribute("tknm")]
-		[XmlElementAttribute("tknm", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("tknm", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string TokenName { get; set; }
 
 		[JsonPropertyAttribute("tkau")]
-		[XmlElementAttribute("tkau", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("tkau", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> Audience { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Audience-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Audience collection is empty.</para>
@@ -3375,57 +3375,57 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("dynAuthTokenReqInfo", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("dynAuthTokenReqInfo", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("dynAuthTokenReqInfo")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class DynAuthTokenReqInfo
 	{
 		[JsonPropertyAttribute("dasi")]
-		[XmlElementAttribute("dasi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("dasi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<DynAuthTokenReqInfoDasInfo> DasInfo { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("DynAuthTokenReqInfoDasInfo", Namespace="http://www.onem2m.org/xml/protocols", AnonymousType=true)]
+	[XmlTypeAttribute("DynAuthTokenReqInfoDasInfo", Namespace = "http://www.onem2m.org/xml/protocols", AnonymousType = true)]
 	[JsonObjectAttribute("DynAuthTokenReqInfoDasInfo")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class DynAuthTokenReqInfoDasInfo
 	{
 		[JsonPropertyAttribute("uri")]
-		[XmlElementAttribute("uri", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("uri", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string URI { get; set; }
 
 		[JsonPropertyAttribute("daq")]
-		[XmlElementAttribute("daq", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("daq", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public DynAuthDasRequest DasRequest { get; set; }
 
 		[JsonPropertyAttribute("sdr")]
-		[XmlElementAttribute("sdr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sdr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public string SecuredDasRequest { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("dynAuthDasRequest", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("dynAuthDasRequest", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("dynAuthDasRequest")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class DynAuthDasRequest
 	{
 		[JsonPropertyAttribute("or")]
-		[XmlElementAttribute("or", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("or", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string Originator { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("trt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("trt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ResourceType TargetedResourceTypeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die TargetedResourceType-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the TargetedResourceType property is specified.</para>
@@ -3456,9 +3456,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("op", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("op", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Operation OperationValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Operation-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the Operation property is specified.</para>
@@ -3486,21 +3486,21 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("oip")]
-		[XmlElementAttribute("oip", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("oip", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public DynAuthDasRequestOriginatorIP OriginatorIP { get; set; }
 
 		[JsonPropertyAttribute("olo")]
-		[XmlElementAttribute("olo", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("olo", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public LocationRegion OriginatorLocation { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="en">Pattern: ([a-zA-Z0-9\.\-,_]*)@([A-Za-z0-9\-_]*)(\.([A-Za-z0-9\-_])*)*.</para>
 		/// </summary>
 		[System.ComponentModel.DataAnnotations.RegularExpressionAttribute("([a-zA-Z0-9\\.\\-,_]*)@([A-Za-z0-9\\-_]*)(\\.([A-Za-z0-9\\-_])*)*")]
 		[JsonPropertyAttribute("orid")]
-		[XmlElementAttribute("orid", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("orid", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public ICollection<string> OriginatorRoleIDs { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die OriginatorRoleIDs-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the OriginatorRoleIDs collection is empty.</para>
@@ -3513,25 +3513,25 @@ namespace Aetheros.Schema.OneM2M
 		public bool OriginatorRoleIDsSpecified => (this.OriginatorRoleIDs.Count != 0);
 
 		[JsonPropertyAttribute("rts")]
-		[XmlElementAttribute("rts", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("rts", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public string RequestTimestamp { get; set; }
 
 		[JsonPropertyAttribute("trid")]
-		[XmlElementAttribute("trid", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("trid", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string TargetedResourceID { get; set; }
 
 		[JsonPropertyAttribute("ppl")]
-		[XmlElementAttribute("ppl", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ppl", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public string ProposedPrivilegesLifetime { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="en">Pattern: ([a-zA-Z0-9\.\-,_]*)@([A-Za-z0-9\-_]*)(\.([A-Za-z0-9\-_])*)*.</para>
 		/// </summary>
 		[System.ComponentModel.DataAnnotations.RegularExpressionAttribute("([a-zA-Z0-9\\.\\-,_]*)@([A-Za-z0-9\\-_]*)(\\.([A-Za-z0-9\\-_])*)*")]
 		[JsonPropertyAttribute("rfa")]
-		[XmlElementAttribute("rfa", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("rfa", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public ICollection<string> RoleIDsFromACPs { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die RoleIDsFromACPs-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the RoleIDsFromACPs collection is empty.</para>
@@ -3542,15 +3542,15 @@ namespace Aetheros.Schema.OneM2M
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
 		public bool RoleIDsFromACPsSpecified => (this.RoleIDsFromACPs.Count != 0);
-		
+
 		/// <summary>
 		/// <para xml:lang="en">Pattern: ([a-zA-Z0-9\.\-,_]*)@([A-Za-z0-9\-_]*)(\.([A-Za-z0-9\-_])*)*.</para>
 		/// </summary>
 		[System.ComponentModel.DataAnnotations.RegularExpressionAttribute("([a-zA-Z0-9\\.\\-,_]*)@([A-Za-z0-9\\-_]*)(\\.([A-Za-z0-9\\-_])*)*")]
 		[JsonPropertyAttribute("tids")]
-		[XmlElementAttribute("tids", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("tids", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public ICollection<string> TokenIDs { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die TokenIDs-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the TokenIDs collection is empty.</para>
@@ -3565,7 +3565,7 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("DynAuthDasRequestOriginatorIP", Namespace="http://www.onem2m.org/xml/protocols", AnonymousType=true)]
+	[XmlTypeAttribute("DynAuthDasRequestOriginatorIP", Namespace = "http://www.onem2m.org/xml/protocols", AnonymousType = true)]
 	[JsonObjectAttribute("DynAuthDasRequestOriginatorIP")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3580,9 +3580,9 @@ namespace Aetheros.Schema.OneM2M
 			"\\.(25[0-5]|2[0-4][0-9]|[0-1]?[0-9]?[0-9])\\.(25[0-5]|2[0-4][0-9]|[0-1]?[0-9]?[0-9" +
 			"])(/([0-9]|[1-2][0-9]|3[0-2]))?)|([0-9A-Fa-f]{8}(/([0-9]|[1-2][0-9]|3[0-2]))?)")]
 		[JsonPropertyAttribute("ip4")]
-		[XmlElementAttribute("ip4", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token")]
+		[XmlElementAttribute("ip4", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "token")]
 		public string Ipv4Address { get; set; }
-		
+
 		/// <summary>
 		/// <para>An IP version 6 address, based on RFC 1884, with optional CIDR suffix
 		///				in the range /0 ... /128.</para>
@@ -3590,29 +3590,29 @@ namespace Aetheros.Schema.OneM2M
 		/// </summary>
 		[System.ComponentModel.DataAnnotations.RegularExpressionAttribute(@"([0-9A-Fa-f]{1,4}(:[0-9A-Fa-f]{1,4}){7}(/([0-9]|[1-9][0-9]|1[0-1][0-9]|12[0-8]))?)|(:(:[0-9A-Fa-f]{1,4}){1,7})|(([0-9A-Fa-f]{1,4}:){1,6}(:[0-9A-Fa-f]{1,4}){1}(/([0-9]|[1-9][0-9]|1[0-1][0-9]|12[0-8]))?)|(([0-9A-Fa-f]{1,4}:){1,5}(:[0-9A-Fa-f]{1,4}){1,2}(/([0-9]|[1-9][0-9]|1[0-1][0-9]|12[0-8]))?)|(([0-9A-Fa-f]{1,4}:){1,4}(:[0-9A-Fa-f]{1,4}){1,3}(/([0-9]|[1-9][0-9]|1[0-1][0-9]|12[0-8]))?)|(([0-9A-Fa-f]{1,4}:){1,3}(:[0-9A-Fa-f]{1,4}){1,4}(/([0-9]|[1-9][0-9]|1[0-1][0-9]|12[0-8]))?)|(([0-9A-Fa-f]{1,4}:){1,2}(:[0-9A-Fa-f]{1,4}){1,5}(/([0-9]|[1-9][0-9]|1[0-1][0-9]|12[0-8]))?)|(([0-9A-Fa-f]{1,4}:){1}(:[0-9A-Fa-f]{1,4}){1,6}(/([0-9]|[1-9][0-9]|1[0-1][0-9]|12[0-8]))?)|(([0-9A-Fa-f]{1,4}:){1,7}:(/([0-9]|[1-9][0-9]|1[0-1][0-9]|12[0-8]))?)|(((:(:0{1,4}){0,3}(:(0{1,4}|[fF]{4}))?)|(0{1,4}:(:0{1,4}){0,2}(:(0{1,4}|[fF]{4}))?)|((0{1,4}:){2}(:0{1,4})?(:(0{1,4}|[fF]{4}))?)|((0{1,4}:){3}(:(0{1,4}|[fF]{4}))?)|((0{1,4}:){4}(0{1,4}|[fF]{4})?)):(25[0-5]|2[0-4][0-9]|[0-1]?[0-9]?[0-9])\.(25[0-5]|2[0-4][0-9]|[0-1]?[0-9]?[0-9])\.(25[0-5]|2[0-4][0-9]|[0-1]?[0-9]?[0-9])\.(25[0-5]|2[0-4][0-9]|[0-1]?[0-9]?[0-9]))|(::(/0)?)")]
 		[JsonPropertyAttribute("ip6")]
-		[XmlElementAttribute("ip6", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token")]
+		[XmlElementAttribute("ip6", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "token")]
 		public string Ipv6Address { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("bop", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("bop", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("bop")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class BackOffParameters
 	{
 		[JsonPropertyAttribute("bops")]
-		[XmlElementAttribute("bops", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("bops", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<BackOffParametersBackOffParametersSet> BackOffParametersSet { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("nwa", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("nwa", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public NetworkAction NetworkActionValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die NetworkAction-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the NetworkAction property is specified.</para>
@@ -3643,9 +3643,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("ibt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ibt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long InitialBackoffTimeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die InitialBackoffTime-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the InitialBackoffTime property is specified.</para>
@@ -3676,9 +3676,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("abt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("abt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long AdditionalBackoffTimeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AdditionalBackoffTime-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the AdditionalBackoffTime property is specified.</para>
@@ -3709,9 +3709,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("mbt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mbt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long MaximumBackoffTimeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MaximumBackoffTime-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the MaximumBackoffTime property is specified.</para>
@@ -3742,9 +3742,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("rbt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("rbt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long OptionalRandomBackoffTimeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die OptionalRandomBackoffTime-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the OptionalRandomBackoffTime property is specified.</para>
@@ -3774,7 +3774,7 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("BackOffParametersBackOffParametersSet", Namespace="http://www.onem2m.org/xml/protocols", AnonymousType=true)]
+	[XmlTypeAttribute("BackOffParametersBackOffParametersSet", Namespace = "http://www.onem2m.org/xml/protocols", AnonymousType = true)]
 	[JsonObjectAttribute("BackOffParametersBackOffParametersSet")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3784,9 +3784,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("nwa", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("nwa", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public NetworkAction NetworkActionValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die NetworkAction-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the NetworkAction property is specified.</para>
@@ -3814,24 +3814,24 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("ibt")]
-		[XmlElementAttribute("ibt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ibt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long InitialBackoffTime { get; set; }
 
 		[JsonPropertyAttribute("abt")]
-		[XmlElementAttribute("abt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("abt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long AdditionalBackoffTime { get; set; }
 
 		[JsonPropertyAttribute("mbt")]
-		[XmlElementAttribute("mbt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mbt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long MaximumBackoffTime { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("rbt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("rbt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long OptionalRandomBackoffTimeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die OptionalRandomBackoffTime-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the OptionalRandomBackoffTime property is specified.</para>
@@ -3858,14 +3858,14 @@ namespace Aetheros.Schema.OneM2M
 			}
 		}
 	}
-	
+
 	/// <summary>
 	/// <para>Used in the networkAction element in the backOffParameters</para>
 	/// </summary>
 	[System.ComponentModel.DescriptionAttribute("Used in the networkAction element in the backOffParameters")]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("nwa", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("nwa", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum NetworkAction
 	{
 		[XmlEnumAttribute("1")]
@@ -3886,45 +3886,45 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("listOfDataLinks", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("listOfDataLinks", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("listOfDataLinks")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class ListOfDataLinks
 	{
 		[JsonPropertyAttribute("dle")]
-		[XmlElementAttribute("dle", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("dle", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<DataLink> DataLinkEntry { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("dali", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("dali", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("dali")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class DataLink
 	{
 		[JsonPropertyAttribute("nm")]
-		[XmlElementAttribute("nm", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("nm", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string Name { get; set; }
 
 		[JsonPropertyAttribute("dcid")]
-		[XmlElementAttribute("dcid", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("dcid", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string DataContainerID { get; set; }
 
 		[JsonPropertyAttribute("atn")]
-		[XmlElementAttribute("atn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="NCName")]
+		[XmlElementAttribute("atn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "NCName")]
 		public string AttributeName { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("rce", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("rce", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:rce")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("sg_resource", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("sg_resource", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[XmlIncludeAttribute(typeof(Aetheros.Schema.OneM2M.AccessControlPolicy))]
 	[XmlIncludeAttribute(typeof(Aetheros.Schema.OneM2M.AccessControlPolicyAnnc))]
 	[XmlIncludeAttribute(typeof(Aetheros.Schema.OneM2M.ActiveCmdhPolicy))]
@@ -4013,9 +4013,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("ty", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ty", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ResourceType ResourceTypeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ResourceType-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ResourceType property is specified.</para>
@@ -4043,25 +4043,26 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("ri")]
-		[XmlElementAttribute("ri", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("ri", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string ResourceID { get; set; }
 
 		[JsonPropertyAttribute("pi")]
-		[XmlElementAttribute("pi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("pi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string ParentID { get; set; }
 
 		[JsonPropertyAttribute("ct")]
-		[XmlElementAttribute("ct", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("ct", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset CreationTime { get; set; }
 
 		[JsonPropertyAttribute("lt")]
-		[XmlElementAttribute("lt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("lt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset LastModifiedTime { get; set; }
 
 		[JsonPropertyAttribute("lbl")]
-		[XmlElementAttribute("lbl", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token")]
+		[XmlElementAttribute("lbl", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "token")]
 		public ICollection<string> Labels { get; set; } = System.Array.Empty<System.String>();
-		
+
+		private bool _labelsSpecified = false;
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Labels-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Labels collection is empty.</para>
@@ -4071,20 +4072,20 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		public bool LabelsSpecified => (this.Labels.Count != 0);
+		public bool LabelsSpecified { get => (_labelsSpecified || this.Labels.Count != 0); set => _labelsSpecified = value; }
 
 		[JsonPropertyAttribute("rn")]
-		[XmlAttributeAttribute("rn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="NCName")]
+		[XmlAttributeAttribute("rn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "NCName")]
 		public string ResourceName { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("regularResource", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("regularResource", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:regularResource")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("sg_regularResource", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("sg_regularResource", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[XmlIncludeAttribute(typeof(Aetheros.Schema.OneM2M.ActiveCmdhPolicy))]
 	[XmlIncludeAttribute(typeof(Aetheros.Schema.OneM2M.AE))]
 	[XmlIncludeAttribute(typeof(AnnounceableResource))]
@@ -4135,9 +4136,10 @@ namespace Aetheros.Schema.OneM2M
 	public partial class RegularResource : Resource
 	{
 		[JsonPropertyAttribute("acpi")]
-		[XmlElementAttribute("acpi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("acpi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> AccessControlPolicyIDs { get; set; } = System.Array.Empty<System.String>();
-		
+
+		private bool _accessControlPolicyIdsSpecified = false;
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AccessControlPolicyIDs-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AccessControlPolicyIDs collection is empty.</para>
@@ -4147,16 +4149,20 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		public bool AccessControlPolicyIDsSpecified => (this.AccessControlPolicyIDs.Count != 0);
+		public bool AccessControlPolicyIDsSpecified
+		{
+			get => (_accessControlPolicyIdsSpecified || this.AccessControlPolicyIDs.Count != 0);
+			set => _accessControlPolicyIdsSpecified = value;
+		}
 
 		[JsonPropertyAttribute("et")]
-		[XmlElementAttribute("et", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("et", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset ExpirationTime { get; set; }
 
 		[JsonPropertyAttribute("daci")]
-		[XmlElementAttribute("daci", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("daci", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> DynamicAuthorizationConsultationIDs { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die DynamicAuthorizationConsultationIDs-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the DynamicAuthorizationConsultationIDs collection is empty.</para>
@@ -4171,11 +4177,11 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("announceableResource", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("announceableResource", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:announceableResource")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("sg_announceableResource", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("sg_announceableResource", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[XmlIncludeAttribute(typeof(Aetheros.Schema.OneM2M.ActiveCmdhPolicy))]
 	[XmlIncludeAttribute(typeof(Aetheros.Schema.OneM2M.AE))]
 	[XmlIncludeAttribute(typeof(Aetheros.Schema.OneM2M.AreaNwkDeviceInfo))]
@@ -4208,9 +4214,9 @@ namespace Aetheros.Schema.OneM2M
 	public partial class AnnounceableResource : RegularResource
 	{
 		[JsonPropertyAttribute("at")]
-		[XmlElementAttribute("at", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("at", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> AnnounceTo { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AnnounceTo-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AnnounceTo collection is empty.</para>
@@ -4223,9 +4229,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool AnnounceToSpecified => (this.AnnounceTo.Count != 0);
 
 		[JsonPropertyAttribute("aa")]
-		[XmlElementAttribute("aa", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="NCName")]
+		[XmlElementAttribute("aa", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "NCName")]
 		public ICollection<string> AnnouncedAttribute { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AnnouncedAttribute-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AnnouncedAttribute collection is empty.</para>
@@ -4240,11 +4246,11 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("announcedResource", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("announcedResource", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:announcedResource")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("sg_announcedResource", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("sg_announcedResource", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[XmlIncludeAttribute(typeof(Aetheros.Schema.OneM2M.AEAnnc))]
 	[XmlIncludeAttribute(typeof(AnnouncedMgmtResource))]
 	[XmlIncludeAttribute(typeof(Aetheros.Schema.OneM2M.AreaNwkDeviceInfoAnnc))]
@@ -4268,21 +4274,21 @@ namespace Aetheros.Schema.OneM2M
 	public partial class AnnouncedResource : Resource
 	{
 		[JsonPropertyAttribute("acpi")]
-		[XmlElementAttribute("acpi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("acpi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> AccessControlPolicyIDs { get; set; }
 
 		[JsonPropertyAttribute("et")]
-		[XmlElementAttribute("et", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("et", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset ExpirationTime { get; set; }
 
 		[JsonPropertyAttribute("lnk")]
-		[XmlElementAttribute("lnk", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("lnk", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string Link { get; set; }
 
 		[JsonPropertyAttribute("daci")]
-		[XmlElementAttribute("daci", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("daci", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> DynamicAuthorizationConsultationIDs { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die DynamicAuthorizationConsultationIDs-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the DynamicAuthorizationConsultationIDs collection is empty.</para>
@@ -4297,11 +4303,11 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("announceableSubordinateResource", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("announceableSubordinateResource", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:announceableSubordinateResource")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("sg_announceableSubordinateResource", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("sg_announceableSubordinateResource", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[XmlIncludeAttribute(typeof(Aetheros.Schema.OneM2M.AccessControlPolicy))]
 	[XmlIncludeAttribute(typeof(Aetheros.Schema.OneM2M.ContentInstance))]
 	[XmlIncludeAttribute(typeof(Aetheros.Schema.OneM2M.Schedule))]
@@ -4309,13 +4315,13 @@ namespace Aetheros.Schema.OneM2M
 	public partial class AnnounceableSubordinateResource : Resource
 	{
 		[JsonPropertyAttribute("et")]
-		[XmlElementAttribute("et", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("et", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset ExpirationTime { get; set; }
 
 		[JsonPropertyAttribute("at")]
-		[XmlElementAttribute("at", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("at", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> AnnounceTo { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AnnounceTo-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AnnounceTo collection is empty.</para>
@@ -4328,9 +4334,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool AnnounceToSpecified => (this.AnnounceTo.Count != 0);
 
 		[JsonPropertyAttribute("aa")]
-		[XmlElementAttribute("aa", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="NCName")]
+		[XmlElementAttribute("aa", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "NCName")]
 		public ICollection<string> AnnouncedAttribute { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AnnouncedAttribute-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AnnouncedAttribute collection is empty.</para>
@@ -4345,26 +4351,26 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("subordinateResource", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("subordinateResource", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:subordinateResource")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("sg_subordinateResource", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("sg_subordinateResource", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[XmlIncludeAttribute(typeof(Aetheros.Schema.OneM2M.PollingChannel))]
 	public partial class SubordinateResource : Resource
 	{
 		[JsonPropertyAttribute("et")]
-		[XmlElementAttribute("et", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("et", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset ExpirationTime { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("announcedSubordinateResource", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("announcedSubordinateResource", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:announcedSubordinateResource")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("sg_announcedSubordinateResource", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("sg_announcedSubordinateResource", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[XmlIncludeAttribute(typeof(Aetheros.Schema.OneM2M.AccessControlPolicyAnnc))]
 	[XmlIncludeAttribute(typeof(Aetheros.Schema.OneM2M.ContentInstanceAnnc))]
 	[XmlIncludeAttribute(typeof(Aetheros.Schema.OneM2M.ScheduleAnnc))]
@@ -4372,21 +4378,21 @@ namespace Aetheros.Schema.OneM2M
 	public partial class AnnouncedSubordinateResource : Resource
 	{
 		[JsonPropertyAttribute("et")]
-		[XmlElementAttribute("et", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("et", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset ExpirationTime { get; set; }
 
 		[JsonPropertyAttribute("lnk")]
-		[XmlElementAttribute("lnk", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("lnk", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string Link { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("mgRsc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("mgRsc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:mgRsc")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("sg_mgmtResource", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("sg_mgmtResource", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[XmlIncludeAttribute(typeof(Aetheros.Schema.OneM2M.ActiveCmdhPolicy))]
 	[XmlIncludeAttribute(typeof(Aetheros.Schema.OneM2M.AreaNwkDeviceInfo))]
 	[XmlIncludeAttribute(typeof(Aetheros.Schema.OneM2M.AreaNwkInfo))]
@@ -4412,9 +4418,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("mgd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mgd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public MgmtDefinition MgmtDefinitionValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MgmtDefinition-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the MgmtDefinition property is specified.</para>
@@ -4442,9 +4448,9 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("obis")]
-		[XmlElementAttribute("obis", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("obis", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> ObjectIDs { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ObjectIDs-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ObjectIDs collection is empty.</para>
@@ -4457,9 +4463,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ObjectIDsSpecified => (this.ObjectIDs.Count != 0);
 
 		[JsonPropertyAttribute("obps")]
-		[XmlElementAttribute("obps", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("obps", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> ObjectPaths { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ObjectPaths-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ObjectPaths collection is empty.</para>
@@ -4472,17 +4478,17 @@ namespace Aetheros.Schema.OneM2M
 		public bool ObjectPathsSpecified => (this.ObjectPaths.Count != 0);
 
 		[JsonPropertyAttribute("dc")]
-		[XmlElementAttribute("dc", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("dc", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string Description { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("mgoA", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("mgoA", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:mgoA")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("sg_announcedMgmtResource", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("sg_announcedMgmtResource", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[XmlIncludeAttribute(typeof(Aetheros.Schema.OneM2M.AreaNwkDeviceInfoAnnc))]
 	[XmlIncludeAttribute(typeof(Aetheros.Schema.OneM2M.AreaNwkInfoAnnc))]
 	[XmlIncludeAttribute(typeof(Aetheros.Schema.OneM2M.BatteryAnnc))]
@@ -4499,9 +4505,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("mgd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mgd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public MgmtDefinition MgmtDefinitionValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MgmtDefinition-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the MgmtDefinition property is specified.</para>
@@ -4529,9 +4535,9 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("obis")]
-		[XmlElementAttribute("obis", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("obis", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> ObjectIDs { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ObjectIDs-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ObjectIDs collection is empty.</para>
@@ -4544,9 +4550,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ObjectIDsSpecified => (this.ObjectIDs.Count != 0);
 
 		[JsonPropertyAttribute("obps")]
-		[XmlElementAttribute("obps", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("obps", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> ObjectPaths { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ObjectPaths-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ObjectPaths collection is empty.</para>
@@ -4559,17 +4565,17 @@ namespace Aetheros.Schema.OneM2M
 		public bool ObjectPathsSpecified => (this.ObjectPaths.Count != 0);
 
 		[JsonPropertyAttribute("dc")]
-		[XmlElementAttribute("dc", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("dc", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string Description { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("flexContainerResource", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("flexContainerResource", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("flexContainerResource")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("sg_flexContainerResource", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("sg_flexContainerResource", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[XmlIncludeAttribute(typeof(Aetheros.Schema.OneM2M.AllJoynApp))]
 	[XmlIncludeAttribute(typeof(Aetheros.Schema.OneM2M.AllJoynInterface))]
 	[XmlIncludeAttribute(typeof(Aetheros.Schema.OneM2M.AllJoynMethod))]
@@ -4586,9 +4592,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("ty", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ty", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ResourceType ResourceTypeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ResourceType-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ResourceType property is specified.</para>
@@ -4616,20 +4622,20 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("ri")]
-		[XmlElementAttribute("ri", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("ri", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string ResourceID { get; set; }
 
 		[JsonPropertyAttribute("pi")]
-		[XmlElementAttribute("pi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("pi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string ParentID { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("ct", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("ct", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset CreationTimeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die CreationTime-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the CreationTime property is specified.</para>
@@ -4660,9 +4666,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("lt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("lt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset LastModifiedTimeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die LastModifiedTime-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the LastModifiedTime property is specified.</para>
@@ -4690,9 +4696,9 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("lbl")]
-		[XmlElementAttribute("lbl", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token")]
+		[XmlElementAttribute("lbl", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "token")]
 		public ICollection<string> Labels { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Labels-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Labels collection is empty.</para>
@@ -4705,9 +4711,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool LabelsSpecified => (this.Labels.Count != 0);
 
 		[JsonPropertyAttribute("acpi")]
-		[XmlElementAttribute("acpi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("acpi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> AccessControlPolicyIDs { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AccessControlPolicyIDs-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AccessControlPolicyIDs collection is empty.</para>
@@ -4723,9 +4729,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("et", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("et", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset ExpirationTimeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ExpirationTime-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ExpirationTime property is specified.</para>
@@ -4753,9 +4759,9 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("daci")]
-		[XmlElementAttribute("daci", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("daci", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> DynamicAuthorizationConsultationIDs { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die DynamicAuthorizationConsultationIDs-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the DynamicAuthorizationConsultationIDs collection is empty.</para>
@@ -4768,9 +4774,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool DynamicAuthorizationConsultationIDsSpecified => (this.DynamicAuthorizationConsultationIDs.Count != 0);
 
 		[JsonPropertyAttribute("at")]
-		[XmlElementAttribute("at", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("at", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> AnnounceTo { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AnnounceTo-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AnnounceTo collection is empty.</para>
@@ -4783,9 +4789,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool AnnounceToSpecified => (this.AnnounceTo.Count != 0);
 
 		[JsonPropertyAttribute("aa")]
-		[XmlElementAttribute("aa", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="NCName")]
+		[XmlElementAttribute("aa", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "NCName")]
 		public ICollection<string> AnnouncedAttribute { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AnnouncedAttribute-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AnnouncedAttribute collection is empty.</para>
@@ -4798,33 +4804,33 @@ namespace Aetheros.Schema.OneM2M
 		public bool AnnouncedAttributeSpecified => (this.AnnouncedAttribute.Count != 0);
 
 		[JsonPropertyAttribute("st")]
-		[XmlElementAttribute("st", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("st", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long StateTag { get; set; }
 
 		[JsonPropertyAttribute("cr")]
-		[XmlElementAttribute("cr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("cr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string Creator { get; set; }
 
 		[JsonPropertyAttribute("cnd")]
-		[XmlElementAttribute("cnd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("cnd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string ContainerDefinition { get; set; }
 
 		[JsonPropertyAttribute("or")]
-		[XmlElementAttribute("or", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("or", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string OntologyRef { get; set; }
 
 		[JsonPropertyAttribute("rn")]
-		[XmlAttributeAttribute("rn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="NCName")]
+		[XmlAttributeAttribute("rn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "NCName")]
 		public string ResourceName { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("announcedFlexContainerResource", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("announcedFlexContainerResource", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("announcedFlexContainerResource")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("sg_announcedFlexContainerResource", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("sg_announcedFlexContainerResource", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[XmlIncludeAttribute(typeof(Aetheros.Schema.OneM2M.AllJoynAppAnnc))]
 	[XmlIncludeAttribute(typeof(Aetheros.Schema.OneM2M.AllJoynInterfaceAnnc))]
 	[XmlIncludeAttribute(typeof(Aetheros.Schema.OneM2M.AllJoynMethodAnnc))]
@@ -4841,9 +4847,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("ty", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ty", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ResourceType ResourceTypeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ResourceType-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ResourceType property is specified.</para>
@@ -4871,20 +4877,20 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("ri")]
-		[XmlElementAttribute("ri", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("ri", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string ResourceID { get; set; }
 
 		[JsonPropertyAttribute("pi")]
-		[XmlElementAttribute("pi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("pi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string ParentID { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("ct", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("ct", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset CreationTimeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die CreationTime-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the CreationTime property is specified.</para>
@@ -4915,9 +4921,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("lt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("lt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset LastModifiedTimeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die LastModifiedTime-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the LastModifiedTime property is specified.</para>
@@ -4945,9 +4951,9 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("lbl")]
-		[XmlElementAttribute("lbl", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token")]
+		[XmlElementAttribute("lbl", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "token")]
 		public ICollection<string> Labels { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Labels-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Labels collection is empty.</para>
@@ -4960,16 +4966,16 @@ namespace Aetheros.Schema.OneM2M
 		public bool LabelsSpecified => (this.Labels.Count != 0);
 
 		[JsonPropertyAttribute("acpi")]
-		[XmlElementAttribute("acpi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("acpi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> AccessControlPolicyIDs { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("et", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("et", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset ExpirationTimeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ExpirationTime-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ExpirationTime property is specified.</para>
@@ -4997,13 +5003,13 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("lnk")]
-		[XmlElementAttribute("lnk", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("lnk", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string Link { get; set; }
 
 		[JsonPropertyAttribute("daci")]
-		[XmlElementAttribute("daci", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("daci", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> DynamicAuthorizationConsultationIDs { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die DynamicAuthorizationConsultationIDs-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the DynamicAuthorizationConsultationIDs collection is empty.</para>
@@ -5019,9 +5025,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("st", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("st", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long StateTagValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die StateTag-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the StateTag property is specified.</para>
@@ -5049,25 +5055,25 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("cnd")]
-		[XmlElementAttribute("cnd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("cnd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string ContainerDefinition { get; set; }
 
 		[JsonPropertyAttribute("or")]
-		[XmlElementAttribute("or", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("or", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string OntologyRef { get; set; }
 
 		[JsonPropertyAttribute("rn")]
-		[XmlAttributeAttribute("rn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="NCName")]
+		[XmlAttributeAttribute("rn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "NCName")]
 		public string ResourceName { get; set; }
 	}
-	
+
 	/// <summary>
 	/// <para>Used for cseType attribute of &lt;CSEBase&gt; resource.</para>
 	/// </summary>
 	[System.ComponentModel.DescriptionAttribute("Used for cseType attribute of &lt;CSEBase&gt; resource.")]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("cseTypeID", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("cseTypeID", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum CseTypeID
 	{
 		[XmlEnumAttribute("1")]
@@ -5079,14 +5085,14 @@ namespace Aetheros.Schema.OneM2M
 		[XmlEnumAttribute("3")]
 		AsnCse = 3,
 	}
-	
+
 	/// <summary>
 	/// <para>Used for locationSource attribute of &lt;locationPolicy&gt; resource.</para>
 	/// </summary>
 	[System.ComponentModel.DescriptionAttribute("Used for locationSource attribute of &lt;locationPolicy&gt; resource.")]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("los", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("los", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum LocationSource
 	{
 		[XmlEnumAttribute("1")]
@@ -5098,7 +5104,7 @@ namespace Aetheros.Schema.OneM2M
 		[XmlEnumAttribute("3")]
 		SharingBased = 3,
 	}
-	
+
 	/// <summary>
 	/// <para>Used for ec parameter in request and eventCat attribute of &lt;delivery&gt; resource and cmdh
 	///				policy resource types.</para>
@@ -5107,7 +5113,7 @@ namespace Aetheros.Schema.OneM2M
 		"rce and cmdh policy resource types.")]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("stdEventCats", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("stdEventCats", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum StdEventCats
 	{
 		[XmlEnumAttribute("2")]
@@ -5119,14 +5125,14 @@ namespace Aetheros.Schema.OneM2M
 		[XmlEnumAttribute("4")]
 		Latest = 4,
 	}
-	
+
 	/// <summary>
 	/// <para>Used for request Status in the &lt;request&gt; resource</para>
 	/// </summary>
 	[System.ComponentModel.DescriptionAttribute("Used for request Status in the &lt;request&gt; resource")]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("rs", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("rs", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum RequestStatus
 	{
 		[XmlEnumAttribute("1")]
@@ -5141,14 +5147,14 @@ namespace Aetheros.Schema.OneM2M
 		[XmlEnumAttribute("4")]
 		Forwarded = 4,
 	}
-	
+
 	/// <summary>
 	/// <para>Used for memberType attribute in &lt;group&gt; resource.</para>
 	/// </summary>
 	[System.ComponentModel.DescriptionAttribute("Used for memberType attribute in &lt;group&gt; resource.")]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("mt", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("mt", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum MemberType
 	{
 		[XmlEnumAttribute("0")]
@@ -5310,14 +5316,14 @@ namespace Aetheros.Schema.OneM2M
 		[XmlEnumAttribute("20002")]
 		Latest = 20002,
 	}
-	
+
 	/// <summary>
 	/// <para>Used for consistencyStrategy attribute in &lt;group&gt; resource.</para>
 	/// </summary>
 	[System.ComponentModel.DescriptionAttribute("Used for consistencyStrategy attribute in &lt;group&gt; resource.")]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("csy", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("csy", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum ConsistencyStrategy
 	{
 		[XmlEnumAttribute("1")]
@@ -5329,14 +5335,14 @@ namespace Aetheros.Schema.OneM2M
 		[XmlEnumAttribute("3")]
 		SetMixed = 3,
 	}
-	
+
 	/// <summary>
 	/// <para>Used for cmdType attribute in &lt;mgmtCmd&gt; resource.</para>
 	/// </summary>
 	[System.ComponentModel.DescriptionAttribute("Used for cmdType attribute in &lt;mgmtCmd&gt; resource.")]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("cmt", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("cmt", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum CmdType
 	{
 		[XmlEnumAttribute("1")]
@@ -5378,7 +5384,7 @@ namespace Aetheros.Schema.OneM2M
 		[XmlEnumAttribute("1005")]
 		Item1005 = 1005,
 	}
-	
+
 	/// <summary>
 	/// <para>Used for execModeType attribute in &lt;mgmtCmd&gt; and &lt;execInstance&gt; resource.</para>
 	/// </summary>
@@ -5386,7 +5392,7 @@ namespace Aetheros.Schema.OneM2M
 		"rce.")]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("execModeType", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("execModeType", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum ExecModeType
 	{
 		[XmlEnumAttribute("1")]
@@ -5401,14 +5407,14 @@ namespace Aetheros.Schema.OneM2M
 		[XmlEnumAttribute("4")]
 		RandomRepeat = 4,
 	}
-	
+
 	/// <summary>
 	/// <para>Used for execStatusType attribute in &lt;execInstance&gt; resource.</para>
 	/// </summary>
 	[System.ComponentModel.DescriptionAttribute("Used for execStatusType attribute in &lt;execInstance&gt; resource.")]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("execStatusType", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("execStatusType", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum ExecStatusType
 	{
 		[XmlEnumAttribute("1")]
@@ -5432,7 +5438,7 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("execResultType", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("execResultType", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum ExecResultType
 	{
 		[XmlEnumAttribute("1")]
@@ -5519,14 +5525,14 @@ namespace Aetheros.Schema.OneM2M
 		[XmlEnumAttribute("30")]
 		StatusInvalidDeploymentUnitUpdateVersionExists = 30,
 	}
-	
+
 	/// <summary>
 	/// <para>This is used for pendingNotification attribute in &lt;subscription&gt; resource.</para>
 	/// </summary>
 	[System.ComponentModel.DescriptionAttribute("This is used for pendingNotification attribute in &lt;subscription&gt; resource.")]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("pn", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("pn", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum PendingNotification
 	{
 		[XmlEnumAttribute("1")]
@@ -5538,7 +5544,7 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("nct", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("nct", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum NotificationContentType
 	{
 		[XmlEnumAttribute("1")]
@@ -5550,7 +5556,7 @@ namespace Aetheros.Schema.OneM2M
 		[XmlEnumAttribute("3")]
 		ResourceID = 3,
 	}
-	
+
 	/// <summary>
 	/// <para>Used in the notificationEventType element of eventNotificationCriteria attribute of subscription resource 
 	///				and in the Notification data object</para>
@@ -5559,7 +5565,7 @@ namespace Aetheros.Schema.OneM2M
 		"of subscription resource and in the Notification data object")]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("net", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("net", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum NotificationEventType
 	{
 		[XmlEnumAttribute("1")]
@@ -5577,14 +5583,14 @@ namespace Aetheros.Schema.OneM2M
 		[XmlEnumAttribute("5")]
 		RetrieveContainer = 5,
 	}
-	
+
 	/// <summary>
 	/// <para>This is used for [battery] resource.</para>
 	/// </summary>
 	[System.ComponentModel.DescriptionAttribute("This is used for [battery] resource.")]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("bts", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("bts", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum BatteryStatus
 	{
 		[XmlEnumAttribute("1")]
@@ -5608,14 +5614,14 @@ namespace Aetheros.Schema.OneM2M
 		[XmlEnumAttribute("7")]
 		Unknown = 7,
 	}
-	
+
 	/// <summary>
 	/// <para>Used for the logTypeId attribute of [eventLog] Management Resource.</para>
 	/// </summary>
 	[System.ComponentModel.DescriptionAttribute("Used for the logTypeId attribute of [eventLog] Management Resource.")]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("lgt", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("lgt", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum LogTypeId
 	{
 		[XmlEnumAttribute("1")]
@@ -5633,14 +5639,14 @@ namespace Aetheros.Schema.OneM2M
 		[XmlEnumAttribute("5")]
 		Panic = 5,
 	}
-	
+
 	/// <summary>
 	/// <para>Used for the logStatus attribute of [eventLog] Management Resource.</para>
 	/// </summary>
 	[System.ComponentModel.DescriptionAttribute("Used for the logStatus attribute of [eventLog] Management Resource.")]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("lgst", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("lgst", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum LogStatus
 	{
 		[XmlEnumAttribute("1")]
@@ -5661,7 +5667,7 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("evt", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("evt", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum EventType
 	{
 		[XmlEnumAttribute("1")]
@@ -5676,7 +5682,7 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("statsRuleStatusType", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("statsRuleStatusType", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum StatsRuleStatusType
 	{
 		[XmlEnumAttribute("1")]
@@ -5688,7 +5694,7 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("statModelType", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("statModelType", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum StatModelType
 	{
 		[XmlEnumAttribute("1")]
@@ -5697,7 +5703,7 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("encodingType", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("encodingType", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum EncodingType
 	{
 		[XmlEnumAttribute("0")]
@@ -5709,14 +5715,14 @@ namespace Aetheros.Schema.OneM2M
 		[XmlEnumAttribute("2")]
 		Base64Binary = 2,
 	}
-	
+
 	/// <summary>
 	/// <para>Used in filterCriteria</para>
 	/// </summary>
 	[System.ComponentModel.DescriptionAttribute("Used in filterCriteria")]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("notificationTargetPolicyAction", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("notificationTargetPolicyAction", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum NotificationTargetPolicyAction
 	{
 		[XmlEnumAttribute("1")]
@@ -5734,7 +5740,7 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("logicalOperator", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("logicalOperator", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum LogicalOperator
 	{
 		[XmlEnumAttribute("1")]
@@ -5743,14 +5749,14 @@ namespace Aetheros.Schema.OneM2M
 		[XmlEnumAttribute("2")]
 		OR = 2,
 	}
-	
+
 	/// <summary>
 	/// <para>Used for direction attribute of allJoynApp resource</para>
 	/// </summary>
 	[System.ComponentModel.DescriptionAttribute("Used for direction attribute of allJoynApp resource")]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("allJoynDirection", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("allJoynDirection", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum AllJoynDirection
 	{
 		[XmlEnumAttribute("1")]
@@ -5759,14 +5765,14 @@ namespace Aetheros.Schema.OneM2M
 		[XmlEnumAttribute("2")]
 		Onem2mToAlljoyn = 2,
 	}
-	
+
 	/// <summary>
 	/// <para>Used in m2m:contentInfo</para>
 	/// </summary>
 	[System.ComponentModel.DescriptionAttribute("Used in m2m:contentInfo")]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("contentSecurity", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("contentSecurity", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum ContentSecurity
 	{
 		[XmlEnumAttribute("0")]
@@ -5787,14 +5793,14 @@ namespace Aetheros.Schema.OneM2M
 		[XmlEnumAttribute("5")]
 		XmlBase64 = 5,
 	}
-	
+
 	/// <summary>
 	/// <para>Used for periodicIndicator attribute of trafficPattern resource</para>
 	/// </summary>
 	[System.ComponentModel.DescriptionAttribute("Used for periodicIndicator attribute of trafficPattern resource")]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("pri", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("pri", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum PeriodicIndicator
 	{
 		[XmlEnumAttribute("1")]
@@ -5803,14 +5809,14 @@ namespace Aetheros.Schema.OneM2M
 		[XmlEnumAttribute("2")]
 		OnDemand = 2,
 	}
-	
+
 	/// <summary>
 	/// <para>Used for periodicIndicator attribute of trafficPattern resource</para>
 	/// </summary>
 	[System.ComponentModel.DescriptionAttribute("Used for periodicIndicator attribute of trafficPattern resource")]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("sti", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("sti", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum StationaryIndication
 	{
 		[XmlEnumAttribute("1")]
@@ -5822,17 +5828,17 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("agn", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("agn", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("agn")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("aggregatedNotification", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("aggregatedNotification", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class AggregatedNotification<TPrimitiveContent> where TPrimitiveContent : PrimitiveContent
 	{
 		[JsonPropertyAttribute("sgn")]
-		[XmlElementAttribute("sgn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sgn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Notification<TPrimitiveContent>> Notification { get; set; } = System.Array.Empty<Notification<TPrimitiveContent>>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Notification-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Notification collection is empty.</para>
@@ -5847,24 +5853,24 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("sgn", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("sgn", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("sgn")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("notification", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("notification", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class Notification<TPrimitiveContent> where TPrimitiveContent : PrimitiveContent
 	{
 		[JsonPropertyAttribute("nev")]
-		[XmlElementAttribute("nev", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("nev", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public NotificationNotificationEvent<TPrimitiveContent> NotificationEvent { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("vrq", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("vrq", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool VerificationRequestValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die VerificationRequest-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the VerificationRequest property is specified.</para>
@@ -5895,9 +5901,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("sud", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("sud", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool SubscriptionDeletionValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SubscriptionDeletion-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the SubscriptionDeletion property is specified.</para>
@@ -5925,45 +5931,45 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("sur")]
-		[XmlElementAttribute("sur", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("sur", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string SubscriptionReference { get; set; }
 
 		[JsonPropertyAttribute("cr")]
-		[XmlElementAttribute("cr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("cr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string Creator { get; set; }
 
 		[JsonPropertyAttribute("nfu")]
-		[XmlElementAttribute("nfu", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("nfu", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string NotificationForwardingURI { get; set; }
 
 		[JsonPropertyAttribute("idr")]
-		[XmlElementAttribute("idr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("idr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public NotificationIPEDiscoveryRequest IPEDiscoveryRequest { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("NotificationNotificationEvent", Namespace="http://www.onem2m.org/xml/protocols", AnonymousType=true)]
+	[XmlTypeAttribute("NotificationNotificationEvent", Namespace = "http://www.onem2m.org/xml/protocols", AnonymousType = true)]
 	[JsonObjectAttribute("NotificationNotificationEvent")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class NotificationNotificationEvent<TPrimitiveContent> where TPrimitiveContent : PrimitiveContent
 	{
 		[JsonPropertyAttribute("rep")]
-		[XmlElementAttribute("rep", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("rep", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public object Representation { get; set; }
 
 		[JsonPropertyAttribute("om")]
-		[XmlElementAttribute("om", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("om", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public NotificationNotificationEventOperationMonitor OperationMonitor { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("net", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("net", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.NotificationEventType NotificationEventTypeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die NotificationEventType-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the NotificationEventType property is specified.</para>
@@ -5993,7 +5999,7 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("NotificationNotificationEventOperationMonitor", Namespace="http://www.onem2m.org/xml/protocols", AnonymousType=true)]
+	[XmlTypeAttribute("NotificationNotificationEventOperationMonitor", Namespace = "http://www.onem2m.org/xml/protocols", AnonymousType = true)]
 	[JsonObjectAttribute("NotificationNotificationEventOperationMonitor")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6003,9 +6009,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("op", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("op", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.Operation OperationValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Operation-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the Operation property is specified.</para>
@@ -6033,43 +6039,43 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("org")]
-		[XmlElementAttribute("org", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("org", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string Originator { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("NotificationIPEDiscoveryRequest", Namespace="http://www.onem2m.org/xml/protocols", AnonymousType=true)]
+	[XmlTypeAttribute("NotificationIPEDiscoveryRequest", Namespace = "http://www.onem2m.org/xml/protocols", AnonymousType = true)]
 	[JsonObjectAttribute("NotificationIPEDiscoveryRequest")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class NotificationIPEDiscoveryRequest
 	{
 		[JsonPropertyAttribute("org")]
-		[XmlElementAttribute("org", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("org", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string Originator { get; set; }
 
 		[JsonPropertyAttribute("fc")]
-		[XmlElementAttribute("fc", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("fc", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.FilterCriteria FilterCriteria { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("seci", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("seci", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("seci")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("securityInfo", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("securityInfo", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class SecurityInfo
 	{
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("sit", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sit", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public SecurityInfoType SecurityInfoTypeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SecurityInfoType-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the SecurityInfoType property is specified.</para>
@@ -6097,34 +6103,34 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("daq")]
-		[XmlElementAttribute("daq", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("daq", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.DynAuthDasRequest DasRequest { get; set; }
 
 		[JsonPropertyAttribute("dres")]
-		[XmlElementAttribute("dres", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("dres", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public DynAuthDasResponse DasResponse { get; set; }
 
 		[JsonPropertyAttribute("ero")]
-		[XmlElementAttribute("ero", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ero", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.ReceiverESPrimRandObject EsprimRandObject { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="en">Pattern: ([a-zA-Z0-9\-_=]+)\.([a-zA-Z0-9\-_=]*)\.([a-zA-Z0-9\-_=]*)\.([a-zA-Z0-9\-_=]*)\.([A-Za-z0-9\-_=])+.</para>
 		/// </summary>
 		[System.ComponentModel.DataAnnotations.RegularExpressionAttribute("([a-zA-Z0-9\\-_=]+)\\.([a-zA-Z0-9\\-_=]*)\\.([a-zA-Z0-9\\-_=]*)\\.([a-zA-Z0-9\\-_=]*)\\.(" +
 			"[A-Za-z0-9\\-_=])+")]
 		[JsonPropertyAttribute("epo")]
-		[XmlElementAttribute("epo", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("epo", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string EsprimObject { get; set; }
 
 		[JsonPropertyAttribute("eckm")]
-		[XmlElementAttribute("eckm", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary")]
+		[XmlElementAttribute("eckm", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "base64Binary")]
 		public byte[] EscertkeMessage { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("sit", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("sit", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum SecurityInfoType
 	{
 		[XmlEnumAttribute("1")]
@@ -6148,20 +6154,20 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("dynAuthDasResponse", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("dynAuthDasResponse", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("dynAuthDasResponse")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class DynAuthDasResponse
 	{
 		[JsonPropertyAttribute("dai")]
-		[XmlElementAttribute("dai", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("dai", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public DynAuthDasResponseDynamicACPInfo DynamicACPInfo { get; set; }
 
 		[JsonPropertyAttribute("tkns")]
-		[XmlElementAttribute("tkns", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("tkns", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<string> Tokens { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Tokens-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Tokens collection is empty.</para>
@@ -6176,7 +6182,7 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("DynAuthDasResponseDynamicACPInfo", Namespace="http://www.onem2m.org/xml/protocols", AnonymousType=true)]
+	[XmlTypeAttribute("DynAuthDasResponseDynamicACPInfo", Namespace = "http://www.onem2m.org/xml/protocols", AnonymousType = true)]
 	[JsonObjectAttribute("DynAuthDasResponseDynamicACPInfo")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6184,10 +6190,10 @@ namespace Aetheros.Schema.OneM2M
 	{
 		[JsonPropertyAttribute("gp")]
 		[JsonConverter(typeof(JsonArrayItem<AccessControlRule>), "acr")]
-		[XmlArrayAttribute("gp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-		[XmlArrayItemAttribute("acr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayAttribute("gp", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayItemAttribute("acr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.AccessControlRule> GrantedPrivileges { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.AccessControlRule>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die GrantedPrivileges-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the GrantedPrivileges collection is empty.</para>
@@ -6200,85 +6206,85 @@ namespace Aetheros.Schema.OneM2M
 		public bool GrantedPrivilegesSpecified => (this.GrantedPrivileges.Count != 0);
 
 		[JsonPropertyAttribute("pl")]
-		[XmlElementAttribute("pl", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("pl", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public string PrivilegesLifetime { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("resourceWrapper", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("resourceWrapper", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("resourceWrapper")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("resource", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("resource", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class ResourceWrapper
 	{
 		[JsonPropertyAttribute("m2m:sg_resource")]
-		[XmlElementAttribute("sg_resource", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sg_resource", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.Resource Sg_Resource { get; set; }
 
 		[JsonPropertyAttribute("m2m:sg_regularResource")]
-		[XmlElementAttribute("sg_regularResource", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sg_regularResource", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.RegularResource Sg_RegularResource { get; set; }
 
 		[JsonPropertyAttribute("m2m:sg_announcedResource")]
-		[XmlElementAttribute("sg_announcedResource", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sg_announcedResource", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.AnnouncedResource Sg_AnnouncedResource { get; set; }
 
 		[JsonPropertyAttribute("m2m:sg_announceableResource")]
-		[XmlElementAttribute("sg_announceableResource", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sg_announceableResource", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.AnnounceableResource Sg_AnnounceableResource { get; set; }
 
 		[JsonPropertyAttribute("m2m:sg_subordinateResource")]
-		[XmlElementAttribute("sg_subordinateResource", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sg_subordinateResource", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.SubordinateResource Sg_SubordinateResource { get; set; }
 
 		[JsonPropertyAttribute("m2m:sg_announcedSubordinateResource")]
-		[XmlElementAttribute("sg_announcedSubordinateResource", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sg_announcedSubordinateResource", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.AnnouncedSubordinateResource Sg_AnnouncedSubordinateResource { get; set; }
 
 		[JsonPropertyAttribute("m2m:sg_announceableSubordinateResource")]
-		[XmlElementAttribute("sg_announceableSubordinateResource", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sg_announceableSubordinateResource", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.AnnounceableSubordinateResource Sg_AnnounceableSubordinateResource { get; set; }
 
 		[JsonPropertyAttribute("m2m:sg_mgmtResource")]
-		[XmlElementAttribute("sg_mgmtResource", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sg_mgmtResource", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.MgmtResource Sg_MgmtResource { get; set; }
 
 		[JsonPropertyAttribute("m2m:sg_announcedMgmtResource")]
-		[XmlElementAttribute("sg_announcedMgmtResource", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sg_announcedMgmtResource", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.AnnouncedMgmtResource Sg_AnnouncedMgmtResource { get; set; }
 
 		[JsonPropertyAttribute("sg_flexContainerResource")]
-		[XmlElementAttribute("sg_flexContainerResource", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sg_flexContainerResource", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.FlexContainerResource Sg_FlexContainerResource { get; set; }
 
 		[JsonPropertyAttribute("sg_announcedFlexContainerResource")]
-		[XmlElementAttribute("sg_announcedFlexContainerResource", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sg_announcedFlexContainerResource", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.AnnouncedFlexContainerResource Sg_AnnouncedFlexContainerResource { get; set; }
 
 		[JsonPropertyAttribute("uri")]
-		[XmlElementAttribute("uri", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("uri", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string URI { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("agr", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("agr", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("agr")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("aggregatedResponse", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("aggregatedResponse", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class AggregatedResponse<TPrimitiveContent> where TPrimitiveContent : PrimitiveContent
 	{
 		[JsonPropertyAttribute("ri")]
-		[XmlElementAttribute("ri", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("ri", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string ResourceID { get; set; }
 
 		[JsonPropertyAttribute("rsp")]
-		[XmlElementAttribute("rsp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("rsp", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<ResponsePrimitive<TPrimitiveContent>> ResponsePrimitive { get; set; } = System.Array.Empty<ResponsePrimitive<TPrimitiveContent>>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ResponsePrimitive-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ResponsePrimitive collection is empty.</para>
@@ -6293,20 +6299,20 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("rsp", Namespace="http://www.onem2m.org/xml/protocols", AnonymousType=true)]
+	[XmlTypeAttribute("rsp", Namespace = "http://www.onem2m.org/xml/protocols", AnonymousType = true)]
 	[JsonObjectAttribute("rsp")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("responsePrimitive", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("responsePrimitive", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class ResponsePrimitive<TPrimitiveContent> where TPrimitiveContent : PrimitiveContent
 	{
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("rsc", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("rsc", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.ResponseStatusCode ResponseStatusCodeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ResponseStatusCode-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ResponseStatusCode property is specified.</para>
@@ -6334,28 +6340,28 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("rqi")]
-		[XmlElementAttribute("rqi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token")]
+		[XmlElementAttribute("rqi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "token")]
 		public string RequestIdentifier { get; set; }
 
 		[JsonPropertyAttribute("pc")]
-		[XmlElementAttribute("pc", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-	public TPrimitiveContent PrimitiveContent { get; set; }
+		[XmlElementAttribute("pc", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		public TPrimitiveContent PrimitiveContent { get; set; }
 
 		[JsonPropertyAttribute("to")]
-		[XmlElementAttribute("to", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("to", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string To { get; set; }
 
 		[JsonPropertyAttribute("fr")]
-		[XmlElementAttribute("fr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("fr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string From { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("ot", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("ot", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset OriginatingTimestampValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die OriginatingTimestamp-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the OriginatingTimestamp property is specified.</para>
@@ -6383,20 +6389,20 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("rset")]
-		[XmlElementAttribute("rset", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("rset", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public string ResultExpirationTimestamp { get; set; }
 
 		[JsonPropertyAttribute("ec")]
-		[XmlElementAttribute("ec", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ec", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public string EventCategory { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("cnst", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cnst", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.ContentStatus ContentStatusValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ContentStatus-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ContentStatus property is specified.</para>
@@ -6427,9 +6433,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("cnot", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cnot", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long ContentOffsetValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ContentOffset-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ContentOffset property is specified.</para>
@@ -6458,10 +6464,10 @@ namespace Aetheros.Schema.OneM2M
 
 		[JsonPropertyAttribute("ati")]
 		[JsonConverter(typeof(JsonArrayItem<DynAuthLocalTokenIdAssignmentsLocalTokenIdAssignment>), "ltia")]
-		[XmlArrayAttribute("ati", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-		[XmlArrayItemAttribute("ltia", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayAttribute("ati", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayItemAttribute("ltia", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.DynAuthLocalTokenIdAssignmentsLocalTokenIdAssignment> AssignedTokenIdentifiers { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.DynAuthLocalTokenIdAssignmentsLocalTokenIdAssignment>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AssignedTokenIdentifiers-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AssignedTokenIdentifiers collection is empty.</para>
@@ -6475,10 +6481,10 @@ namespace Aetheros.Schema.OneM2M
 
 		[JsonPropertyAttribute("tokenReqInfo")]
 		[JsonConverter(typeof(JsonArrayItem<DynAuthTokenReqInfoDasInfo>), "dasi")]
-		[XmlArrayAttribute("tokenReqInfo", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-		[XmlArrayItemAttribute("dasi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayAttribute("tokenReqInfo", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayItemAttribute("dasi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.DynAuthTokenReqInfoDasInfo> TokenReqInfo { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.DynAuthTokenReqInfoDasInfo>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die TokenReqInfo-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the TokenReqInfo collection is empty.</para>
@@ -6493,17 +6499,17 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("listOfChildResourceRef", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("listOfChildResourceRef", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("listOfChildResourceRef")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("resourceRefList", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("resourceRefList", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class ListOfChildResourceRef
 	{
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -6518,7 +6524,7 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("enc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("enc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("enc")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6528,9 +6534,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("crb", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("crb", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset CreatedBeforeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die CreatedBefore-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the CreatedBefore property is specified.</para>
@@ -6561,9 +6567,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("cra", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("cra", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset CreatedAfterValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die CreatedAfter-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the CreatedAfter property is specified.</para>
@@ -6594,9 +6600,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("ms", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("ms", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset ModifiedSinceValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ModifiedSince-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ModifiedSince property is specified.</para>
@@ -6627,9 +6633,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("us", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("us", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset UnmodifiedSinceValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die UnmodifiedSince-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the UnmodifiedSince property is specified.</para>
@@ -6660,9 +6666,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("sts", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sts", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long StateTagSmallerValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die StateTagSmaller-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the StateTagSmaller property is specified.</para>
@@ -6693,9 +6699,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("stb", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("stb", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long StateTagBiggerValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die StateTagBigger-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the StateTagBigger property is specified.</para>
@@ -6726,9 +6732,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("exb", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("exb", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset ExpireBeforeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ExpireBefore-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ExpireBefore property is specified.</para>
@@ -6759,9 +6765,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("exa", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("exa", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset ExpireAfterValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ExpireAfter-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ExpireAfter property is specified.</para>
@@ -6792,9 +6798,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("sza", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sza", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long SizeAboveValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SizeAbove-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the SizeAbove property is specified.</para>
@@ -6825,9 +6831,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("szb", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("szb", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long SizeBelowValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SizeBelow-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the SizeBelow property is specified.</para>
@@ -6855,9 +6861,9 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("om")]
-		[XmlElementAttribute("om", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("om", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Operation> OperationMonitor { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Operation>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die OperationMonitor-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the OperationMonitor collection is empty.</para>
@@ -6870,9 +6876,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool OperationMonitorSpecified => (this.OperationMonitor.Count != 0);
 
 		[JsonPropertyAttribute("atr")]
-		[XmlElementAttribute("atr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("atr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Attribute> Attribute { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Attribute>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Attribute-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Attribute collection is empty.</para>
@@ -6885,9 +6891,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool AttributeSpecified => (this.Attribute.Count != 0);
 
 		[JsonPropertyAttribute("net")]
-		[XmlElementAttribute("net", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("net", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.NotificationEventType> NotificationEventType { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.NotificationEventType>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die NotificationEventType-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the NotificationEventType collection is empty.</para>
@@ -6900,30 +6906,30 @@ namespace Aetheros.Schema.OneM2M
 		public bool NotificationEventTypeSpecified => (this.NotificationEventType.Count != 0);
 
 		[JsonPropertyAttribute("md")]
-		[XmlElementAttribute("md", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("md", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.MissingData MissingData { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("bn", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("bn", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("bn")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class BatchNotify
 	{
 		[JsonPropertyAttribute("num")]
-		[XmlElementAttribute("num", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("num", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long Number { get; set; }
 
 		[JsonPropertyAttribute("dur")]
-		[XmlElementAttribute("dur", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="duration")]
+		[XmlElementAttribute("dur", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "duration")]
 		public System.TimeSpan Duration { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("rl", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("rl", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("rl")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6933,9 +6939,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("mnn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mnn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long MaxNrOfNotifyValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MaxNrOfNotify-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the MaxNrOfNotify property is specified.</para>
@@ -6966,9 +6972,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("tww", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="duration")]
+		[XmlElementAttribute("tww", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "duration")]
 		public System.TimeSpan TimeWindowValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die TimeWindow-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the TimeWindow property is specified.</para>
@@ -6998,20 +7004,20 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("responseContent", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("responseContent", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("responseContent")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class ResponseContent<TPrimitiveContent> : Aetheros.Schema.OneM2M.PrimitiveContent where TPrimitiveContent : PrimitiveContent
 	{
 		[JsonPropertyAttribute("rce")]
-		[XmlElementAttribute("rce", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("rce", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.ResourceWrapper Resource { get; set; }
 
 		[JsonPropertyAttribute("m2m:uril")]
-		[XmlElementAttribute("uril", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("uril", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> URIList { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die URIList-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the URIList collection is empty.</para>
@@ -7024,19 +7030,19 @@ namespace Aetheros.Schema.OneM2M
 		public bool URIListSpecified => (this.URIList.Count != 0);
 
 		[JsonPropertyAttribute("uri")]
-		[XmlElementAttribute("uri", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("uri", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string URI { get; set; }
 
 		[JsonPropertyAttribute("agr")]
-		[XmlElementAttribute("agr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("agr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.AggregatedResponse<TPrimitiveContent> AggregatedResponse { get; set; }
 
 		[JsonPropertyAttribute("rrl")]
 		[JsonConverter(typeof(JsonArrayItem<ChildResourceRef>), "ch")]
-		[XmlArrayAttribute("rrl", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-		[XmlArrayItemAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayAttribute("rrl", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayItemAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ResourceRefList { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ResourceRefList-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ResourceRefList collection is empty.</para>
@@ -7049,35 +7055,35 @@ namespace Aetheros.Schema.OneM2M
 		public bool ResourceRefListSpecified => (this.ResourceRefList.Count != 0);
 
 		[JsonPropertyAttribute("m2m:dbg")]
-		[XmlElementAttribute("dbg", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("dbg", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string DebugInfo { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("acp", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("acp", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:acp")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("accessControlPolicy", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("accessControlPolicy", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class AccessControlPolicy : Aetheros.Schema.OneM2M.AnnounceableSubordinateResource
 	{
 		[JsonPropertyAttribute("pv")]
 		[JsonConverter(typeof(JsonArrayItem<AccessControlRule>), "acr")]
-		[XmlArrayAttribute("pv", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-		[XmlArrayItemAttribute("acr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayAttribute("pv", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayItemAttribute("acr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.AccessControlRule> Privileges { get; set; }
 
 		[JsonPropertyAttribute("pvs")]
 		[JsonConverter(typeof(JsonArrayItem<AccessControlRule>), "acr")]
-		[XmlArrayAttribute("pvs", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-		[XmlArrayItemAttribute("acr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayAttribute("pvs", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayItemAttribute("acr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.AccessControlRule> SelfPrivileges { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -7090,9 +7096,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Subscription> Subscription { get; set; } = System.Array.Empty<Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -7107,28 +7113,28 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("sub", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("sub", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:sub")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("subscription", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("subscription", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class Subscription : Aetheros.Schema.OneM2M.RegularResource
 	{
 		[JsonPropertyAttribute("cr")]
-		[XmlElementAttribute("cr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("cr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string Creator { get; set; }
 
 		[JsonPropertyAttribute("enc")]
-		[XmlElementAttribute("enc", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("enc", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.EventNotificationCriteria EventNotificationCriteria { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("exc", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("exc", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long ExpirationCounterValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ExpirationCounter-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ExpirationCounter property is specified.</para>
@@ -7156,32 +7162,32 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("nu")]
-		[XmlElementAttribute("nu", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("nu", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> NotificationURI { get; set; }
 
 		[JsonPropertyAttribute("gpi")]
-		[XmlElementAttribute("gpi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("gpi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string GroupID { get; set; }
 
 		[JsonPropertyAttribute("nfu")]
-		[XmlElementAttribute("nfu", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("nfu", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string NotificationForwardingURI { get; set; }
 
 		[JsonPropertyAttribute("bn")]
-		[XmlElementAttribute("bn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("bn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.BatchNotify BatchNotify { get; set; }
 
 		[JsonPropertyAttribute("rl")]
-		[XmlElementAttribute("rl", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("rl", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.RateLimit RateLimit { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("psn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("psn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long PreSubscriptionNotifyValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die PreSubscriptionNotify-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the PreSubscriptionNotify property is specified.</para>
@@ -7212,9 +7218,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("pn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("pn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.PendingNotification PendingNotificationValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die PendingNotification-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the PendingNotification property is specified.</para>
@@ -7245,9 +7251,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("nsp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("nsp", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long NotificationStoragePriorityValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die NotificationStoragePriority-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the NotificationStoragePriority property is specified.</para>
@@ -7278,9 +7284,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("ln", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("ln", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool LatestNotifyValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die LatestNotify-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the LatestNotify property is specified.</para>
@@ -7311,9 +7317,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("nct", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("nct", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.NotificationContentType NotificationContentTypeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die NotificationContentType-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the NotificationContentType property is specified.</para>
@@ -7341,17 +7347,17 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("nec")]
-		[XmlElementAttribute("nec", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("nec", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public string NotificationEventCat { get; set; }
 
 		[JsonPropertyAttribute("su")]
-		[XmlElementAttribute("su", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("su", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string SubscriberURI { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -7364,9 +7370,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sch")]
-		[XmlElementAttribute("sch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Schedule> Schedule { get; set; } = System.Array.Empty<Schedule>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Schedule-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Schedule collection is empty.</para>
@@ -7379,9 +7385,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ScheduleSpecified => (this.Schedule.Count != 0);
 
 		[JsonPropertyAttribute("m2m:ntpr")]
-		[XmlElementAttribute("ntpr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ntpr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<NotificationTargetMgmtPolicyRef> NotificationTargetMgmtPolicyRef { get; set; } = System.Array.Empty<NotificationTargetMgmtPolicyRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die NotificationTargetMgmtPolicyRef-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the NotificationTargetMgmtPolicyRef collection is empty.</para>
@@ -7396,11 +7402,11 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("sch", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("sch", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:sch")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("schedule", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("schedule", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class Schedule : Aetheros.Schema.OneM2M.AnnounceableSubordinateResource
 	{
 		/// <summary>
@@ -7408,14 +7414,14 @@ namespace Aetheros.Schema.OneM2M
 		/// </summary>
 		[System.ComponentModel.DataAnnotations.RegularExpressionAttribute(@"(([*]|[1-5]?\d([,-/][1-5]?\d)*)\s+){2}([*]|((1?\d|2[0-3])([,-/](1?\d|2[0-3]))*))\s+([*]|(([1-9]|1\d|2\d|3[01])([,-/]([1-9]|1\d|2\d|3[01]))*))\s+([*]|(([1-9]|1[0-2])([,-/]([1-9]|1[0-2]))*))\s+([*]|([0-6]([,-/][0-6])*))\s+([*]|([2-9]\d\d\d)(([,-]([2-9]\d\d\d)([/][\d]?[\d]?[\d]?[\d])?)*))")]
 		[JsonPropertyAttribute("se")]
-		[XmlArrayAttribute("se", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-		[XmlArrayItemAttribute("sce", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlArrayAttribute("se", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayItemAttribute("sce", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public ICollection<string> ScheduleElement { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -7428,9 +7434,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Subscription> Subscription { get; set; } = System.Array.Empty<Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -7445,17 +7451,17 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("ntpr", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("ntpr", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:ntpr")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("notificationTargetMgmtPolicyRef", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("notificationTargetMgmtPolicyRef", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class NotificationTargetMgmtPolicyRef : Aetheros.Schema.OneM2M.RegularResource
 	{
 		[JsonPropertyAttribute("ntu")]
-		[XmlElementAttribute("ntu", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("ntu", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> NotificationTargetURI { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die NotificationTargetURI-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the NotificationTargetURI collection is empty.</para>
@@ -7468,13 +7474,13 @@ namespace Aetheros.Schema.OneM2M
 		public bool NotificationTargetURISpecified => (this.NotificationTargetURI.Count != 0);
 
 		[JsonPropertyAttribute("npi")]
-		[XmlElementAttribute("npi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("npi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string NotificationlPolicyID { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -7487,9 +7493,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Subscription> Subscription { get; set; } = System.Array.Empty<Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -7504,29 +7510,29 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("acpA", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("acpA", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:acpA")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("accessControlPolicyAnnc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("accessControlPolicyAnnc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class AccessControlPolicyAnnc : Aetheros.Schema.OneM2M.AnnouncedSubordinateResource
 	{
 		[JsonPropertyAttribute("pv")]
 		[JsonConverter(typeof(JsonArrayItem<AccessControlRule>), "acr")]
-		[XmlArrayAttribute("pv", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-		[XmlArrayItemAttribute("acr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayAttribute("pv", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayItemAttribute("acr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.AccessControlRule> Privileges { get; set; }
 
 		[JsonPropertyAttribute("pvs")]
 		[JsonConverter(typeof(JsonArrayItem<AccessControlRule>), "acr")]
-		[XmlArrayAttribute("pvs", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-		[XmlArrayItemAttribute("acr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayAttribute("pvs", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayItemAttribute("acr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.AccessControlRule> SelfPrivileges { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -7539,9 +7545,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Subscription> Subscription { get; set; } = System.Array.Empty<Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -7556,43 +7562,43 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("acmp", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("acmp", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:acmp")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("activeCmdhPolicy", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("activeCmdhPolicy", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class ActiveCmdhPolicy : Aetheros.Schema.OneM2M.MgmtResource
 	{
 		[JsonPropertyAttribute("acmlk")]
-		[XmlElementAttribute("acmlk", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("acmlk", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string ActiveCmdhPolicyLink { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("ae", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("ae", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:ae")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("AE", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("AE", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class AE : Aetheros.Schema.OneM2M.AnnounceableResource
 	{
 		[JsonPropertyAttribute("apn")]
-		[XmlElementAttribute("apn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("apn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string AppName { get; set; }
 
 		[JsonPropertyAttribute("api")]
-		[XmlElementAttribute("api", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("api", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string App_ID { get; set; }
 
 		[JsonPropertyAttribute("aei")]
-		[XmlElementAttribute("aei", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("aei", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string AE_ID { get; set; }
 
 		[JsonPropertyAttribute("poa")]
-		[XmlElementAttribute("poa", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("poa", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public ICollection<string> PointOfAccess { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die PointOfAccess-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the PointOfAccess collection is empty.</para>
@@ -7605,21 +7611,21 @@ namespace Aetheros.Schema.OneM2M
 		public bool PointOfAccessSpecified => (this.PointOfAccess.Count != 0);
 
 		[JsonPropertyAttribute("or")]
-		[XmlElementAttribute("or", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("or", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string OntologyRef { get; set; }
 
 		[JsonPropertyAttribute("nl")]
-		[XmlElementAttribute("nl", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("nl", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string NodeLink { get; set; }
 
 		[JsonPropertyAttribute("rr")]
-		[XmlElementAttribute("rr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("rr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool RequestReachability { get; set; }
 
 		[JsonPropertyAttribute("csz")]
-		[XmlElementAttribute("csz", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("csz", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.PermittedMediaTypes> ContentSerialization { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.PermittedMediaTypes>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ContentSerialization-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ContentSerialization collection is empty.</para>
@@ -7632,13 +7638,13 @@ namespace Aetheros.Schema.OneM2M
 		public bool ContentSerializationSpecified => (this.ContentSerialization.Count != 0);
 
 		[JsonPropertyAttribute("esi")]
-		[XmlElementAttribute("esi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("esi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.E2ESecInfo E2ESecInfo { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -7651,9 +7657,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:cnt")]
-		[XmlElementAttribute("cnt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cnt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Container> Container { get; set; } = System.Array.Empty<Container>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Container-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Container collection is empty.</para>
@@ -7666,9 +7672,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ContainerSpecified => (this.Container.Count != 0);
 
 		[JsonPropertyAttribute("m2m:grp")]
-		[XmlElementAttribute("grp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("grp", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Group> Group { get; set; } = System.Array.Empty<Group>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Group-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Group collection is empty.</para>
@@ -7681,9 +7687,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool GroupSpecified => (this.Group.Count != 0);
 
 		[JsonPropertyAttribute("m2m:acp")]
-		[XmlElementAttribute("acp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("acp", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.AccessControlPolicy> AccessControlPolicy { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.AccessControlPolicy>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AccessControlPolicy-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AccessControlPolicy collection is empty.</para>
@@ -7696,9 +7702,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool AccessControlPolicySpecified => (this.AccessControlPolicy.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -7711,9 +7717,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SubscriptionSpecified => (this.Subscription.Count != 0);
 
 		[JsonPropertyAttribute("m2m:pch")]
-		[XmlElementAttribute("pch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("pch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<PollingChannel> PollingChannel { get; set; } = System.Array.Empty<PollingChannel>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die PollingChannel-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the PollingChannel collection is empty.</para>
@@ -7726,9 +7732,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool PollingChannelSpecified => (this.PollingChannel.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sch")]
-		[XmlElementAttribute("sch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Schedule> Schedule { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Schedule>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Schedule-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Schedule collection is empty.</para>
@@ -7741,9 +7747,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ScheduleSpecified => (this.Schedule.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smd")]
-		[XmlElementAttribute("smd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<SemanticDescriptor> SemanticDescriptor { get; set; } = System.Array.Empty<SemanticDescriptor>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptor-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptor collection is empty.</para>
@@ -7756,9 +7762,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorSpecified => (this.SemanticDescriptor.Count != 0);
 
 		[JsonPropertyAttribute("m2m:ts")]
-		[XmlElementAttribute("ts", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ts", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<TimeSeries> TimeSeries { get; set; } = System.Array.Empty<TimeSeries>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die TimeSeries-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the TimeSeries collection is empty.</para>
@@ -7771,9 +7777,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool TimeSeriesSpecified => (this.TimeSeries.Count != 0);
 
 		[JsonPropertyAttribute("m2m:trpt")]
-		[XmlElementAttribute("trpt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("trpt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<TrafficPattern> TrafficPattern { get; set; } = System.Array.Empty<TrafficPattern>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die TrafficPattern-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the TrafficPattern collection is empty.</para>
@@ -7786,9 +7792,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool TrafficPatternSpecified => (this.TrafficPattern.Count != 0);
 
 		[JsonPropertyAttribute("sg_flexContainerResource")]
-		[XmlElementAttribute("sg_flexContainerResource", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sg_flexContainerResource", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.FlexContainerResource> Sg_FlexContainerResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.FlexContainerResource>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Sg_FlexContainerResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Sg_FlexContainerResource collection is empty.</para>
@@ -7803,28 +7809,28 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("cnt", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("cnt", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:cnt")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("container", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("container", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class Container : Aetheros.Schema.OneM2M.AnnounceableResource
 	{
 		[JsonPropertyAttribute("st")]
-		[XmlElementAttribute("st", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("st", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long StateTag { get; set; }
 
 		[JsonPropertyAttribute("cr")]
-		[XmlElementAttribute("cr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("cr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string Creator { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("mni", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mni", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long MaxNrOfInstancesValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MaxNrOfInstances-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the MaxNrOfInstances property is specified.</para>
@@ -7855,9 +7861,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("mbs", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mbs", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long MaxByteSizeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MaxByteSize-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the MaxByteSize property is specified.</para>
@@ -7888,9 +7894,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("mia", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mia", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long MaxInstanceAgeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MaxInstanceAge-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the MaxInstanceAge property is specified.</para>
@@ -7918,28 +7924,28 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("cni")]
-		[XmlElementAttribute("cni", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cni", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long CurrentNrOfInstances { get; set; }
 
 		[JsonPropertyAttribute("cbs")]
-		[XmlElementAttribute("cbs", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cbs", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long CurrentByteSize { get; set; }
 
 		[JsonPropertyAttribute("li")]
-		[XmlElementAttribute("li", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("li", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string LocationID { get; set; }
 
 		[JsonPropertyAttribute("or")]
-		[XmlElementAttribute("or", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("or", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string OntologyRef { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("disr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("disr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool DisableRetrievalValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die DisableRetrieval-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the DisableRetrieval property is specified.</para>
@@ -7967,9 +7973,9 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -7982,9 +7988,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:cin")]
-		[XmlElementAttribute("cin", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cin", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<ContentInstance> ContentInstance { get; set; } = System.Array.Empty<ContentInstance>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ContentInstance-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ContentInstance collection is empty.</para>
@@ -7997,9 +8003,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ContentInstanceSpecified => (this.ContentInstance.Count != 0);
 
 		[JsonPropertyAttribute("m2m:cnt")]
-		[XmlElementAttribute("cnt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cnt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Container> ContainerProperty { get; set; } = System.Array.Empty<Container>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ContainerProperty-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ContainerProperty collection is empty.</para>
@@ -8012,9 +8018,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ContainerPropertySpecified => (this.ContainerProperty.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -8027,9 +8033,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SubscriptionSpecified => (this.Subscription.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smd")]
-		[XmlElementAttribute("smd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<SemanticDescriptor> SemanticDescriptor { get; set; } = System.Array.Empty<SemanticDescriptor>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptor-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptor collection is empty.</para>
@@ -8042,9 +8048,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorSpecified => (this.SemanticDescriptor.Count != 0);
 
 		[JsonPropertyAttribute("sg_flexContainerResource")]
-		[XmlElementAttribute("sg_flexContainerResource", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sg_flexContainerResource", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.FlexContainerResource> Sg_FlexContainerResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.FlexContainerResource>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Sg_FlexContainerResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Sg_FlexContainerResource collection is empty.</para>
@@ -8055,43 +8061,44 @@ namespace Aetheros.Schema.OneM2M
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
 		public bool Sg_FlexContainerResourceSpecified => (this.Sg_FlexContainerResource.Count != 0);
+
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("cin", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("cin", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:cin")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("contentInstance", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("contentInstance", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class ContentInstance : Aetheros.Schema.OneM2M.AnnounceableSubordinateResource
 	{
 		[JsonPropertyAttribute("st")]
-		[XmlElementAttribute("st", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("st", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long StateTag { get; set; }
 
 		[JsonPropertyAttribute("cr")]
-		[XmlElementAttribute("cr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("cr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string Creator { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="en">Pattern: ([\w/!#$^_.+&\-]+(:[0-2])?)|([\w/!#$^_.+&\-]+((:[0-2])?)+((:[0-5])?)).</para>
 		/// </summary>
 		[System.ComponentModel.DataAnnotations.RegularExpressionAttribute("([\\w/!#$^_.+&\\-]+(:[0-2])?)|([\\w/!#$^_.+&\\-]+((:[0-2])?)+((:[0-5])?))")]
 		[JsonPropertyAttribute("cnf")]
-		[XmlElementAttribute("cnf", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("cnf", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string ContentInfo { get; set; }
 
 		[JsonPropertyAttribute("cs")]
-		[XmlElementAttribute("cs", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cs", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long ContentSize { get; set; }
 
 		[JsonPropertyAttribute("conr")]
 		[JsonConverter(typeof(JsonArrayItem<ContentRefURIReference>), "urir")]
-		[XmlArrayAttribute("conr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-		[XmlArrayItemAttribute("urir", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayAttribute("conr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayItemAttribute("urir", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ContentRefURIReference> ContentRef { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ContentRefURIReference>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ContentRef-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ContentRef collection is empty.</para>
@@ -8104,17 +8111,17 @@ namespace Aetheros.Schema.OneM2M
 		public bool ContentRefSpecified => (this.ContentRef.Count != 0);
 
 		[JsonPropertyAttribute("or")]
-		[XmlElementAttribute("or", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("or", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string OntologyRef { get; set; }
 
 		[JsonPropertyAttribute("con")]
-		[XmlElementAttribute("con", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("con", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public object Content { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -8127,9 +8134,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smd")]
-		[XmlElementAttribute("smd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<SemanticDescriptor> SemanticDescriptor { get; set; } = System.Array.Empty<SemanticDescriptor>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptor-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptor collection is empty.</para>
@@ -8144,41 +8151,41 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("smd", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("smd", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:smd")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("semanticDescriptor", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("semanticDescriptor", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class SemanticDescriptor : Aetheros.Schema.OneM2M.AnnounceableResource
 	{
 		[JsonPropertyAttribute("cr")]
-		[XmlElementAttribute("cr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("cr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string Creator { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="en">Pattern: application\/rdf\+xml\:1.</para>
 		/// </summary>
 		[System.ComponentModel.DataAnnotations.RegularExpressionAttribute("application\\/rdf\\+xml\\:1")]
 		[JsonPropertyAttribute("dcrp")]
-		[XmlElementAttribute("dcrp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("dcrp", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string DescriptorRepresentation { get; set; }
 
 		[JsonPropertyAttribute("soe")]
-		[XmlElementAttribute("soe", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("soe", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string SemanticOpExec { get; set; }
 
 		[JsonPropertyAttribute("dsp")]
-		[XmlElementAttribute("dsp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary")]
+		[XmlElementAttribute("dsp", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "base64Binary")]
 		public byte[] Descriptor { get; set; }
 
 		[JsonPropertyAttribute("or")]
-		[XmlElementAttribute("or", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("or", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string OntologyRef { get; set; }
 
 		[JsonPropertyAttribute("rels")]
-		[XmlElementAttribute("rels", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("rels", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> RelatedSemantics { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die RelatedSemantics-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the RelatedSemantics collection is empty.</para>
@@ -8191,9 +8198,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool RelatedSemanticsSpecified => (this.RelatedSemantics.Count != 0);
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -8206,9 +8213,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -8223,24 +8230,24 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("grp", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("grp", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:grp")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("group", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("group", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class Group : Aetheros.Schema.OneM2M.AnnounceableResource
 	{
 		[JsonPropertyAttribute("cr")]
-		[XmlElementAttribute("cr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("cr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string Creator { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("mt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.MemberType MemberTypeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MemberType-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the MemberType property is specified.</para>
@@ -8268,21 +8275,21 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("cnm")]
-		[XmlElementAttribute("cnm", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cnm", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long CurrentNrOfMembers { get; set; }
 
 		[JsonPropertyAttribute("mnm")]
-		[XmlElementAttribute("mnm", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mnm", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long MaxNrOfMembers { get; set; }
 
 		[JsonPropertyAttribute("mid")]
-		[XmlElementAttribute("mid", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("mid", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> MemberIDs { get; set; }
 
 		[JsonPropertyAttribute("macp")]
-		[XmlElementAttribute("macp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("macp", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> MembersAccessControlPolicyIDs { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MembersAccessControlPolicyIDs-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the MembersAccessControlPolicyIDs collection is empty.</para>
@@ -8295,16 +8302,16 @@ namespace Aetheros.Schema.OneM2M
 		public bool MembersAccessControlPolicyIDsSpecified => (this.MembersAccessControlPolicyIDs.Count != 0);
 
 		[JsonPropertyAttribute("mtv")]
-		[XmlElementAttribute("mtv", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("mtv", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool MemberTypeValidated { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("csy", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("csy", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.ConsistencyStrategy ConsistencyStrategyValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ConsistencyStrategy-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ConsistencyStrategy property is specified.</para>
@@ -8332,13 +8339,13 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("gn")]
-		[XmlElementAttribute("gn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("gn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string GroupName { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -8351,9 +8358,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -8366,9 +8373,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SubscriptionSpecified => (this.Subscription.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smd")]
-		[XmlElementAttribute("smd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<SemanticDescriptor> SemanticDescriptor { get; set; } = System.Array.Empty<SemanticDescriptor>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptor-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptor collection is empty.</para>
@@ -8383,39 +8390,39 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("pch", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("pch", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:pch")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("pollingChannel", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("pollingChannel", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class PollingChannel : Aetheros.Schema.OneM2M.SubordinateResource
 	{
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("ts", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("ts", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:ts")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("timeSeries", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("timeSeries", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class TimeSeries : Aetheros.Schema.OneM2M.AnnounceableResource
 	{
 		[JsonPropertyAttribute("st")]
-		[XmlElementAttribute("st", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("st", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long StateTag { get; set; }
 
 		[JsonPropertyAttribute("cr")]
-		[XmlElementAttribute("cr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("cr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string Creator { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("mni", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mni", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long MaxNrOfInstancesValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MaxNrOfInstances-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the MaxNrOfInstances property is specified.</para>
@@ -8446,9 +8453,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("mbs", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mbs", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long MaxByteSizeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MaxByteSize-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the MaxByteSize property is specified.</para>
@@ -8479,9 +8486,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("mia", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mia", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long MaxInstanceAgeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MaxInstanceAge-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the MaxInstanceAge property is specified.</para>
@@ -8509,20 +8516,20 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("cni")]
-		[XmlElementAttribute("cni", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cni", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long CurrentNrOfInstances { get; set; }
 
 		[JsonPropertyAttribute("cbs")]
-		[XmlElementAttribute("cbs", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cbs", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long CurrentByteSize { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("pei", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("pei", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long PeriodicIntervalValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die PeriodicInterval-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the PeriodicInterval property is specified.</para>
@@ -8553,9 +8560,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("mdd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("mdd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool MissingDataDetectValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MissingDataDetect-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the MissingDataDetect property is specified.</para>
@@ -8586,9 +8593,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("mdn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mdn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long MissingDataMaxNrValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MissingDataMaxNr-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the MissingDataMaxNr property is specified.</para>
@@ -8616,16 +8623,16 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("mdlt")]
-		[XmlElementAttribute("mdlt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mdlt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public string MissingDataList { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("mdc", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mdc", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long MissingDataCurrentNrValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MissingDataCurrentNr-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the MissingDataCurrentNr property is specified.</para>
@@ -8656,9 +8663,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("mdt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mdt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long MissingDataDetectTimerValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MissingDataDetectTimer-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the MissingDataDetectTimer property is specified.</para>
@@ -8686,21 +8693,21 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("or")]
-		[XmlElementAttribute("or", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("or", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string OntologyRef { get; set; }
 
 		[JsonPropertyAttribute("la")]
-		[XmlElementAttribute("la", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("la", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string Latest { get; set; }
 
 		[JsonPropertyAttribute("ol")]
-		[XmlElementAttribute("ol", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("ol", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string Oldest { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -8713,9 +8720,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:tsi")]
-		[XmlElementAttribute("tsi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("tsi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<TimeSeriesInstance> TimeSeriesInstance { get; set; } = System.Array.Empty<TimeSeriesInstance>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die TimeSeriesInstance-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the TimeSeriesInstance collection is empty.</para>
@@ -8728,9 +8735,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool TimeSeriesInstanceSpecified => (this.TimeSeriesInstance.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -8743,9 +8750,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SubscriptionSpecified => (this.Subscription.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smd")]
-		[XmlElementAttribute("smd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<SemanticDescriptor> SemanticDescriptor { get; set; } = System.Array.Empty<SemanticDescriptor>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptor-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptor collection is empty.</para>
@@ -8760,28 +8767,28 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("tsi", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("tsi", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:tsi")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("timeSeriesInstance", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("timeSeriesInstance", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class TimeSeriesInstance : Aetheros.Schema.OneM2M.AnnounceableSubordinateResource
 	{
 		[JsonPropertyAttribute("dgt")]
-		[XmlElementAttribute("dgt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("dgt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public string DataGenerationTime { get; set; }
 
 		[JsonPropertyAttribute("con")]
-		[XmlElementAttribute("con", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("con", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public string Content { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("snr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("snr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long SequenceNrValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SequenceNr-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the SequenceNr property is specified.</para>
@@ -8811,20 +8818,20 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("trpt", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("trpt", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:trpt")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("trafficPattern", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("trafficPattern", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class TrafficPattern : Aetheros.Schema.OneM2M.AnnounceableResource
 	{
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("ptn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("ptn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool ProvideToNSEValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ProvideToNSE-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ProvideToNSE property is specified.</para>
@@ -8855,9 +8862,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("pri", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("pri", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.PeriodicIndicator PeriodicIndicatorValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die PeriodicIndicator-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the PeriodicIndicator property is specified.</para>
@@ -8888,9 +8895,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("pdt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="unsignedInt")]
+		[XmlElementAttribute("pdt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "unsignedInt")]
 		public uint PeriodicDurationTimeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die PeriodicDurationTime-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the PeriodicDurationTime property is specified.</para>
@@ -8921,9 +8928,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("pit", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="unsignedInt")]
+		[XmlElementAttribute("pit", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "unsignedInt")]
 		public uint PeriodicIntervalTimeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die PeriodicIntervalTime-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the PeriodicIntervalTime property is specified.</para>
@@ -8954,9 +8961,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("sti", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sti", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.StationaryIndication StationaryIndicationValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die StationaryIndication-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the StationaryIndication property is specified.</para>
@@ -8987,9 +8994,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("dsi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("dsi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long DataSizeIndicatorValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die DataSizeIndicator-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the DataSizeIndicator property is specified.</para>
@@ -9020,9 +9027,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("vdt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("vdt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset ValidityTimeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ValidityTime-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ValidityTime property is specified.</para>
@@ -9050,13 +9057,13 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("ttn")]
-		[XmlElementAttribute("ttn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("ttn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> TargetNetwork { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -9069,9 +9076,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -9084,9 +9091,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SubscriptionSpecified => (this.Subscription.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sch")]
-		[XmlElementAttribute("sch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Schedule> Schedule { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Schedule>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Schedule-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Schedule collection is empty.</para>
@@ -9101,29 +9108,29 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("aeA", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("aeA", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:aeA")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("AEAnnc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("AEAnnc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class AEAnnc : Aetheros.Schema.OneM2M.AnnouncedResource
 	{
 		[JsonPropertyAttribute("apn")]
-		[XmlElementAttribute("apn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("apn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string AppName { get; set; }
 
 		[JsonPropertyAttribute("api")]
-		[XmlElementAttribute("api", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("api", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string App_ID { get; set; }
 
 		[JsonPropertyAttribute("aei")]
-		[XmlElementAttribute("aei", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("aei", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string AE_ID { get; set; }
 
 		[JsonPropertyAttribute("poa")]
-		[XmlElementAttribute("poa", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("poa", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public ICollection<string> PointOfAccess { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die PointOfAccess-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the PointOfAccess collection is empty.</para>
@@ -9136,20 +9143,20 @@ namespace Aetheros.Schema.OneM2M
 		public bool PointOfAccessSpecified => (this.PointOfAccess.Count != 0);
 
 		[JsonPropertyAttribute("or")]
-		[XmlElementAttribute("or", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("or", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string OntologyRef { get; set; }
 
 		[JsonPropertyAttribute("nl")]
-		[XmlElementAttribute("nl", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("nl", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string NodeLink { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("rr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("rr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool RequestReachabilityValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die RequestReachability-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the RequestReachability property is specified.</para>
@@ -9177,9 +9184,9 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("csz")]
-		[XmlElementAttribute("csz", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("csz", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.PermittedMediaTypes> ContentSerialization { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.PermittedMediaTypes>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ContentSerialization-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ContentSerialization collection is empty.</para>
@@ -9192,13 +9199,13 @@ namespace Aetheros.Schema.OneM2M
 		public bool ContentSerializationSpecified => (this.ContentSerialization.Count != 0);
 
 		[JsonPropertyAttribute("esi")]
-		[XmlElementAttribute("esi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("esi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.E2ESecInfo E2ESecInfo { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -9211,9 +9218,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:cnt")]
-		[XmlElementAttribute("cnt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cnt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Container> Container { get; set; } = System.Array.Empty<Container>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Container-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Container collection is empty.</para>
@@ -9226,9 +9233,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ContainerSpecified => (this.Container.Count != 0);
 
 		[JsonPropertyAttribute("m2m:cntA")]
-		[XmlElementAttribute("cntA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cntA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<ContainerAnnc> ContainerAnnc { get; set; } = System.Array.Empty<ContainerAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ContainerAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ContainerAnnc collection is empty.</para>
@@ -9241,9 +9248,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ContainerAnncSpecified => (this.ContainerAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:grp")]
-		[XmlElementAttribute("grp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("grp", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Group> Group { get; set; } = System.Array.Empty<Group>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Group-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Group collection is empty.</para>
@@ -9256,9 +9263,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool GroupSpecified => (this.Group.Count != 0);
 
 		[JsonPropertyAttribute("m2m:grpA")]
-		[XmlElementAttribute("grpA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("grpA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<GroupAnnc> GroupAnnc { get; set; } = System.Array.Empty<GroupAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die GroupAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the GroupAnnc collection is empty.</para>
@@ -9271,9 +9278,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool GroupAnncSpecified => (this.GroupAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:acp")]
-		[XmlElementAttribute("acp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("acp", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.AccessControlPolicy> AccessControlPolicy { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.AccessControlPolicy>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AccessControlPolicy-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AccessControlPolicy collection is empty.</para>
@@ -9286,9 +9293,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool AccessControlPolicySpecified => (this.AccessControlPolicy.Count != 0);
 
 		[JsonPropertyAttribute("m2m:acpA")]
-		[XmlElementAttribute("acpA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("acpA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.AccessControlPolicyAnnc> AccessControlPolicyAnnc { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.AccessControlPolicyAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AccessControlPolicyAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AccessControlPolicyAnnc collection is empty.</para>
@@ -9301,9 +9308,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool AccessControlPolicyAnncSpecified => (this.AccessControlPolicyAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -9316,9 +9323,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SubscriptionSpecified => (this.Subscription.Count != 0);
 
 		[JsonPropertyAttribute("m2m:schA")]
-		[XmlElementAttribute("schA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("schA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<ScheduleAnnc> ScheduleAnnc { get; set; } = System.Array.Empty<ScheduleAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ScheduleAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ScheduleAnnc collection is empty.</para>
@@ -9331,9 +9338,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ScheduleAnncSpecified => (this.ScheduleAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smd")]
-		[XmlElementAttribute("smd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<SemanticDescriptor> SemanticDescriptor { get; set; } = System.Array.Empty<SemanticDescriptor>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptor-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptor collection is empty.</para>
@@ -9346,9 +9353,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorSpecified => (this.SemanticDescriptor.Count != 0);
 
 		[JsonPropertyAttribute("m2m:ts")]
-		[XmlElementAttribute("ts", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ts", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<TimeSeries> TimeSeries { get; set; } = System.Array.Empty<TimeSeries>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die TimeSeries-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the TimeSeries collection is empty.</para>
@@ -9361,9 +9368,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool TimeSeriesSpecified => (this.TimeSeries.Count != 0);
 
 		[JsonPropertyAttribute("m2m:tsa")]
-		[XmlElementAttribute("tsa", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("tsa", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<TimeSeriesAnnc> TimeSeriesAnnc { get; set; } = System.Array.Empty<TimeSeriesAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die TimeSeriesAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the TimeSeriesAnnc collection is empty.</para>
@@ -9376,9 +9383,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool TimeSeriesAnncSpecified => (this.TimeSeriesAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:trptA")]
-		[XmlElementAttribute("trptA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("trptA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<TrafficPatternAnnc> TrafficPatternAnnc { get; set; } = System.Array.Empty<TrafficPatternAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die TrafficPatternAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the TrafficPatternAnnc collection is empty.</para>
@@ -9391,9 +9398,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool TrafficPatternAnncSpecified => (this.TrafficPatternAnnc.Count != 0);
 
 		[JsonPropertyAttribute("sg_flexContainerResource")]
-		[XmlElementAttribute("sg_flexContainerResource", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sg_flexContainerResource", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.FlexContainerResource> Sg_FlexContainerResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.FlexContainerResource>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Sg_FlexContainerResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Sg_FlexContainerResource collection is empty.</para>
@@ -9406,9 +9413,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool Sg_FlexContainerResourceSpecified => (this.Sg_FlexContainerResource.Count != 0);
 
 		[JsonPropertyAttribute("sg_announcedFlexContainerResource")]
-		[XmlElementAttribute("sg_announcedFlexContainerResource", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sg_announcedFlexContainerResource", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.AnnouncedFlexContainerResource> Sg_AnnouncedFlexContainerResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.AnnouncedFlexContainerResource>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Sg_AnnouncedFlexContainerResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Sg_AnnouncedFlexContainerResource collection is empty.</para>
@@ -9423,24 +9430,24 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("cntA", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("cntA", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:cntA")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("containerAnnc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("containerAnnc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class ContainerAnnc : Aetheros.Schema.OneM2M.AnnouncedResource
 	{
 		[JsonPropertyAttribute("st")]
-		[XmlElementAttribute("st", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("st", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long StateTag { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("mni", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mni", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long MaxNrOfInstancesValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MaxNrOfInstances-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the MaxNrOfInstances property is specified.</para>
@@ -9471,9 +9478,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("mbs", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mbs", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long MaxByteSizeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MaxByteSize-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the MaxByteSize property is specified.</para>
@@ -9504,9 +9511,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("mia", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mia", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long MaxInstanceAgeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MaxInstanceAge-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the MaxInstanceAge property is specified.</para>
@@ -9537,9 +9544,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("cni", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cni", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long CurrentNrOfInstancesValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die CurrentNrOfInstances-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the CurrentNrOfInstances property is specified.</para>
@@ -9570,9 +9577,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("cbs", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cbs", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long CurrentByteSizeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die CurrentByteSize-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the CurrentByteSize property is specified.</para>
@@ -9600,20 +9607,20 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("li")]
-		[XmlElementAttribute("li", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("li", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string LocationID { get; set; }
 
 		[JsonPropertyAttribute("or")]
-		[XmlElementAttribute("or", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("or", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string OntologyRef { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("disr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("disr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool DisableRetrievalValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die DisableRetrieval-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the DisableRetrieval property is specified.</para>
@@ -9641,9 +9648,9 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -9656,9 +9663,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:cin")]
-		[XmlElementAttribute("cin", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cin", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<ContentInstance> ContentInstance { get; set; } = System.Array.Empty<ContentInstance>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ContentInstance-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ContentInstance collection is empty.</para>
@@ -9671,9 +9678,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ContentInstanceSpecified => (this.ContentInstance.Count != 0);
 
 		[JsonPropertyAttribute("m2m:cinA")]
-		[XmlElementAttribute("cinA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cinA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<ContentInstanceAnnc> ContentInstanceAnnc { get; set; } = System.Array.Empty<ContentInstanceAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ContentInstanceAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ContentInstanceAnnc collection is empty.</para>
@@ -9686,9 +9693,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ContentInstanceAnncSpecified => (this.ContentInstanceAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:cnt")]
-		[XmlElementAttribute("cnt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cnt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Container> Container { get; set; } = System.Array.Empty<Container>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Container-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Container collection is empty.</para>
@@ -9701,9 +9708,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ContainerSpecified => (this.Container.Count != 0);
 
 		[JsonPropertyAttribute("m2m:cntA")]
-		[XmlElementAttribute("cntA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cntA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<ContainerAnnc> ContainerAnncProperty { get; set; } = System.Array.Empty<ContainerAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ContainerAnncProperty-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ContainerAnncProperty collection is empty.</para>
@@ -9716,9 +9723,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ContainerAnncPropertySpecified => (this.ContainerAnncProperty.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -9731,9 +9738,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SubscriptionSpecified => (this.Subscription.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smd")]
-		[XmlElementAttribute("smd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<SemanticDescriptor> SemanticDescriptor { get; set; } = System.Array.Empty<SemanticDescriptor>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptor-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptor collection is empty.</para>
@@ -9746,9 +9753,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorSpecified => (this.SemanticDescriptor.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smdA")]
-		[XmlElementAttribute("smdA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smdA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<SemanticDescriptorAnnc> SemanticDescriptorAnnc { get; set; } = System.Array.Empty<SemanticDescriptorAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptorAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptorAnnc collection is empty.</para>
@@ -9761,9 +9768,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorAnncSpecified => (this.SemanticDescriptorAnnc.Count != 0);
 
 		[JsonPropertyAttribute("sg_flexContainerResource")]
-		[XmlElementAttribute("sg_flexContainerResource", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sg_flexContainerResource", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.FlexContainerResource> Sg_FlexContainerResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.FlexContainerResource>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Sg_FlexContainerResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Sg_FlexContainerResource collection is empty.</para>
@@ -9776,9 +9783,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool Sg_FlexContainerResourceSpecified => (this.Sg_FlexContainerResource.Count != 0);
 
 		[JsonPropertyAttribute("sg_announcedFlexContainerResource")]
-		[XmlElementAttribute("sg_announcedFlexContainerResource", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sg_announcedFlexContainerResource", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.AnnouncedFlexContainerResource> Sg_AnnouncedFlexContainerResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.AnnouncedFlexContainerResource>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Sg_AnnouncedFlexContainerResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Sg_AnnouncedFlexContainerResource collection is empty.</para>
@@ -9793,32 +9800,32 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("cinA", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("cinA", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:cinA")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("contentInstanceAnnc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("contentInstanceAnnc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class ContentInstanceAnnc : Aetheros.Schema.OneM2M.AnnouncedSubordinateResource
 	{
 		[JsonPropertyAttribute("st")]
-		[XmlElementAttribute("st", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("st", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long StateTag { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="en">Pattern: ([\w/!#$^_.+&\-]+(:[0-2])?)|([\w/!#$^_.+&\-]+((:[0-2])?)+((:[0-5])?)).</para>
 		/// </summary>
 		[System.ComponentModel.DataAnnotations.RegularExpressionAttribute("([\\w/!#$^_.+&\\-]+(:[0-2])?)|([\\w/!#$^_.+&\\-]+((:[0-2])?)+((:[0-5])?))")]
 		[JsonPropertyAttribute("cnf")]
-		[XmlElementAttribute("cnf", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("cnf", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string ContentInfo { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("cs", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cs", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long ContentSizeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ContentSize-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ContentSize property is specified.</para>
@@ -9846,17 +9853,17 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("or")]
-		[XmlElementAttribute("or", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("or", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string OntologyRef { get; set; }
 
 		[JsonPropertyAttribute("con")]
-		[XmlElementAttribute("con", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("con", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public object Content { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -9869,9 +9876,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smd")]
-		[XmlElementAttribute("smd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<SemanticDescriptor> SemanticDescriptor { get; set; } = System.Array.Empty<SemanticDescriptor>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptor-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptor collection is empty.</para>
@@ -9886,11 +9893,11 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("smdA", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("smdA", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:smdA")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("semanticDescriptorAnnc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("semanticDescriptorAnnc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class SemanticDescriptorAnnc : Aetheros.Schema.OneM2M.AnnouncedResource
 	{
 		/// <summary>
@@ -9898,25 +9905,25 @@ namespace Aetheros.Schema.OneM2M
 		/// </summary>
 		[System.ComponentModel.DataAnnotations.RegularExpressionAttribute("application\\/rdf\\+xml\\:1")]
 		[JsonPropertyAttribute("dcrp")]
-		[XmlElementAttribute("dcrp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("dcrp", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string DescriptorRepresentation { get; set; }
 
 		[JsonPropertyAttribute("soe")]
-		[XmlElementAttribute("soe", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("soe", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string SemanticOpExec { get; set; }
 
 		[JsonPropertyAttribute("dsp")]
-		[XmlElementAttribute("dsp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary")]
+		[XmlElementAttribute("dsp", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "base64Binary")]
 		public byte[] Descriptor { get; set; }
 
 		[JsonPropertyAttribute("or")]
-		[XmlElementAttribute("or", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("or", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string OntologyRef { get; set; }
 
 		[JsonPropertyAttribute("rels")]
-		[XmlElementAttribute("rels", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("rels", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> RelatedSemantics { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die RelatedSemantics-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the RelatedSemantics collection is empty.</para>
@@ -9929,9 +9936,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool RelatedSemanticsSpecified => (this.RelatedSemantics.Count != 0);
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -9944,9 +9951,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -9961,20 +9968,20 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("grpA", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("grpA", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:grpA")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("groupAnnc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("groupAnnc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class GroupAnnc : Aetheros.Schema.OneM2M.AnnouncedResource
 	{
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("mt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.MemberType MemberTypeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MemberType-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the MemberType property is specified.</para>
@@ -10005,9 +10012,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("cnm", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cnm", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long CurrentNrOfMembersValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die CurrentNrOfMembers-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the CurrentNrOfMembers property is specified.</para>
@@ -10038,9 +10045,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("mnm", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mnm", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long MaxNrOfMembersValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MaxNrOfMembers-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the MaxNrOfMembers property is specified.</para>
@@ -10068,13 +10075,13 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("mid")]
-		[XmlElementAttribute("mid", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mid", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public string[] MemberIDs { get; set; }
 
 		[JsonPropertyAttribute("macp")]
-		[XmlElementAttribute("macp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("macp", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> MembersAccessControlPolicyIDs { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MembersAccessControlPolicyIDs-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the MembersAccessControlPolicyIDs collection is empty.</para>
@@ -10090,9 +10097,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("mtv", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("mtv", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool MemberTypeValidatedValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MemberTypeValidated-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the MemberTypeValidated property is specified.</para>
@@ -10123,9 +10130,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("csy", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("csy", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.ConsistencyStrategy ConsistencyStrategyValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ConsistencyStrategy-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ConsistencyStrategy property is specified.</para>
@@ -10153,13 +10160,13 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("gn")]
-		[XmlElementAttribute("gn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("gn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string GroupName { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -10172,9 +10179,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -10187,9 +10194,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SubscriptionSpecified => (this.Subscription.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smd")]
-		[XmlElementAttribute("smd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<SemanticDescriptor> SemanticDescriptor { get; set; } = System.Array.Empty<SemanticDescriptor>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptor-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptor collection is empty.</para>
@@ -10202,9 +10209,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorSpecified => (this.SemanticDescriptor.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smdA")]
-		[XmlElementAttribute("smdA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smdA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<SemanticDescriptorAnnc> SemanticDescriptorAnnc { get; set; } = System.Array.Empty<SemanticDescriptorAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptorAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptorAnnc collection is empty.</para>
@@ -10219,11 +10226,11 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("schA", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("schA", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:schA")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("scheduleAnnc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("scheduleAnnc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class ScheduleAnnc : Aetheros.Schema.OneM2M.AnnouncedSubordinateResource
 	{
 		/// <summary>
@@ -10231,10 +10238,10 @@ namespace Aetheros.Schema.OneM2M
 		/// </summary>
 		[System.ComponentModel.DataAnnotations.RegularExpressionAttribute(@"(([*]|[1-5]?\d([,-/][1-5]?\d)*)\s+){2}([*]|((1?\d|2[0-3])([,-/](1?\d|2[0-3]))*))\s+([*]|(([1-9]|1\d|2\d|3[01])([,-/]([1-9]|1\d|2\d|3[01]))*))\s+([*]|(([1-9]|1[0-2])([,-/]([1-9]|1[0-2]))*))\s+([*]|([0-6]([,-/][0-6])*))\s+([*]|([2-9]\d\d\d)(([,-]([2-9]\d\d\d)([/][\d]?[\d]?[\d]?[\d])?)*))")]
 		[JsonPropertyAttribute("se")]
-		[XmlArrayAttribute("se", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-		[XmlArrayItemAttribute("sce", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlArrayAttribute("se", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayItemAttribute("sce", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public ICollection<string> ScheduleElement { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ScheduleElement-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ScheduleElement collection is empty.</para>
@@ -10249,20 +10256,20 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("tsa", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("tsa", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:tsa")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("timeSeriesAnnc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("timeSeriesAnnc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class TimeSeriesAnnc : Aetheros.Schema.OneM2M.AnnouncedResource
 	{
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("st", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("st", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long StateTagValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die StateTag-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the StateTag property is specified.</para>
@@ -10293,9 +10300,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("mni", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mni", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long MaxNrOfInstancesValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MaxNrOfInstances-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the MaxNrOfInstances property is specified.</para>
@@ -10326,9 +10333,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("mbs", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mbs", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long MaxByteSizeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MaxByteSize-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the MaxByteSize property is specified.</para>
@@ -10359,9 +10366,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("mia", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mia", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long MaxInstanceAgeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MaxInstanceAge-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the MaxInstanceAge property is specified.</para>
@@ -10389,20 +10396,20 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("cni")]
-		[XmlElementAttribute("cni", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cni", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long CurrentNrOfInstances { get; set; }
 
 		[JsonPropertyAttribute("cbs")]
-		[XmlElementAttribute("cbs", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cbs", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long CurrentByteSize { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("pei", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("pei", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long PeriodicIntervalValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die PeriodicInterval-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the PeriodicInterval property is specified.</para>
@@ -10433,9 +10440,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("mdd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("mdd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool MissingDataDetectValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MissingDataDetect-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the MissingDataDetect property is specified.</para>
@@ -10463,16 +10470,16 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("mdlt")]
-		[XmlElementAttribute("mdlt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mdlt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public string MissingDataList { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("mdc", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mdc", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long MissingDataCurrentNrValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MissingDataCurrentNr-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the MissingDataCurrentNr property is specified.</para>
@@ -10503,9 +10510,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("mdt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mdt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long MissingDataDetectTimerValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MissingDataDetectTimer-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the MissingDataDetectTimer property is specified.</para>
@@ -10533,13 +10540,13 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("or")]
-		[XmlElementAttribute("or", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("or", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string OntologyRef { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -10552,9 +10559,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:tsi")]
-		[XmlElementAttribute("tsi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("tsi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<TimeSeriesInstance> TimeSeriesInstance { get; set; } = System.Array.Empty<TimeSeriesInstance>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die TimeSeriesInstance-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the TimeSeriesInstance collection is empty.</para>
@@ -10567,9 +10574,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool TimeSeriesInstanceSpecified => (this.TimeSeriesInstance.Count != 0);
 
 		[JsonPropertyAttribute("m2m:tsia")]
-		[XmlElementAttribute("tsia", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("tsia", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<TimeSeriesInstanceAnnc> TimeSeriesInstanceAnnc { get; set; } = System.Array.Empty<TimeSeriesInstanceAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die TimeSeriesInstanceAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the TimeSeriesInstanceAnnc collection is empty.</para>
@@ -10582,9 +10589,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool TimeSeriesInstanceAnncSpecified => (this.TimeSeriesInstanceAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -10597,9 +10604,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SubscriptionSpecified => (this.Subscription.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smd")]
-		[XmlElementAttribute("smd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<SemanticDescriptor> SemanticDescriptor { get; set; } = System.Array.Empty<SemanticDescriptor>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptor-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptor collection is empty.</para>
@@ -10612,9 +10619,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorSpecified => (this.SemanticDescriptor.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smdA")]
-		[XmlElementAttribute("smdA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smdA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<SemanticDescriptorAnnc> SemanticDescriptorAnnc { get; set; } = System.Array.Empty<SemanticDescriptorAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptorAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptorAnnc collection is empty.</para>
@@ -10629,28 +10636,28 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("tsia", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("tsia", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:tsia")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("timeSeriesInstanceAnnc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("timeSeriesInstanceAnnc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class TimeSeriesInstanceAnnc : Aetheros.Schema.OneM2M.AnnouncedSubordinateResource
 	{
 		[JsonPropertyAttribute("dgt")]
-		[XmlElementAttribute("dgt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("dgt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public string DataGenerationTime { get; set; }
 
 		[JsonPropertyAttribute("con")]
-		[XmlElementAttribute("con", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("con", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public string Content { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("snr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("snr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long SequenceNrValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SequenceNr-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the SequenceNr property is specified.</para>
@@ -10680,20 +10687,20 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("trptA", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("trptA", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:trptA")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("trafficPatternAnnc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("trafficPatternAnnc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class TrafficPatternAnnc : Aetheros.Schema.OneM2M.AnnouncedResource
 	{
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("ptn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("ptn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool ProvideToNSEValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ProvideToNSE-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ProvideToNSE property is specified.</para>
@@ -10724,9 +10731,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("pri", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("pri", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.PeriodicIndicator PeriodicIndicatorValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die PeriodicIndicator-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the PeriodicIndicator property is specified.</para>
@@ -10757,9 +10764,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("pdt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="unsignedInt")]
+		[XmlElementAttribute("pdt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "unsignedInt")]
 		public uint PeriodicDurationTimeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die PeriodicDurationTime-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the PeriodicDurationTime property is specified.</para>
@@ -10790,9 +10797,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("pit", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="unsignedInt")]
+		[XmlElementAttribute("pit", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "unsignedInt")]
 		public uint PeriodicIntervalTimeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die PeriodicIntervalTime-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the PeriodicIntervalTime property is specified.</para>
@@ -10823,9 +10830,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("sti", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sti", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.StationaryIndication StationaryIndicationValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die StationaryIndication-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the StationaryIndication property is specified.</para>
@@ -10856,9 +10863,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("dsi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("dsi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long DataSizeIndicatorValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die DataSizeIndicator-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the DataSizeIndicator property is specified.</para>
@@ -10889,9 +10896,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("vdt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("vdt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset ValidityTimeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ValidityTime-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ValidityTime property is specified.</para>
@@ -10919,9 +10926,9 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("ttn")]
-		[XmlElementAttribute("ttn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("ttn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> TargetNetwork { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die TargetNetwork-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the TargetNetwork collection is empty.</para>
@@ -10934,9 +10941,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool TargetNetworkSpecified => (this.TargetNetwork.Count != 0);
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -10949,9 +10956,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -10964,9 +10971,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SubscriptionSpecified => (this.Subscription.Count != 0);
 
 		[JsonPropertyAttribute("m2m:schA")]
-		[XmlElementAttribute("schA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("schA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<ScheduleAnnc> ScheduleAnnc { get; set; } = System.Array.Empty<ScheduleAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ScheduleAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ScheduleAnnc collection is empty.</para>
@@ -10981,20 +10988,20 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("ajap", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("ajap", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("ajap")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("allJoynApp", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("allJoynApp", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class AllJoynApp : Aetheros.Schema.OneM2M.FlexContainerResource
 	{
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("dir", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("dir", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.AllJoynDirection DirectionValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Direction-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the Direction property is specified.</para>
@@ -11022,9 +11029,9 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -11037,9 +11044,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smd")]
-		[XmlElementAttribute("smd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.SemanticDescriptor> SemanticDescriptor { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.SemanticDescriptor>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptor-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptor collection is empty.</para>
@@ -11052,9 +11059,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorSpecified => (this.SemanticDescriptor.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -11067,9 +11074,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SubscriptionSpecified => (this.Subscription.Count != 0);
 
 		[JsonPropertyAttribute("ajso")]
-		[XmlElementAttribute("ajso", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ajso", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<AllJoynSvcObject> AllJoynSvcObject { get; set; } = System.Array.Empty<AllJoynSvcObject>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AllJoynSvcObject-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AllJoynSvcObject collection is empty.</para>
@@ -11084,25 +11091,25 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("ajso", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("ajso", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("ajso")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("allJoynSvcObject", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("allJoynSvcObject", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class AllJoynSvcObject : Aetheros.Schema.OneM2M.FlexContainerResource
 	{
 		[JsonPropertyAttribute("ajop")]
-		[XmlElementAttribute("ajop", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("ajop", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string ObjectPath { get; set; }
 
 		[JsonPropertyAttribute("ena")]
-		[XmlElementAttribute("ena", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("ena", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool Enable { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -11115,9 +11122,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smd")]
-		[XmlElementAttribute("smd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.SemanticDescriptor> SemanticDescriptor { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.SemanticDescriptor>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptor-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptor collection is empty.</para>
@@ -11130,9 +11137,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorSpecified => (this.SemanticDescriptor.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -11145,9 +11152,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SubscriptionSpecified => (this.Subscription.Count != 0);
 
 		[JsonPropertyAttribute("ajif")]
-		[XmlElementAttribute("ajif", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ajif", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<AllJoynInterface> AllJoynInterface { get; set; } = System.Array.Empty<AllJoynInterface>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AllJoynInterface-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AllJoynInterface collection is empty.</para>
@@ -11162,21 +11169,21 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("ajif", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("ajif", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("ajif")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("allJoynInterface", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("allJoynInterface", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class AllJoynInterface : Aetheros.Schema.OneM2M.FlexContainerResource
 	{
 		[JsonPropertyAttribute("ajir")]
-		[XmlElementAttribute("ajir", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("ajir", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string InterfaceIntrospectXmlRef { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -11189,9 +11196,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smd")]
-		[XmlElementAttribute("smd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.SemanticDescriptor> SemanticDescriptor { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.SemanticDescriptor>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptor-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptor collection is empty.</para>
@@ -11204,9 +11211,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorSpecified => (this.SemanticDescriptor.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -11219,9 +11226,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SubscriptionSpecified => (this.Subscription.Count != 0);
 
 		[JsonPropertyAttribute("ajmd")]
-		[XmlElementAttribute("ajmd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ajmd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<AllJoynMethod> AllJoynMethod { get; set; } = System.Array.Empty<AllJoynMethod>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AllJoynMethod-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AllJoynMethod collection is empty.</para>
@@ -11234,9 +11241,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool AllJoynMethodSpecified => (this.AllJoynMethod.Count != 0);
 
 		[JsonPropertyAttribute("ajpr")]
-		[XmlElementAttribute("ajpr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ajpr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<AllJoynProperty> AllJoynProperty { get; set; } = System.Array.Empty<AllJoynProperty>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AllJoynProperty-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AllJoynProperty collection is empty.</para>
@@ -11249,9 +11256,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool AllJoynPropertySpecified => (this.AllJoynProperty.Count != 0);
 
 		[JsonPropertyAttribute("m2m:cnt")]
-		[XmlElementAttribute("cnt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cnt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Container> Container { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Container>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Container-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Container collection is empty.</para>
@@ -11266,17 +11273,17 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("ajmd", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("ajmd", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("ajmd")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("allJoynMethod", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("allJoynMethod", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class AllJoynMethod : Aetheros.Schema.OneM2M.FlexContainerResource
 	{
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -11289,9 +11296,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smd")]
-		[XmlElementAttribute("smd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.SemanticDescriptor> SemanticDescriptor { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.SemanticDescriptor>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptor-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptor collection is empty.</para>
@@ -11304,9 +11311,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorSpecified => (this.SemanticDescriptor.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -11319,9 +11326,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SubscriptionSpecified => (this.Subscription.Count != 0);
 
 		[JsonPropertyAttribute("ajmc")]
-		[XmlElementAttribute("ajmc", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ajmc", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<AllJoynMethodCall> AllJoynMethodCall { get; set; } = System.Array.Empty<AllJoynMethodCall>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AllJoynMethodCall-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AllJoynMethodCall collection is empty.</para>
@@ -11336,29 +11343,29 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("ajmc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("ajmc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("ajmc")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("allJoynMethodCall", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("allJoynMethodCall", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class AllJoynMethodCall : Aetheros.Schema.OneM2M.FlexContainerResource
 	{
 		[JsonPropertyAttribute("inp")]
-		[XmlElementAttribute("inp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("inp", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string Input { get; set; }
 
 		[JsonPropertyAttribute("clst")]
-		[XmlElementAttribute("clst", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("clst", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string CallStatus { get; set; }
 
 		[JsonPropertyAttribute("out")]
-		[XmlElementAttribute("out", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("out", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string Output { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -11371,9 +11378,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smd")]
-		[XmlElementAttribute("smd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.SemanticDescriptor> SemanticDescriptor { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.SemanticDescriptor>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptor-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptor collection is empty.</para>
@@ -11386,9 +11393,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorSpecified => (this.SemanticDescriptor.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -11403,25 +11410,25 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("ajpr", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("ajpr", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("ajpr")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("allJoynProperty", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("allJoynProperty", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class AllJoynProperty : Aetheros.Schema.OneM2M.FlexContainerResource
 	{
 		[JsonPropertyAttribute("crv")]
-		[XmlElementAttribute("crv", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("crv", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string CurrentValue { get; set; }
 
 		[JsonPropertyAttribute("rqv")]
-		[XmlElementAttribute("rqv", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("rqv", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string RequestedValue { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -11434,9 +11441,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smd")]
-		[XmlElementAttribute("smd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.SemanticDescriptor> SemanticDescriptor { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.SemanticDescriptor>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptor-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptor collection is empty.</para>
@@ -11449,9 +11456,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorSpecified => (this.SemanticDescriptor.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -11466,20 +11473,20 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("ajapa", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("ajapa", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("ajapa")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("allJoynAppAnnc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("allJoynAppAnnc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class AllJoynAppAnnc : Aetheros.Schema.OneM2M.AnnouncedFlexContainerResource
 	{
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("dir", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("dir", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.AllJoynDirection DirectionValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Direction-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the Direction property is specified.</para>
@@ -11507,9 +11514,9 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -11522,9 +11529,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smd")]
-		[XmlElementAttribute("smd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.SemanticDescriptor> SemanticDescriptor { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.SemanticDescriptor>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptor-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptor collection is empty.</para>
@@ -11537,9 +11544,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorSpecified => (this.SemanticDescriptor.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smdA")]
-		[XmlElementAttribute("smdA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smdA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.SemanticDescriptorAnnc> SemanticDescriptorAnnc { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.SemanticDescriptorAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptorAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptorAnnc collection is empty.</para>
@@ -11552,9 +11559,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorAnncSpecified => (this.SemanticDescriptorAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -11567,9 +11574,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SubscriptionSpecified => (this.Subscription.Count != 0);
 
 		[JsonPropertyAttribute("ajso")]
-		[XmlElementAttribute("ajso", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ajso", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<AllJoynSvcObject> AllJoynSvcObject { get; set; } = System.Array.Empty<AllJoynSvcObject>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AllJoynSvcObject-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AllJoynSvcObject collection is empty.</para>
@@ -11582,9 +11589,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool AllJoynSvcObjectSpecified => (this.AllJoynSvcObject.Count != 0);
 
 		[JsonPropertyAttribute("ajsoa")]
-		[XmlElementAttribute("ajsoa", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ajsoa", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<AllJoynSvcObjectAnnc> AllJoynSvcObjectAnnc { get; set; } = System.Array.Empty<AllJoynSvcObjectAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AllJoynSvcObjectAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AllJoynSvcObjectAnnc collection is empty.</para>
@@ -11599,24 +11606,24 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("ajsoa", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("ajsoa", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("ajsoa")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("allJoynSvcObjectAnnc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("allJoynSvcObjectAnnc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class AllJoynSvcObjectAnnc : Aetheros.Schema.OneM2M.AnnouncedFlexContainerResource
 	{
 		[JsonPropertyAttribute("ajop")]
-		[XmlElementAttribute("ajop", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("ajop", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string ObjectPath { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("ena", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("ena", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool EnableValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Enable-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the Enable property is specified.</para>
@@ -11644,9 +11651,9 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -11659,9 +11666,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smd")]
-		[XmlElementAttribute("smd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.SemanticDescriptor> SemanticDescriptor { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.SemanticDescriptor>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptor-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptor collection is empty.</para>
@@ -11674,9 +11681,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorSpecified => (this.SemanticDescriptor.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smdA")]
-		[XmlElementAttribute("smdA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smdA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.SemanticDescriptorAnnc> SemanticDescriptorAnnc { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.SemanticDescriptorAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptorAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptorAnnc collection is empty.</para>
@@ -11689,9 +11696,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorAnncSpecified => (this.SemanticDescriptorAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -11704,9 +11711,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SubscriptionSpecified => (this.Subscription.Count != 0);
 
 		[JsonPropertyAttribute("ajif")]
-		[XmlElementAttribute("ajif", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ajif", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<AllJoynInterface> AllJoynInterface { get; set; } = System.Array.Empty<AllJoynInterface>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AllJoynInterface-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AllJoynInterface collection is empty.</para>
@@ -11719,9 +11726,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool AllJoynInterfaceSpecified => (this.AllJoynInterface.Count != 0);
 
 		[JsonPropertyAttribute("ajifa")]
-		[XmlElementAttribute("ajifa", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ajifa", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<AllJoynInterfaceAnnc> AllJoynInterfaceAnnc { get; set; } = System.Array.Empty<AllJoynInterfaceAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AllJoynInterfaceAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AllJoynInterfaceAnnc collection is empty.</para>
@@ -11736,21 +11743,21 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("ajifa", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("ajifa", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("ajifa")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("allJoynInterfaceAnnc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("allJoynInterfaceAnnc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class AllJoynInterfaceAnnc : Aetheros.Schema.OneM2M.AnnouncedFlexContainerResource
 	{
 		[JsonPropertyAttribute("ajir")]
-		[XmlElementAttribute("ajir", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("ajir", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string InterfaceIntrospectXmlRef { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -11763,9 +11770,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smd")]
-		[XmlElementAttribute("smd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.SemanticDescriptor> SemanticDescriptor { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.SemanticDescriptor>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptor-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptor collection is empty.</para>
@@ -11778,9 +11785,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorSpecified => (this.SemanticDescriptor.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smdA")]
-		[XmlElementAttribute("smdA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smdA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.SemanticDescriptorAnnc> SemanticDescriptorAnnc { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.SemanticDescriptorAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptorAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptorAnnc collection is empty.</para>
@@ -11793,9 +11800,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorAnncSpecified => (this.SemanticDescriptorAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -11808,9 +11815,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SubscriptionSpecified => (this.Subscription.Count != 0);
 
 		[JsonPropertyAttribute("ajmd")]
-		[XmlElementAttribute("ajmd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ajmd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<AllJoynMethod> AllJoynMethod { get; set; } = System.Array.Empty<AllJoynMethod>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AllJoynMethod-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AllJoynMethod collection is empty.</para>
@@ -11823,9 +11830,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool AllJoynMethodSpecified => (this.AllJoynMethod.Count != 0);
 
 		[JsonPropertyAttribute("ajmda")]
-		[XmlElementAttribute("ajmda", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ajmda", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<AllJoynMethodAnnc> AllJoynMethodAnnc { get; set; } = System.Array.Empty<AllJoynMethodAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AllJoynMethodAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AllJoynMethodAnnc collection is empty.</para>
@@ -11838,9 +11845,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool AllJoynMethodAnncSpecified => (this.AllJoynMethodAnnc.Count != 0);
 
 		[JsonPropertyAttribute("ajpr")]
-		[XmlElementAttribute("ajpr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ajpr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<AllJoynProperty> AllJoynProperty { get; set; } = System.Array.Empty<AllJoynProperty>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AllJoynProperty-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AllJoynProperty collection is empty.</para>
@@ -11853,9 +11860,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool AllJoynPropertySpecified => (this.AllJoynProperty.Count != 0);
 
 		[JsonPropertyAttribute("ajpra")]
-		[XmlElementAttribute("ajpra", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ajpra", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<AllJoynPropertyAnnc> AllJoynPropertyAnnc { get; set; } = System.Array.Empty<AllJoynPropertyAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AllJoynPropertyAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AllJoynPropertyAnnc collection is empty.</para>
@@ -11868,9 +11875,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool AllJoynPropertyAnncSpecified => (this.AllJoynPropertyAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:cnt")]
-		[XmlElementAttribute("cnt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cnt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Container> Container { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Container>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Container-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Container collection is empty.</para>
@@ -11883,9 +11890,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ContainerSpecified => (this.Container.Count != 0);
 
 		[JsonPropertyAttribute("m2m:cntA")]
-		[XmlElementAttribute("cntA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cntA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ContainerAnnc> ContainerAnnc { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ContainerAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ContainerAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ContainerAnnc collection is empty.</para>
@@ -11900,17 +11907,17 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("ajmda", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("ajmda", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("ajmda")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("allJoynMethodAnnc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("allJoynMethodAnnc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class AllJoynMethodAnnc : Aetheros.Schema.OneM2M.AnnouncedFlexContainerResource
 	{
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -11923,9 +11930,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smd")]
-		[XmlElementAttribute("smd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.SemanticDescriptor> SemanticDescriptor { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.SemanticDescriptor>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptor-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptor collection is empty.</para>
@@ -11938,9 +11945,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorSpecified => (this.SemanticDescriptor.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smdA")]
-		[XmlElementAttribute("smdA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smdA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.SemanticDescriptorAnnc> SemanticDescriptorAnnc { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.SemanticDescriptorAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptorAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptorAnnc collection is empty.</para>
@@ -11953,9 +11960,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorAnncSpecified => (this.SemanticDescriptorAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -11968,9 +11975,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SubscriptionSpecified => (this.Subscription.Count != 0);
 
 		[JsonPropertyAttribute("ajmc")]
-		[XmlElementAttribute("ajmc", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ajmc", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<AllJoynMethodCall> AllJoynMethodCall { get; set; } = System.Array.Empty<AllJoynMethodCall>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AllJoynMethodCall-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AllJoynMethodCall collection is empty.</para>
@@ -11983,9 +11990,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool AllJoynMethodCallSpecified => (this.AllJoynMethodCall.Count != 0);
 
 		[JsonPropertyAttribute("ajmca")]
-		[XmlElementAttribute("ajmca", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ajmca", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<AllJoynMethodCallAnnc> AllJoynMethodCallAnnc { get; set; } = System.Array.Empty<AllJoynMethodCallAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AllJoynMethodCallAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AllJoynMethodCallAnnc collection is empty.</para>
@@ -12000,17 +12007,17 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("ajmca", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("ajmca", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("ajmca")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("allJoynMethodCallAnnc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("allJoynMethodCallAnnc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class AllJoynMethodCallAnnc : Aetheros.Schema.OneM2M.AnnouncedFlexContainerResource
 	{
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -12023,9 +12030,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smd")]
-		[XmlElementAttribute("smd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.SemanticDescriptor> SemanticDescriptor { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.SemanticDescriptor>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptor-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptor collection is empty.</para>
@@ -12038,9 +12045,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorSpecified => (this.SemanticDescriptor.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smdA")]
-		[XmlElementAttribute("smdA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smdA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.SemanticDescriptorAnnc> SemanticDescriptorAnnc { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.SemanticDescriptorAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptorAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptorAnnc collection is empty.</para>
@@ -12053,9 +12060,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorAnncSpecified => (this.SemanticDescriptorAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -12070,17 +12077,17 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("ajpra", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("ajpra", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("ajpra")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("allJoynPropertyAnnc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("allJoynPropertyAnnc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class AllJoynPropertyAnnc : Aetheros.Schema.OneM2M.AnnouncedFlexContainerResource
 	{
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -12093,9 +12100,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smd")]
-		[XmlElementAttribute("smd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.SemanticDescriptor> SemanticDescriptor { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.SemanticDescriptor>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptor-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptor collection is empty.</para>
@@ -12108,9 +12115,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorSpecified => (this.SemanticDescriptor.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smdA")]
-		[XmlElementAttribute("smdA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smdA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.SemanticDescriptorAnnc> SemanticDescriptorAnnc { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.SemanticDescriptorAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptorAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptorAnnc collection is empty.</para>
@@ -12123,9 +12130,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorAnncSpecified => (this.SemanticDescriptorAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -12140,32 +12147,32 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("andi", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("andi", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:andi")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("areaNwkDeviceInfo", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("areaNwkDeviceInfo", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class AreaNwkDeviceInfo : Aetheros.Schema.OneM2M.MgmtResource
 	{
 		[JsonPropertyAttribute("dvd")]
-		[XmlElementAttribute("dvd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("dvd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string DevID { get; set; }
 
 		[JsonPropertyAttribute("dvt")]
-		[XmlElementAttribute("dvt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("dvt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string DevType { get; set; }
 
 		[JsonPropertyAttribute("awi")]
-		[XmlElementAttribute("awi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("awi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string AreaNwkId { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("sli", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sli", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long SleepIntervalValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SleepInterval-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the SleepInterval property is specified.</para>
@@ -12196,9 +12203,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("sld", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sld", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long SleepDurationValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SleepDuration-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the SleepDuration property is specified.</para>
@@ -12226,17 +12233,17 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("ss")]
-		[XmlElementAttribute("ss", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("ss", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string DevStatus { get; set; }
 
 		[JsonPropertyAttribute("lnh")]
-		[XmlElementAttribute("lnh", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("lnh", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> ListOfNeighbors { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -12249,9 +12256,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -12266,32 +12273,32 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("andiA", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("andiA", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:andiA")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("areaNwkDeviceInfoAnnc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("areaNwkDeviceInfoAnnc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class AreaNwkDeviceInfoAnnc : Aetheros.Schema.OneM2M.AnnouncedMgmtResource
 	{
 		[JsonPropertyAttribute("dvd")]
-		[XmlElementAttribute("dvd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("dvd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string DevID { get; set; }
 
 		[JsonPropertyAttribute("dvt")]
-		[XmlElementAttribute("dvt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("dvt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string DevType { get; set; }
 
 		[JsonPropertyAttribute("awi")]
-		[XmlElementAttribute("awi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("awi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string AreaNwkId { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("sli", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sli", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long SleepIntervalValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SleepInterval-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the SleepInterval property is specified.</para>
@@ -12322,9 +12329,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("sld", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sld", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long SleepDurationValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SleepDuration-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the SleepDuration property is specified.</para>
@@ -12352,13 +12359,13 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("ss")]
-		[XmlElementAttribute("ss", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("ss", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string DevStatus { get; set; }
 
 		[JsonPropertyAttribute("lnh")]
-		[XmlElementAttribute("lnh", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("lnh", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> ListOfNeighbors { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ListOfNeighbors-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ListOfNeighbors collection is empty.</para>
@@ -12371,9 +12378,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ListOfNeighborsSpecified => (this.ListOfNeighbors.Count != 0);
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -12386,9 +12393,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -12403,29 +12410,29 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("ani", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("ani", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:ani")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("areaNwkInfo", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("areaNwkInfo", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class AreaNwkInfo : Aetheros.Schema.OneM2M.MgmtResource
 	{
 		[JsonPropertyAttribute("ant")]
-		[XmlElementAttribute("ant", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("ant", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string AreaNwkType { get; set; }
 
 		[JsonPropertyAttribute("ldv")]
-		[XmlElementAttribute("ldv", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("ldv", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> ListOfDevices { get; set; }
 
 		[JsonPropertyAttribute("lst")]
-		[XmlElementAttribute("lst", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("lst", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool LinkState { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -12438,9 +12445,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -12455,21 +12462,21 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("aniA", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("aniA", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:aniA")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("areaNwkInfoAnnc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("areaNwkInfoAnnc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class AreaNwkInfoAnnc : Aetheros.Schema.OneM2M.AnnouncedMgmtResource
 	{
 		[JsonPropertyAttribute("ant")]
-		[XmlElementAttribute("ant", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("ant", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string AreaNwkType { get; set; }
 
 		[JsonPropertyAttribute("ldv")]
-		[XmlElementAttribute("ldv", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("ldv", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> ListOfDevices { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ListOfDevices-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ListOfDevices collection is empty.</para>
@@ -12482,13 +12489,13 @@ namespace Aetheros.Schema.OneM2M
 		public bool ListOfDevicesSpecified => (this.ListOfDevices.Count != 0);
 
 		[JsonPropertyAttribute("lst")]
-		[XmlElementAttribute("lst", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("lst", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool LinkState { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -12501,9 +12508,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -12518,24 +12525,24 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("bat", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("bat", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:bat")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("battery", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("battery", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class Battery : Aetheros.Schema.OneM2M.MgmtResource
 	{
 		[JsonPropertyAttribute("btl")]
-		[XmlElementAttribute("btl", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="unsignedInt")]
+		[XmlElementAttribute("btl", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "unsignedInt")]
 		public uint BatteryLevel { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("bts", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("bts", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.BatteryStatus BatteryStatusValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die BatteryStatus-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the BatteryStatus property is specified.</para>
@@ -12563,9 +12570,9 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -12578,9 +12585,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -12595,20 +12602,20 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("batA", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("batA", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:batA")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("batteryAnnc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("batteryAnnc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class BatteryAnnc : Aetheros.Schema.OneM2M.AnnouncedMgmtResource
 	{
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("btl", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="unsignedInt")]
+		[XmlElementAttribute("btl", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "unsignedInt")]
 		public uint BatteryLevelValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die BatteryLevel-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the BatteryLevel property is specified.</para>
@@ -12639,9 +12646,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("bts", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("bts", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.BatteryStatus BatteryStatusValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die BatteryStatus-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the BatteryStatus property is specified.</para>
@@ -12669,9 +12676,9 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -12684,9 +12691,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -12701,46 +12708,46 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("cmbf", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("cmbf", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:cmbf")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("cmdhBuffer", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("cmdhBuffer", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class CmdhBuffer : Aetheros.Schema.OneM2M.MgmtResource
 	{
 		[JsonPropertyAttribute("aec")]
-		[XmlElementAttribute("aec", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("aec", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<string> ApplicableEventCategory { get; set; }
 
 		[JsonPropertyAttribute("mbfs")]
-		[XmlElementAttribute("mbfs", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mbfs", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long MaxBufferSize { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="en">Maximum exclusive value: 11.</para>
 		/// </summary>
 		[JsonPropertyAttribute("sgp")]
-		[XmlElementAttribute("sgp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sgp", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long StoragePriority { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("cmdf", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("cmdf", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:cmdf")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("cmdhDefaults", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("cmdhDefaults", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class CmdhDefaults : Aetheros.Schema.OneM2M.MgmtResource
 	{
 		[JsonPropertyAttribute("cmlk")]
-		[XmlElementAttribute("cmlk", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cmlk", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.MgmtLinkRef> MgmtLink { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -12753,9 +12760,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:cmpv")]
-		[XmlElementAttribute("cmpv", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cmpv", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<CmdhEcDefParamValues> CmdhEcDefParamValues { get; set; } = System.Array.Empty<CmdhEcDefParamValues>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die CmdhEcDefParamValues-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the CmdhEcDefParamValues collection is empty.</para>
@@ -12768,9 +12775,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool CmdhEcDefParamValuesSpecified => (this.CmdhEcDefParamValues.Count != 0);
 
 		[JsonPropertyAttribute("m2m:cmdv")]
-		[XmlElementAttribute("cmdv", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cmdv", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<CmdhDefEcValue> CmdhDefEcValue { get; set; } = System.Array.Empty<CmdhDefEcValue>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die CmdhDefEcValue-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the CmdhDefEcValue collection is empty.</para>
@@ -12785,70 +12792,70 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("cmpv", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("cmpv", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:cmpv")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("cmdhEcDefParamValues", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("cmdhEcDefParamValues", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class CmdhEcDefParamValues : Aetheros.Schema.OneM2M.MgmtResource
 	{
 		[JsonPropertyAttribute("aec")]
-		[XmlElementAttribute("aec", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("aec", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<string> ApplicableEventCategory { get; set; }
 
 		[JsonPropertyAttribute("dqet")]
-		[XmlElementAttribute("dqet", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="long")]
+		[XmlElementAttribute("dqet", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "long")]
 		public long DefaultRequestExpTime { get; set; }
 
 		[JsonPropertyAttribute("dset")]
-		[XmlElementAttribute("dset", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="long")]
+		[XmlElementAttribute("dset", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "long")]
 		public long DefaultResultExpTime { get; set; }
 
 		[JsonPropertyAttribute("doet")]
-		[XmlElementAttribute("doet", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="long")]
+		[XmlElementAttribute("doet", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "long")]
 		public long DefaultOpExecTime { get; set; }
 
 		[JsonPropertyAttribute("drp")]
-		[XmlElementAttribute("drp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="long")]
+		[XmlElementAttribute("drp", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "long")]
 		public long DefaultRespPersistence { get; set; }
 
 		[JsonPropertyAttribute("dda")]
-		[XmlElementAttribute("dda", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("dda", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool DefaultDelAggregation { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("cmdv", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("cmdv", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:cmdv")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("cmdhDefEcValue", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("cmdhDefEcValue", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class CmdhDefEcValue : Aetheros.Schema.OneM2M.MgmtResource
 	{
 		[JsonPropertyAttribute("od")]
-		[XmlElementAttribute("od", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("od", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long Order { get; set; }
 
 		[JsonPropertyAttribute("dev")]
-		[XmlElementAttribute("dev", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("dev", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public string DefEcValue { get; set; }
 
 		[JsonPropertyAttribute("ror")]
-		[XmlElementAttribute("ror", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("ror", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> RequestOrigin { get; set; }
 
 		[JsonPropertyAttribute("rct")]
-		[XmlElementAttribute("rct", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("rct", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public object RequestContext { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("rctn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("rctn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool RequestContextNotificationValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die RequestContextNotification-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the RequestContextNotification property is specified.</para>
@@ -12876,38 +12883,38 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("rch")]
-		[XmlElementAttribute("rch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("rch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public object RequestCharacteristics { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("cml", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("cml", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:cml")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("cmdhLimits", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("cmdhLimits", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class CmdhLimits : Aetheros.Schema.OneM2M.MgmtResource
 	{
 		[JsonPropertyAttribute("od")]
-		[XmlElementAttribute("od", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("od", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long Order { get; set; }
 
 		[JsonPropertyAttribute("ror")]
-		[XmlElementAttribute("ror", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("ror", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> RequestOrigin { get; set; }
 
 		[JsonPropertyAttribute("rct")]
-		[XmlElementAttribute("rct", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("rct", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public object RequestContext { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("rctn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("rctn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool RequestContextNotificationValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die RequestContextNotification-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the RequestContextNotification property is specified.</para>
@@ -12935,48 +12942,48 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("rch")]
-		[XmlElementAttribute("rch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("rch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public object RequestCharacteristics { get; set; }
 
 		[JsonPropertyAttribute("lec")]
-		[XmlElementAttribute("lec", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("lec", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<string> LimitsEventCategory { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="en">Minimum inclusive value: -1.</para>
 		/// </summary>
 		[JsonPropertyAttribute("lqet")]
-		[XmlElementAttribute("lqet", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="long")]
+		[XmlElementAttribute("lqet", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "long")]
 		public ICollection<long> LimitsRequestExpTime { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="en">Minimum inclusive value: -1.</para>
 		/// </summary>
 		[JsonPropertyAttribute("lset")]
-		[XmlElementAttribute("lset", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="long")]
+		[XmlElementAttribute("lset", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "long")]
 		public ICollection<long> LimitsResultExpTime { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="en">Minimum inclusive value: -1.</para>
 		/// </summary>
 		[JsonPropertyAttribute("loet")]
-		[XmlElementAttribute("loet", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="long")]
+		[XmlElementAttribute("loet", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "long")]
 		public ICollection<long> LimitsOpExecTime { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="en">Minimum inclusive value: -1.</para>
 		/// </summary>
 		[JsonPropertyAttribute("lrp")]
-		[XmlElementAttribute("lrp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="long")]
+		[XmlElementAttribute("lrp", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "long")]
 		public ICollection<long> LimitsRespPersistence { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("lda", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("lda", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public CmdhLimitsLimitsDelAggregation LimitsDelAggregationValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die LimitsDelAggregation-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the LimitsDelAggregation property is specified.</para>
@@ -13006,7 +13013,7 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("CmdhLimitsLimitsDelAggregation", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("CmdhLimitsLimitsDelAggregation", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public enum CmdhLimitsLimitsDelAggregation
 	{
 		[XmlEnumAttribute("0")]
@@ -13021,21 +13028,21 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("cmnr", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("cmnr", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:cmnr")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("cmdhNetworkAccessRules", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("cmdhNetworkAccessRules", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class CmdhNetworkAccessRules : Aetheros.Schema.OneM2M.MgmtResource
 	{
 		[JsonPropertyAttribute("aecs")]
-		[XmlElementAttribute("aecs", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("aecs", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<string> ApplicableEventCategories { get; set; }
 
 		[JsonPropertyAttribute("cmlk")]
-		[XmlElementAttribute("cmlk", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cmlk", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.MgmtLinkRef> MgmtLink { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.MgmtLinkRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MgmtLink-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the MgmtLink collection is empty.</para>
@@ -13048,9 +13055,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool MgmtLinkSpecified => (this.MgmtLink.Count != 0);
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -13063,9 +13070,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:cmwr")]
-		[XmlElementAttribute("cmwr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cmwr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<CmdhNwAccessRule> CmdhNwAccessRule { get; set; } = System.Array.Empty<CmdhNwAccessRule>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die CmdhNwAccessRule-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the CmdhNwAccessRule collection is empty.</para>
@@ -13080,59 +13087,59 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("cmwr", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("cmwr", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:cmwr")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("cmdhNwAccessRule", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("cmdhNwAccessRule", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class CmdhNwAccessRule : Aetheros.Schema.OneM2M.MgmtResource
 	{
 		[JsonPropertyAttribute("ttn")]
-		[XmlElementAttribute("ttn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("ttn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> TargetNetwork { get; set; }
 
 		[JsonPropertyAttribute("mrv")]
-		[XmlElementAttribute("mrv", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mrv", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long MinReqVolume { get; set; }
 
 		[JsonPropertyAttribute("swt")]
-		[XmlElementAttribute("swt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("swt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long SpreadingWaitTime { get; set; }
 
 		[JsonPropertyAttribute("bop")]
-		[XmlElementAttribute("bop", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("bop", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.BackOffParameters BackOffParameters { get; set; }
 
 		[JsonPropertyAttribute("ohc")]
-		[XmlElementAttribute("ohc", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ohc", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public object OtherConditions { get; set; }
 
 		[JsonPropertyAttribute("cmlk")]
-		[XmlElementAttribute("cmlk", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cmlk", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.MgmtLinkRef MgmtLink { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("cmp", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("cmp", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:cmp")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("cmdhPolicy", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("cmdhPolicy", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class CmdhPolicy : Aetheros.Schema.OneM2M.MgmtResource
 	{
 		[JsonPropertyAttribute("cpn")]
-		[XmlElementAttribute("cpn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("cpn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string CmdhPolicyName { get; set; }
 
 		[JsonPropertyAttribute("cmlk")]
-		[XmlElementAttribute("cmlk", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cmlk", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.MgmtLinkRef> MgmtLink { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -13145,9 +13152,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:cmbf")]
-		[XmlElementAttribute("cmbf", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cmbf", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.CmdhBuffer> CmdhBuffer { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.CmdhBuffer>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die CmdhBuffer-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the CmdhBuffer collection is empty.</para>
@@ -13160,9 +13167,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool CmdhBufferSpecified => (this.CmdhBuffer.Count != 0);
 
 		[JsonPropertyAttribute("m2m:cmdf")]
-		[XmlElementAttribute("cmdf", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cmdf", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.CmdhDefaults> CmdhDefaults { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.CmdhDefaults>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die CmdhDefaults-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the CmdhDefaults collection is empty.</para>
@@ -13175,9 +13182,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool CmdhDefaultsSpecified => (this.CmdhDefaults.Count != 0);
 
 		[JsonPropertyAttribute("m2m:cml")]
-		[XmlElementAttribute("cml", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cml", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.CmdhLimits> CmdhLimits { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.CmdhLimits>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die CmdhLimits-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the CmdhLimits collection is empty.</para>
@@ -13190,9 +13197,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool CmdhLimitsSpecified => (this.CmdhLimits.Count != 0);
 
 		[JsonPropertyAttribute("m2m:cmnr")]
-		[XmlElementAttribute("cmnr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cmnr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.CmdhNetworkAccessRules> CmdhNetworkAccessRules { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.CmdhNetworkAccessRules>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die CmdhNetworkAccessRules-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the CmdhNetworkAccessRules collection is empty.</para>
@@ -13207,17 +13214,17 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("cb", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("cb", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:cb")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("CSEBase", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("CSEBase", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class CSEBase<TPrimitiveContent> : Aetheros.Schema.OneM2M.Resource where TPrimitiveContent : PrimitiveContent
 	{
 		[JsonPropertyAttribute("acpi")]
-		[XmlElementAttribute("acpi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("acpi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> AccessControlPolicyIDs { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AccessControlPolicyIDs-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AccessControlPolicyIDs collection is empty.</para>
@@ -13233,9 +13240,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("cst", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cst", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.CseTypeID CseTypeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die CseType-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the CseType property is specified.</para>
@@ -13263,29 +13270,29 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("csi")]
-		[XmlElementAttribute("csi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("csi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string CSE_ID { get; set; }
 
 		[JsonPropertyAttribute("srt")]
-		[XmlElementAttribute("srt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-		public long SupportedResourceType { get; set; }
+		[XmlElementAttribute("srt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		public ICollection<long> SupportedResourceType { get; set; }
 
 		[JsonPropertyAttribute("poa")]
-		[XmlElementAttribute("poa", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("poa", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public ICollection<string> PointOfAccess { get; set; }
 
 		[JsonPropertyAttribute("nl")]
-		[XmlElementAttribute("nl", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("nl", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string NodeLink { get; set; }
 
 		[JsonPropertyAttribute("esi")]
-		[XmlElementAttribute("esi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("esi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.E2ESecInfo E2ESecInfo { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -13298,9 +13305,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:csr")]
-		[XmlElementAttribute("csr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("csr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<RemoteCSE> RemoteCSE { get; set; } = System.Array.Empty<RemoteCSE>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die RemoteCSE-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the RemoteCSE collection is empty.</para>
@@ -13313,9 +13320,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool RemoteCSESpecified => (this.RemoteCSE.Count != 0);
 
 		[JsonPropertyAttribute("m2m:csrA")]
-		[XmlElementAttribute("csrA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("csrA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<RemoteCSEAnnc> RemoteCSEAnnc { get; set; } = System.Array.Empty<RemoteCSEAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die RemoteCSEAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the RemoteCSEAnnc collection is empty.</para>
@@ -13328,9 +13335,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool RemoteCSEAnncSpecified => (this.RemoteCSEAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:nod")]
-		[XmlElementAttribute("nod", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("nod", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Node> Node { get; set; } = System.Array.Empty<Node>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Node-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Node collection is empty.</para>
@@ -13343,9 +13350,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool NodeSpecified => (this.Node.Count != 0);
 
 		[JsonPropertyAttribute("m2m:ae")]
-		[XmlElementAttribute("ae", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ae", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.AE> AE { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.AE>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AE-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AE collection is empty.</para>
@@ -13358,9 +13365,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool AESpecified => (this.AE.Count != 0);
 
 		[JsonPropertyAttribute("m2m:cnt")]
-		[XmlElementAttribute("cnt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cnt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Container> Container { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Container>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Container-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Container collection is empty.</para>
@@ -13373,9 +13380,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ContainerSpecified => (this.Container.Count != 0);
 
 		[JsonPropertyAttribute("m2m:grp")]
-		[XmlElementAttribute("grp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("grp", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Group> Group { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Group>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Group-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Group collection is empty.</para>
@@ -13388,9 +13395,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool GroupSpecified => (this.Group.Count != 0);
 
 		[JsonPropertyAttribute("m2m:acp")]
-		[XmlElementAttribute("acp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("acp", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.AccessControlPolicy> AccessControlPolicy { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.AccessControlPolicy>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AccessControlPolicy-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AccessControlPolicy collection is empty.</para>
@@ -13403,9 +13410,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool AccessControlPolicySpecified => (this.AccessControlPolicy.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -13418,9 +13425,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SubscriptionSpecified => (this.Subscription.Count != 0);
 
 		[JsonPropertyAttribute("m2m:mgc")]
-		[XmlElementAttribute("mgc", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mgc", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<MgmtCmd> MgmtCmd { get; set; } = System.Array.Empty<MgmtCmd>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MgmtCmd-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the MgmtCmd collection is empty.</para>
@@ -13433,9 +13440,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool MgmtCmdSpecified => (this.MgmtCmd.Count != 0);
 
 		[JsonPropertyAttribute("m2m:lcp")]
-		[XmlElementAttribute("lcp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("lcp", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<LocationPolicy> LocationPolicy { get; set; } = System.Array.Empty<LocationPolicy>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die LocationPolicy-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the LocationPolicy collection is empty.</para>
@@ -13448,9 +13455,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool LocationPolicySpecified => (this.LocationPolicy.Count != 0);
 
 		[JsonPropertyAttribute("m2m:stcg")]
-		[XmlElementAttribute("stcg", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("stcg", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<StatsConfig> StatsConfig { get; set; } = System.Array.Empty<StatsConfig>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die StatsConfig-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the StatsConfig collection is empty.</para>
@@ -13463,9 +13470,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool StatsConfigSpecified => (this.StatsConfig.Count != 0);
 
 		[JsonPropertyAttribute("m2m:stcl")]
-		[XmlElementAttribute("stcl", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("stcl", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<StatsCollect> StatsCollect { get; set; } = System.Array.Empty<StatsCollect>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die StatsCollect-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the StatsCollect collection is empty.</para>
@@ -13478,9 +13485,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool StatsCollectSpecified => (this.StatsCollect.Count != 0);
 
 		[JsonPropertyAttribute("m2m:req")]
-		[XmlElementAttribute("req", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("req", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Request<TPrimitiveContent>> Request { get; set; } = System.Array.Empty<Request<TPrimitiveContent>>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Request-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Request collection is empty.</para>
@@ -13493,9 +13500,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool RequestSpecified => (this.Request.Count != 0);
 
 		[JsonPropertyAttribute("m2m:dlv")]
-		[XmlElementAttribute("dlv", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("dlv", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Delivery<TPrimitiveContent>> Delivery { get; set; } = System.Array.Empty<Delivery<TPrimitiveContent>>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Delivery-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Delivery collection is empty.</para>
@@ -13508,9 +13515,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool DeliverySpecified => (this.Delivery.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sch")]
-		[XmlElementAttribute("sch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Schedule> Schedule { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Schedule>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Schedule-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Schedule collection is empty.</para>
@@ -13523,9 +13530,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ScheduleSpecified => (this.Schedule.Count != 0);
 
 		[JsonPropertyAttribute("m2m:mssp")]
-		[XmlElementAttribute("mssp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mssp", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<M2MServiceSubscriptionProfile> M2MServiceSubscriptionProfile { get; set; } = System.Array.Empty<M2MServiceSubscriptionProfile>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die M2MServiceSubscriptionProfile-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the M2MServiceSubscriptionProfile collection is empty.</para>
@@ -13538,9 +13545,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool M2MServiceSubscriptionProfileSpecified => (this.M2MServiceSubscriptionProfile.Count != 0);
 
 		[JsonPropertyAttribute("m2m:asar")]
-		[XmlElementAttribute("asar", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("asar", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<ServiceSubscribedAppRule> ServiceSubscribedAppRule { get; set; } = System.Array.Empty<ServiceSubscribedAppRule>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ServiceSubscribedAppRule-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ServiceSubscribedAppRule collection is empty.</para>
@@ -13553,9 +13560,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ServiceSubscribedAppRuleSpecified => (this.ServiceSubscribedAppRule.Count != 0);
 
 		[JsonPropertyAttribute("m2m:rol")]
-		[XmlElementAttribute("rol", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("rol", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Role> Role { get; set; } = System.Array.Empty<Role>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Role-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Role collection is empty.</para>
@@ -13568,9 +13575,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool RoleSpecified => (this.Role.Count != 0);
 
 		[JsonPropertyAttribute("m2m:tk")]
-		[XmlElementAttribute("tk", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("tk", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Token> Token { get; set; } = System.Array.Empty<Token>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Token-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Token collection is empty.</para>
@@ -13583,9 +13590,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool TokenSpecified => (this.Token.Count != 0);
 
 		[JsonPropertyAttribute("sg_flexContainerResource")]
-		[XmlElementAttribute("sg_flexContainerResource", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sg_flexContainerResource", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.FlexContainerResource> Sg_FlexContainerResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.FlexContainerResource>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Sg_FlexContainerResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Sg_FlexContainerResource collection is empty.</para>
@@ -13600,20 +13607,20 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("csr", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("csr", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:csr")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("remoteCSE", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("remoteCSE", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class RemoteCSE : Aetheros.Schema.OneM2M.AnnounceableResource
 	{
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("cst", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cst", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.CseTypeID CseTypeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die CseType-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the CseType property is specified.</para>
@@ -13641,9 +13648,9 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("poa")]
-		[XmlElementAttribute("poa", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("poa", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public ICollection<string> PointOfAccess { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die PointOfAccess-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the PointOfAccess collection is empty.</para>
@@ -13656,17 +13663,17 @@ namespace Aetheros.Schema.OneM2M
 		public bool PointOfAccessSpecified => (this.PointOfAccess.Count != 0);
 
 		[JsonPropertyAttribute("cb")]
-		[XmlElementAttribute("cb", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("cb", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string CSEBase { get; set; }
 
 		[JsonPropertyAttribute("csi")]
-		[XmlElementAttribute("csi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("csi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string CSE_ID { get; set; }
 
 		[JsonPropertyAttribute("mei")]
-		[XmlElementAttribute("mei", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token")]
+		[XmlElementAttribute("mei", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "token")]
 		public string M2M_Ext_ID { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="en">Minimum inclusive value: 0.</para>
 		/// <para xml:lang="en">Maximum inclusive value: 65535.</para>
@@ -13676,9 +13683,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("tri", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="unsignedInt")]
+		[XmlElementAttribute("tri", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "unsignedInt")]
 		public uint Trigger_Recipient_IDValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Trigger_Recipient_ID-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the Trigger_Recipient_ID property is specified.</para>
@@ -13689,7 +13696,7 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
 		public bool Trigger_Recipient_IDValueSpecified { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="en">Minimum inclusive value: 0.</para>
 		/// <para xml:lang="en">Maximum inclusive value: 65535.</para>
@@ -13710,24 +13717,24 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("rr")]
-		[XmlElementAttribute("rr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("rr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool RequestReachability { get; set; }
 
 		[JsonPropertyAttribute("nl")]
-		[XmlElementAttribute("nl", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("nl", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string NodeLink { get; set; }
 
 		[JsonPropertyAttribute("esi")]
-		[XmlElementAttribute("esi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("esi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.E2ESecInfo E2ESecInfo { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("trn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="unsignedInt")]
+		[XmlElementAttribute("trn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "unsignedInt")]
 		public uint TriggerReferenceNumberValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die TriggerReferenceNumber-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the TriggerReferenceNumber property is specified.</para>
@@ -13755,9 +13762,9 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -13770,9 +13777,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:nodA")]
-		[XmlElementAttribute("nodA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("nodA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<NodeAnnc> NodeAnnc { get; set; } = System.Array.Empty<NodeAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die NodeAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the NodeAnnc collection is empty.</para>
@@ -13785,9 +13792,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool NodeAnncSpecified => (this.NodeAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:cnt")]
-		[XmlElementAttribute("cnt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cnt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Container> Container { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Container>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Container-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Container collection is empty.</para>
@@ -13800,9 +13807,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ContainerSpecified => (this.Container.Count != 0);
 
 		[JsonPropertyAttribute("m2m:cntA")]
-		[XmlElementAttribute("cntA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cntA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ContainerAnnc> ContainerAnnc { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ContainerAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ContainerAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ContainerAnnc collection is empty.</para>
@@ -13815,9 +13822,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ContainerAnncSpecified => (this.ContainerAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:grp")]
-		[XmlElementAttribute("grp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("grp", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Group> Group { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Group>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Group-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Group collection is empty.</para>
@@ -13830,9 +13837,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool GroupSpecified => (this.Group.Count != 0);
 
 		[JsonPropertyAttribute("m2m:grpA")]
-		[XmlElementAttribute("grpA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("grpA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.GroupAnnc> GroupAnnc { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.GroupAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die GroupAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the GroupAnnc collection is empty.</para>
@@ -13845,9 +13852,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool GroupAnncSpecified => (this.GroupAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:acp")]
-		[XmlElementAttribute("acp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("acp", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.AccessControlPolicy> AccessControlPolicy { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.AccessControlPolicy>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AccessControlPolicy-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AccessControlPolicy collection is empty.</para>
@@ -13860,9 +13867,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool AccessControlPolicySpecified => (this.AccessControlPolicy.Count != 0);
 
 		[JsonPropertyAttribute("m2m:acpA")]
-		[XmlElementAttribute("acpA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("acpA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.AccessControlPolicyAnnc> AccessControlPolicyAnnc { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.AccessControlPolicyAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AccessControlPolicyAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AccessControlPolicyAnnc collection is empty.</para>
@@ -13875,9 +13882,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool AccessControlPolicyAnncSpecified => (this.AccessControlPolicyAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -13890,9 +13897,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SubscriptionSpecified => (this.Subscription.Count != 0);
 
 		[JsonPropertyAttribute("m2m:pch")]
-		[XmlElementAttribute("pch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("pch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.PollingChannel> PollingChannel { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.PollingChannel>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die PollingChannel-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the PollingChannel collection is empty.</para>
@@ -13905,9 +13912,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool PollingChannelSpecified => (this.PollingChannel.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sch")]
-		[XmlElementAttribute("sch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Schedule> Schedule { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Schedule>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Schedule-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Schedule collection is empty.</para>
@@ -13920,9 +13927,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ScheduleSpecified => (this.Schedule.Count != 0);
 
 		[JsonPropertyAttribute("m2m:ts")]
-		[XmlElementAttribute("ts", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ts", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.TimeSeries> TimeSeries { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.TimeSeries>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die TimeSeries-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the TimeSeries collection is empty.</para>
@@ -13935,9 +13942,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool TimeSeriesSpecified => (this.TimeSeries.Count != 0);
 
 		[JsonPropertyAttribute("m2m:tsa")]
-		[XmlElementAttribute("tsa", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("tsa", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.TimeSeriesAnnc> TimeSeriesAnnc { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.TimeSeriesAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die TimeSeriesAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the TimeSeriesAnnc collection is empty.</para>
@@ -13950,9 +13957,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool TimeSeriesAnncSpecified => (this.TimeSeriesAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:lcpA")]
-		[XmlElementAttribute("lcpA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("lcpA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<LocationPolicyAnnc> LocationPolicyAnnc { get; set; } = System.Array.Empty<LocationPolicyAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die LocationPolicyAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the LocationPolicyAnnc collection is empty.</para>
@@ -13965,9 +13972,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool LocationPolicyAnncSpecified => (this.LocationPolicyAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:aeA")]
-		[XmlElementAttribute("aeA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("aeA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.AEAnnc> AEAnnc { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.AEAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AEAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AEAnnc collection is empty.</para>
@@ -13980,9 +13987,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool AEAnncSpecified => (this.AEAnnc.Count != 0);
 
 		[JsonPropertyAttribute("sg_flexContainerResource")]
-		[XmlElementAttribute("sg_flexContainerResource", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sg_flexContainerResource", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.FlexContainerResource> Sg_FlexContainerResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.FlexContainerResource>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Sg_FlexContainerResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Sg_FlexContainerResource collection is empty.</para>
@@ -13995,9 +14002,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool Sg_FlexContainerResourceSpecified => (this.Sg_FlexContainerResource.Count != 0);
 
 		[JsonPropertyAttribute("sg_announcedFlexContainerResource")]
-		[XmlElementAttribute("sg_announcedFlexContainerResource", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sg_announcedFlexContainerResource", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.AnnouncedFlexContainerResource> Sg_AnnouncedFlexContainerResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.AnnouncedFlexContainerResource>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Sg_AnnouncedFlexContainerResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Sg_AnnouncedFlexContainerResource collection is empty.</para>
@@ -14012,25 +14019,25 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("nodA", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("nodA", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:nodA")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("nodeAnnc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("nodeAnnc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class NodeAnnc : Aetheros.Schema.OneM2M.AnnouncedResource
 	{
 		[JsonPropertyAttribute("ni")]
-		[XmlElementAttribute("ni", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token")]
+		[XmlElementAttribute("ni", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "token")]
 		public string NodeID { get; set; }
 
 		[JsonPropertyAttribute("hcl")]
-		[XmlElementAttribute("hcl", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("hcl", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string HostedCSELink { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -14043,9 +14050,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:memA")]
-		[XmlElementAttribute("memA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("memA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<MemoryAnnc> MemoryAnnc { get; set; } = System.Array.Empty<MemoryAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MemoryAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the MemoryAnnc collection is empty.</para>
@@ -14058,9 +14065,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool MemoryAnncSpecified => (this.MemoryAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:batA")]
-		[XmlElementAttribute("batA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("batA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.BatteryAnnc> BatteryAnnc { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.BatteryAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die BatteryAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the BatteryAnnc collection is empty.</para>
@@ -14073,9 +14080,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool BatteryAnncSpecified => (this.BatteryAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:aniA")]
-		[XmlElementAttribute("aniA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("aniA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.AreaNwkInfoAnnc> AreaNwkInfoAnnc { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.AreaNwkInfoAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AreaNwkInfoAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AreaNwkInfoAnnc collection is empty.</para>
@@ -14088,9 +14095,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool AreaNwkInfoAnncSpecified => (this.AreaNwkInfoAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:andiA")]
-		[XmlElementAttribute("andiA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("andiA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.AreaNwkDeviceInfoAnnc> AreaNwkDeviceInfoAnnc { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.AreaNwkDeviceInfoAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AreaNwkDeviceInfoAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AreaNwkDeviceInfoAnnc collection is empty.</para>
@@ -14103,9 +14110,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool AreaNwkDeviceInfoAnncSpecified => (this.AreaNwkDeviceInfoAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:fwrA")]
-		[XmlElementAttribute("fwrA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("fwrA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<FirmwareAnnc> FirmwareAnnc { get; set; } = System.Array.Empty<FirmwareAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die FirmwareAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the FirmwareAnnc collection is empty.</para>
@@ -14118,9 +14125,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool FirmwareAnncSpecified => (this.FirmwareAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:swrA")]
-		[XmlElementAttribute("swrA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("swrA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<SoftwareAnnc> SoftwareAnnc { get; set; } = System.Array.Empty<SoftwareAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SoftwareAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SoftwareAnnc collection is empty.</para>
@@ -14133,9 +14140,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SoftwareAnncSpecified => (this.SoftwareAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:dviA")]
-		[XmlElementAttribute("dviA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("dviA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<DeviceInfoAnnc> DeviceInfoAnnc { get; set; } = System.Array.Empty<DeviceInfoAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die DeviceInfoAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the DeviceInfoAnnc collection is empty.</para>
@@ -14148,9 +14155,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool DeviceInfoAnncSpecified => (this.DeviceInfoAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:dvcA")]
-		[XmlElementAttribute("dvcA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("dvcA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<DeviceCapabilityAnnc> DeviceCapabilityAnnc { get; set; } = System.Array.Empty<DeviceCapabilityAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die DeviceCapabilityAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the DeviceCapabilityAnnc collection is empty.</para>
@@ -14163,9 +14170,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool DeviceCapabilityAnncSpecified => (this.DeviceCapabilityAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:rboA")]
-		[XmlElementAttribute("rboA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("rboA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<RebootAnnc> RebootAnnc { get; set; } = System.Array.Empty<RebootAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die RebootAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the RebootAnnc collection is empty.</para>
@@ -14178,9 +14185,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool RebootAnncSpecified => (this.RebootAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:evlA")]
-		[XmlElementAttribute("evlA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("evlA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<EventLogAnnc> EventLogAnnc { get; set; } = System.Array.Empty<EventLogAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die EventLogAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the EventLogAnnc collection is empty.</para>
@@ -14193,9 +14200,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool EventLogAnncSpecified => (this.EventLogAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -14208,9 +14215,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SubscriptionSpecified => (this.Subscription.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smd")]
-		[XmlElementAttribute("smd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.SemanticDescriptor> SemanticDescriptor { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.SemanticDescriptor>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptor-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptor collection is empty.</para>
@@ -14223,9 +14230,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorSpecified => (this.SemanticDescriptor.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smdA")]
-		[XmlElementAttribute("smdA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smdA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.SemanticDescriptorAnnc> SemanticDescriptorAnnc { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.SemanticDescriptorAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptorAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptorAnnc collection is empty.</para>
@@ -14238,9 +14245,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorAnncSpecified => (this.SemanticDescriptorAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:trptA")]
-		[XmlElementAttribute("trptA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("trptA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.TrafficPatternAnnc> TrafficPatternAnnc { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.TrafficPatternAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die TrafficPatternAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the TrafficPatternAnnc collection is empty.</para>
@@ -14255,20 +14262,20 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("memA", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("memA", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:memA")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("memoryAnnc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("memoryAnnc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class MemoryAnnc : Aetheros.Schema.OneM2M.AnnouncedMgmtResource
 	{
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("mma", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="unsignedLong")]
+		[XmlElementAttribute("mma", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "unsignedLong")]
 		public ulong MemAvailableValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MemAvailable-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the MemAvailable property is specified.</para>
@@ -14299,9 +14306,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("mmt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="unsignedLong")]
+		[XmlElementAttribute("mmt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "unsignedLong")]
 		public ulong MemTotalValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MemTotal-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the MemTotal property is specified.</para>
@@ -14329,9 +14336,9 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -14344,9 +14351,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -14361,32 +14368,32 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("fwrA", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("fwrA", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:fwrA")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("firmwareAnnc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("firmwareAnnc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class FirmwareAnnc : Aetheros.Schema.OneM2M.AnnouncedMgmtResource
 	{
 		[JsonPropertyAttribute("vr")]
-		[XmlElementAttribute("vr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("vr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string Version { get; set; }
 
 		[JsonPropertyAttribute("fwn")]
-		[XmlElementAttribute("fwn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("fwn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string FirmwareName { get; set; }
 
 		[JsonPropertyAttribute("url")]
-		[XmlElementAttribute("url", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("url", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string URL { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("ud", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("ud", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool UpdateValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Update-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the Update property is specified.</para>
@@ -14414,13 +14421,13 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("uds")]
-		[XmlElementAttribute("uds", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("uds", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.ActionStatus UpdateStatus { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -14433,9 +14440,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -14450,32 +14457,32 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("swrA", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("swrA", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:swrA")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("softwareAnnc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("softwareAnnc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class SoftwareAnnc : Aetheros.Schema.OneM2M.AnnouncedMgmtResource
 	{
 		[JsonPropertyAttribute("vr")]
-		[XmlElementAttribute("vr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("vr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string Version { get; set; }
 
 		[JsonPropertyAttribute("swn")]
-		[XmlElementAttribute("swn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("swn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string SoftwareName { get; set; }
 
 		[JsonPropertyAttribute("url")]
-		[XmlElementAttribute("url", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("url", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string URL { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("in", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("in", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool InstallValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Install-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the Install property is specified.</para>
@@ -14506,9 +14513,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("un", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("un", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool UninstallValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Uninstall-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the Uninstall property is specified.</para>
@@ -14536,16 +14543,16 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("ins")]
-		[XmlElementAttribute("ins", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ins", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.ActionStatus InstallStatus { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("act", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("act", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool ActivateValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Activate-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the Activate property is specified.</para>
@@ -14576,9 +14583,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("dea", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("dea", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool DeactivateValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Deactivate-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the Deactivate property is specified.</para>
@@ -14606,13 +14613,13 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("acts")]
-		[XmlElementAttribute("acts", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("acts", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.ActionStatus ActiveStatus { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -14625,9 +14632,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -14642,45 +14649,45 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("dviA", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("dviA", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:dviA")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("deviceInfoAnnc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("deviceInfoAnnc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class DeviceInfoAnnc : Aetheros.Schema.OneM2M.AnnouncedMgmtResource
 	{
 		[JsonPropertyAttribute("dlb")]
-		[XmlElementAttribute("dlb", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("dlb", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string DeviceLabel { get; set; }
 
 		[JsonPropertyAttribute("man")]
-		[XmlElementAttribute("man", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("man", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string Manufacturer { get; set; }
 
 		[JsonPropertyAttribute("mod")]
-		[XmlElementAttribute("mod", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("mod", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string Model { get; set; }
 
 		[JsonPropertyAttribute("dty")]
-		[XmlElementAttribute("dty", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("dty", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string DeviceType { get; set; }
 
 		[JsonPropertyAttribute("fwv")]
-		[XmlElementAttribute("fwv", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("fwv", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string FwVersion { get; set; }
 
 		[JsonPropertyAttribute("swv")]
-		[XmlElementAttribute("swv", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("swv", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string SwVersion { get; set; }
 
 		[JsonPropertyAttribute("hwv")]
-		[XmlElementAttribute("hwv", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("hwv", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string HwVersion { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -14693,9 +14700,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -14710,24 +14717,24 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("dvcA", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("dvcA", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:dvcA")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("deviceCapabilityAnnc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("deviceCapabilityAnnc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class DeviceCapabilityAnnc : Aetheros.Schema.OneM2M.AnnouncedMgmtResource
 	{
 		[JsonPropertyAttribute("can")]
-		[XmlElementAttribute("can", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("can", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string CapabilityName { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("att", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("att", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool AttachedValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Attached-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the Attached property is specified.</para>
@@ -14755,16 +14762,16 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("cas")]
-		[XmlElementAttribute("cas", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cas", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.ActionStatus CapabilityActionStatus { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("cus", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("cus", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool CurrentStateValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die CurrentState-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the CurrentState property is specified.</para>
@@ -14795,9 +14802,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("ena", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("ena", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool EnableValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Enable-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the Enable property is specified.</para>
@@ -14828,9 +14835,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("dis", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("dis", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool DisableValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Disable-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the Disable property is specified.</para>
@@ -14858,9 +14865,9 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -14873,9 +14880,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -14890,20 +14897,20 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("rboA", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("rboA", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:rboA")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("rebootAnnc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("rebootAnnc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class RebootAnnc : Aetheros.Schema.OneM2M.AnnouncedMgmtResource
 	{
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("rbo", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("rbo", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool RebootValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Reboot-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the Reboot property is specified.</para>
@@ -14934,9 +14941,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("far", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("far", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool FactoryResetValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die FactoryReset-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the FactoryReset property is specified.</para>
@@ -14964,9 +14971,9 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -14979,9 +14986,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -14996,20 +15003,20 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("evlA", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("evlA", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:evlA")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("eventLogAnnc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("eventLogAnnc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class EventLogAnnc : Aetheros.Schema.OneM2M.AnnouncedMgmtResource
 	{
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("lgt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("lgt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.LogTypeId LogTypeIdValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die LogTypeId-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the LogTypeId property is specified.</para>
@@ -15037,16 +15044,16 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("lgd")]
-		[XmlElementAttribute("lgd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("lgd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string LogData { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("lgst", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("lgst", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.LogStatus LogStatusValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die LogStatus-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the LogStatus property is specified.</para>
@@ -15077,9 +15084,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("lga", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("lga", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool LogStartValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die LogStart-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the LogStart property is specified.</para>
@@ -15110,9 +15117,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("lgo", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("lgo", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool LogStopValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die LogStop-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the LogStop property is specified.</para>
@@ -15140,9 +15147,9 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -15155,9 +15162,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -15172,20 +15179,20 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("lcpA", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("lcpA", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:lcpA")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("locationPolicyAnnc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("locationPolicyAnnc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class LocationPolicyAnnc : Aetheros.Schema.OneM2M.AnnouncedResource
 	{
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("los", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("los", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.LocationSource LocationSourceValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die LocationSource-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the LocationSource property is specified.</para>
@@ -15216,9 +15223,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("lou", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("lou", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public System.TimeSpan LocationUpdatePeriodValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die LocationUpdatePeriod-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the LocationUpdatePeriod property is specified.</para>
@@ -15246,42 +15253,42 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("lot")]
-		[XmlElementAttribute("lot", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token")]
+		[XmlElementAttribute("lot", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "token")]
 		public string LocationTargetID { get; set; }
 
 		[JsonPropertyAttribute("lor")]
-		[XmlElementAttribute("lor", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("lor", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string LocationServer { get; set; }
 
 		[JsonPropertyAttribute("loi")]
-		[XmlElementAttribute("loi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("loi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string LocationContainerID { get; set; }
 
 		[JsonPropertyAttribute("lon")]
-		[XmlElementAttribute("lon", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("lon", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string LocationContainerName { get; set; }
 
 		[JsonPropertyAttribute("lost")]
-		[XmlElementAttribute("lost", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("lost", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string LocationStatus { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("csrA", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("csrA", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:csrA")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("remoteCSEAnnc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("remoteCSEAnnc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class RemoteCSEAnnc : Aetheros.Schema.OneM2M.AnnouncedResource
 	{
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("cst", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cst", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.CseTypeID CseTypeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die CseType-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the CseType property is specified.</para>
@@ -15309,9 +15316,9 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("poa")]
-		[XmlElementAttribute("poa", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("poa", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public ICollection<string> PointOfAccess { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die PointOfAccess-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the PointOfAccess collection is empty.</para>
@@ -15324,20 +15331,20 @@ namespace Aetheros.Schema.OneM2M
 		public bool PointOfAccessSpecified => (this.PointOfAccess.Count != 0);
 
 		[JsonPropertyAttribute("cb")]
-		[XmlElementAttribute("cb", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("cb", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string CSEBase { get; set; }
 
 		[JsonPropertyAttribute("csi")]
-		[XmlElementAttribute("csi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("csi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string CSE_ID { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("rr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("rr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool RequestReachabilityValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die RequestReachability-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the RequestReachability property is specified.</para>
@@ -15365,17 +15372,17 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("nl")]
-		[XmlElementAttribute("nl", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("nl", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string NodeLink { get; set; }
 
 		[JsonPropertyAttribute("esi")]
-		[XmlElementAttribute("esi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("esi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.E2ESecInfo E2ESecInfo { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -15388,9 +15395,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:nodA")]
-		[XmlElementAttribute("nodA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("nodA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<NodeAnnc> NodeAnnc { get; set; } = System.Array.Empty<NodeAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die NodeAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the NodeAnnc collection is empty.</para>
@@ -15403,9 +15410,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool NodeAnncSpecified => (this.NodeAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:cnt")]
-		[XmlElementAttribute("cnt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cnt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Container> Container { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Container>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Container-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Container collection is empty.</para>
@@ -15418,9 +15425,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ContainerSpecified => (this.Container.Count != 0);
 
 		[JsonPropertyAttribute("m2m:cntA")]
-		[XmlElementAttribute("cntA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cntA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ContainerAnnc> ContainerAnnc { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ContainerAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ContainerAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ContainerAnnc collection is empty.</para>
@@ -15433,9 +15440,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ContainerAnncSpecified => (this.ContainerAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:grp")]
-		[XmlElementAttribute("grp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("grp", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Group> Group { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Group>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Group-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Group collection is empty.</para>
@@ -15448,9 +15455,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool GroupSpecified => (this.Group.Count != 0);
 
 		[JsonPropertyAttribute("m2m:grpA")]
-		[XmlElementAttribute("grpA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("grpA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.GroupAnnc> GroupAnnc { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.GroupAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die GroupAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the GroupAnnc collection is empty.</para>
@@ -15463,9 +15470,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool GroupAnncSpecified => (this.GroupAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:acp")]
-		[XmlElementAttribute("acp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("acp", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.AccessControlPolicy> AccessControlPolicy { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.AccessControlPolicy>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AccessControlPolicy-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AccessControlPolicy collection is empty.</para>
@@ -15478,9 +15485,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool AccessControlPolicySpecified => (this.AccessControlPolicy.Count != 0);
 
 		[JsonPropertyAttribute("m2m:acpA")]
-		[XmlElementAttribute("acpA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("acpA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.AccessControlPolicyAnnc> AccessControlPolicyAnnc { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.AccessControlPolicyAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AccessControlPolicyAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AccessControlPolicyAnnc collection is empty.</para>
@@ -15493,9 +15500,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool AccessControlPolicyAnncSpecified => (this.AccessControlPolicyAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -15508,9 +15515,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SubscriptionSpecified => (this.Subscription.Count != 0);
 
 		[JsonPropertyAttribute("m2m:pch")]
-		[XmlElementAttribute("pch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("pch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.PollingChannel> PollingChannel { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.PollingChannel>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die PollingChannel-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the PollingChannel collection is empty.</para>
@@ -15523,9 +15530,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool PollingChannelSpecified => (this.PollingChannel.Count != 0);
 
 		[JsonPropertyAttribute("m2m:schA")]
-		[XmlElementAttribute("schA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("schA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ScheduleAnnc> ScheduleAnnc { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ScheduleAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ScheduleAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ScheduleAnnc collection is empty.</para>
@@ -15538,9 +15545,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ScheduleAnncSpecified => (this.ScheduleAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:lcpA")]
-		[XmlElementAttribute("lcpA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("lcpA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<LocationPolicyAnnc> LocationPolicyAnnc { get; set; } = System.Array.Empty<LocationPolicyAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die LocationPolicyAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the LocationPolicyAnnc collection is empty.</para>
@@ -15553,9 +15560,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool LocationPolicyAnncSpecified => (this.LocationPolicyAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:ts")]
-		[XmlElementAttribute("ts", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ts", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.TimeSeries> TimeSeries { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.TimeSeries>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die TimeSeries-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the TimeSeries collection is empty.</para>
@@ -15568,9 +15575,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool TimeSeriesSpecified => (this.TimeSeries.Count != 0);
 
 		[JsonPropertyAttribute("m2m:tsa")]
-		[XmlElementAttribute("tsa", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("tsa", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.TimeSeriesAnnc> TimeSeriesAnnc { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.TimeSeriesAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die TimeSeriesAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the TimeSeriesAnnc collection is empty.</para>
@@ -15583,9 +15590,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool TimeSeriesAnncSpecified => (this.TimeSeriesAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:aeA")]
-		[XmlElementAttribute("aeA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("aeA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.AEAnnc> AEAnnc { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.AEAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AEAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AEAnnc collection is empty.</para>
@@ -15598,9 +15605,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool AEAnncSpecified => (this.AEAnnc.Count != 0);
 
 		[JsonPropertyAttribute("sg_flexContainerResource")]
-		[XmlElementAttribute("sg_flexContainerResource", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sg_flexContainerResource", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.FlexContainerResource> Sg_FlexContainerResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.FlexContainerResource>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Sg_FlexContainerResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Sg_FlexContainerResource collection is empty.</para>
@@ -15613,9 +15620,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool Sg_FlexContainerResourceSpecified => (this.Sg_FlexContainerResource.Count != 0);
 
 		[JsonPropertyAttribute("sg_announcedFlexContainerResource")]
-		[XmlElementAttribute("sg_announcedFlexContainerResource", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sg_announcedFlexContainerResource", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.AnnouncedFlexContainerResource> Sg_AnnouncedFlexContainerResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.AnnouncedFlexContainerResource>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Sg_AnnouncedFlexContainerResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Sg_AnnouncedFlexContainerResource collection is empty.</para>
@@ -15630,25 +15637,25 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("nod", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("nod", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:nod")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("node", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("node", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class Node : Aetheros.Schema.OneM2M.AnnounceableResource
 	{
 		[JsonPropertyAttribute("ni")]
-		[XmlElementAttribute("ni", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token")]
+		[XmlElementAttribute("ni", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "token")]
 		public string NodeID { get; set; }
 
 		[JsonPropertyAttribute("hcl")]
-		[XmlElementAttribute("hcl", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("hcl", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string HostedCSELink { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -15661,9 +15668,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:acmp")]
-		[XmlElementAttribute("acmp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("acmp", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ActiveCmdhPolicy> ActiveCmdhPolicy { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ActiveCmdhPolicy>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ActiveCmdhPolicy-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ActiveCmdhPolicy collection is empty.</para>
@@ -15676,9 +15683,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ActiveCmdhPolicySpecified => (this.ActiveCmdhPolicy.Count != 0);
 
 		[JsonPropertyAttribute("m2m:andi")]
-		[XmlElementAttribute("andi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("andi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.AreaNwkDeviceInfo> AreaNwkDeviceInfo { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.AreaNwkDeviceInfo>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AreaNwkDeviceInfo-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AreaNwkDeviceInfo collection is empty.</para>
@@ -15691,9 +15698,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool AreaNwkDeviceInfoSpecified => (this.AreaNwkDeviceInfo.Count != 0);
 
 		[JsonPropertyAttribute("m2m:ani")]
-		[XmlElementAttribute("ani", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ani", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.AreaNwkInfo> AreaNwkInfo { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.AreaNwkInfo>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AreaNwkInfo-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AreaNwkInfo collection is empty.</para>
@@ -15706,9 +15713,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool AreaNwkInfoSpecified => (this.AreaNwkInfo.Count != 0);
 
 		[JsonPropertyAttribute("m2m:bat")]
-		[XmlElementAttribute("bat", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("bat", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Battery> Battery { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Battery>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Battery-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Battery collection is empty.</para>
@@ -15721,9 +15728,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool BatterySpecified => (this.Battery.Count != 0);
 
 		[JsonPropertyAttribute("m2m:cmp")]
-		[XmlElementAttribute("cmp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cmp", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.CmdhPolicy> CmdhPolicy { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.CmdhPolicy>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die CmdhPolicy-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the CmdhPolicy collection is empty.</para>
@@ -15736,9 +15743,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool CmdhPolicySpecified => (this.CmdhPolicy.Count != 0);
 
 		[JsonPropertyAttribute("m2m:dvc")]
-		[XmlElementAttribute("dvc", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("dvc", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<DeviceCapability> DeviceCapability { get; set; } = System.Array.Empty<DeviceCapability>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die DeviceCapability-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the DeviceCapability collection is empty.</para>
@@ -15751,9 +15758,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool DeviceCapabilitySpecified => (this.DeviceCapability.Count != 0);
 
 		[JsonPropertyAttribute("m2m:dvi")]
-		[XmlElementAttribute("dvi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("dvi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<DeviceInfo> DeviceInfo { get; set; } = System.Array.Empty<DeviceInfo>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die DeviceInfo-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the DeviceInfo collection is empty.</para>
@@ -15766,9 +15773,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool DeviceInfoSpecified => (this.DeviceInfo.Count != 0);
 
 		[JsonPropertyAttribute("m2m:evl")]
-		[XmlElementAttribute("evl", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("evl", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<EventLog> EventLog { get; set; } = System.Array.Empty<EventLog>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die EventLog-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the EventLog collection is empty.</para>
@@ -15781,9 +15788,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool EventLogSpecified => (this.EventLog.Count != 0);
 
 		[JsonPropertyAttribute("m2m:fwr")]
-		[XmlElementAttribute("fwr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("fwr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Firmware> Firmware { get; set; } = System.Array.Empty<Firmware>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Firmware-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Firmware collection is empty.</para>
@@ -15796,9 +15803,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool FirmwareSpecified => (this.Firmware.Count != 0);
 
 		[JsonPropertyAttribute("m2m:mem")]
-		[XmlElementAttribute("mem", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mem", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Memory> Memory { get; set; } = System.Array.Empty<Memory>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Memory-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Memory collection is empty.</para>
@@ -15811,9 +15818,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool MemorySpecified => (this.Memory.Count != 0);
 
 		[JsonPropertyAttribute("m2m:rbo")]
-		[XmlElementAttribute("rbo", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("rbo", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Reboot> Reboot { get; set; } = System.Array.Empty<Reboot>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Reboot-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Reboot collection is empty.</para>
@@ -15826,9 +15833,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool RebootSpecified => (this.Reboot.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smd")]
-		[XmlElementAttribute("smd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.SemanticDescriptor> SemanticDescriptor { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.SemanticDescriptor>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptor-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptor collection is empty.</para>
@@ -15841,9 +15848,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorSpecified => (this.SemanticDescriptor.Count != 0);
 
 		[JsonPropertyAttribute("m2m:swr")]
-		[XmlElementAttribute("swr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("swr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Software> Software { get; set; } = System.Array.Empty<Software>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Software-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Software collection is empty.</para>
@@ -15856,9 +15863,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SoftwareSpecified => (this.Software.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -15871,9 +15878,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SubscriptionSpecified => (this.Subscription.Count != 0);
 
 		[JsonPropertyAttribute("m2m:trpt")]
-		[XmlElementAttribute("trpt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("trpt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.TrafficPattern> TrafficPattern { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.TrafficPattern>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die TrafficPattern-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the TrafficPattern collection is empty.</para>
@@ -15888,36 +15895,36 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("dvc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("dvc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:dvc")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("deviceCapability", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("deviceCapability", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class DeviceCapability : Aetheros.Schema.OneM2M.MgmtResource
 	{
 		[JsonPropertyAttribute("can")]
-		[XmlElementAttribute("can", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("can", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string CapabilityName { get; set; }
 
 		[JsonPropertyAttribute("att")]
-		[XmlElementAttribute("att", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("att", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool Attached { get; set; }
 
 		[JsonPropertyAttribute("cas")]
-		[XmlElementAttribute("cas", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cas", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.ActionStatus CapabilityActionStatus { get; set; }
 
 		[JsonPropertyAttribute("cus")]
-		[XmlElementAttribute("cus", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("cus", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool CurrentState { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("ena", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("ena", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool EnableValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Enable-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the Enable property is specified.</para>
@@ -15948,9 +15955,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("dis", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("dis", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool DisableValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Disable-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the Disable property is specified.</para>
@@ -15978,9 +15985,9 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -15993,9 +16000,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -16010,45 +16017,45 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("dvi", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("dvi", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:dvi")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("deviceInfo", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("deviceInfo", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class DeviceInfo : Aetheros.Schema.OneM2M.MgmtResource
 	{
 		[JsonPropertyAttribute("dlb")]
-		[XmlElementAttribute("dlb", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("dlb", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string DeviceLabel { get; set; }
 
 		[JsonPropertyAttribute("man")]
-		[XmlElementAttribute("man", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("man", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string Manufacturer { get; set; }
 
 		[JsonPropertyAttribute("mod")]
-		[XmlElementAttribute("mod", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("mod", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string Model { get; set; }
 
 		[JsonPropertyAttribute("dty")]
-		[XmlElementAttribute("dty", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("dty", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string DeviceType { get; set; }
 
 		[JsonPropertyAttribute("fwv")]
-		[XmlElementAttribute("fwv", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("fwv", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string FwVersion { get; set; }
 
 		[JsonPropertyAttribute("swv")]
-		[XmlElementAttribute("swv", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("swv", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string SwVersion { get; set; }
 
 		[JsonPropertyAttribute("hwv")]
-		[XmlElementAttribute("hwv", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("hwv", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string HwVersion { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -16061,9 +16068,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -16078,20 +16085,20 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("evl", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("evl", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:evl")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("eventLog", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("eventLog", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class EventLog : Aetheros.Schema.OneM2M.MgmtResource
 	{
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("lgt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("lgt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.LogTypeId LogTypeIdValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die LogTypeId-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the LogTypeId property is specified.</para>
@@ -16119,16 +16126,16 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("lgd")]
-		[XmlElementAttribute("lgd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("lgd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string LogData { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("lgst", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("lgst", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.LogStatus LogStatusValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die LogStatus-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the LogStatus property is specified.</para>
@@ -16156,17 +16163,17 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("lga")]
-		[XmlElementAttribute("lga", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("lga", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool LogStart { get; set; }
 
 		[JsonPropertyAttribute("lgo")]
-		[XmlElementAttribute("lgo", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("lgo", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool LogStop { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -16179,9 +16186,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -16196,37 +16203,37 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("fwr", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("fwr", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:fwr")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("firmware", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("firmware", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class Firmware : Aetheros.Schema.OneM2M.MgmtResource
 	{
 		[JsonPropertyAttribute("vr")]
-		[XmlElementAttribute("vr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("vr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string Version { get; set; }
 
 		[JsonPropertyAttribute("fwn")]
-		[XmlElementAttribute("fwn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("fwn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string FirmwareName { get; set; }
 
 		[JsonPropertyAttribute("url")]
-		[XmlElementAttribute("url", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("url", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string URL { get; set; }
 
 		[JsonPropertyAttribute("ud")]
-		[XmlElementAttribute("ud", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("ud", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool Update { get; set; }
 
 		[JsonPropertyAttribute("uds")]
-		[XmlElementAttribute("uds", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("uds", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.ActionStatus UpdateStatus { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -16239,9 +16246,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -16256,25 +16263,25 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("mem", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("mem", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:mem")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("memory", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("memory", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class Memory : Aetheros.Schema.OneM2M.MgmtResource
 	{
 		[JsonPropertyAttribute("mma")]
-		[XmlElementAttribute("mma", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="unsignedLong")]
+		[XmlElementAttribute("mma", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "unsignedLong")]
 		public ulong MemAvailable { get; set; }
 
 		[JsonPropertyAttribute("mmt")]
-		[XmlElementAttribute("mmt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="unsignedLong")]
+		[XmlElementAttribute("mmt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "unsignedLong")]
 		public ulong MemTotal { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -16287,9 +16294,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -16304,25 +16311,25 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("rbo", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("rbo", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:rbo")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("reboot", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("reboot", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class Reboot : Aetheros.Schema.OneM2M.MgmtResource
 	{
 		[JsonPropertyAttribute("rbo")]
-		[XmlElementAttribute("rbo", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("rbo", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool RebootProperty { get; set; }
 
 		[JsonPropertyAttribute("far")]
-		[XmlElementAttribute("far", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("far", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool FactoryReset { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -16335,9 +16342,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -16352,44 +16359,44 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("swr", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("swr", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:swr")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("software", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("software", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class Software : Aetheros.Schema.OneM2M.MgmtResource
 	{
 		[JsonPropertyAttribute("vr")]
-		[XmlElementAttribute("vr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("vr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string Version { get; set; }
 
 		[JsonPropertyAttribute("swn")]
-		[XmlElementAttribute("swn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("swn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string SoftwareName { get; set; }
 
 		[JsonPropertyAttribute("url")]
-		[XmlElementAttribute("url", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("url", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string URL { get; set; }
 
 		[JsonPropertyAttribute("in")]
-		[XmlElementAttribute("in", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("in", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool Install { get; set; }
 
 		[JsonPropertyAttribute("un")]
-		[XmlElementAttribute("un", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("un", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool Uninstall { get; set; }
 
 		[JsonPropertyAttribute("ins")]
-		[XmlElementAttribute("ins", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ins", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.ActionStatus InstallStatus { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("act", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("act", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool ActivateValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Activate-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the Activate property is specified.</para>
@@ -16420,9 +16427,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("dea", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("dea", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool DeactivateValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Deactivate-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the Deactivate property is specified.</para>
@@ -16450,13 +16457,13 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("acts")]
-		[XmlElementAttribute("acts", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("acts", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.ActionStatus ActiveStatus { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -16469,9 +16476,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -16486,24 +16493,24 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("mgc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("mgc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:mgc")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("mgmtCmd", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("mgmtCmd", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class MgmtCmd : Aetheros.Schema.OneM2M.RegularResource
 	{
 		[JsonPropertyAttribute("dc")]
-		[XmlElementAttribute("dc", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("dc", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string Description { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("cmt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("cmt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.CmdType CmdTypeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die CmdType-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the CmdType property is specified.</para>
@@ -16531,24 +16538,24 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("exra")]
-		[XmlElementAttribute("exra", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("exra", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.ExecReqArgsListType ExecReqArgs { get; set; }
 
 		[JsonPropertyAttribute("exe")]
-		[XmlElementAttribute("exe", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("exe", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool ExecEnable { get; set; }
 
 		[JsonPropertyAttribute("ext")]
-		[XmlElementAttribute("ext", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token")]
+		[XmlElementAttribute("ext", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "token")]
 		public string ExecTarget { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("exm", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("exm", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.ExecModeType ExecModeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ExecMode-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ExecMode property is specified.</para>
@@ -16579,9 +16586,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("exf", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="duration")]
+		[XmlElementAttribute("exf", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "duration")]
 		public System.TimeSpan ExecFrequencyValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ExecFrequency-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ExecFrequency property is specified.</para>
@@ -16612,9 +16619,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("exy", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="duration")]
+		[XmlElementAttribute("exy", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "duration")]
 		public System.TimeSpan ExecDelayValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ExecDelay-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ExecDelay property is specified.</para>
@@ -16645,9 +16652,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("exn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("exn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long ExecNumberValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ExecNumber-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ExecNumber property is specified.</para>
@@ -16675,9 +16682,9 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -16690,9 +16697,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:exin")]
-		[XmlElementAttribute("exin", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("exin", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<ExecInstance> ExecInstance { get; set; } = System.Array.Empty<ExecInstance>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ExecInstance-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ExecInstance collection is empty.</para>
@@ -16705,9 +16712,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ExecInstanceSpecified => (this.ExecInstance.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -16722,20 +16729,20 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("exin", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("exin", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:exin")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("execInstance", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("execInstance", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class ExecInstance : Aetheros.Schema.OneM2M.RegularResource
 	{
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("exs", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("exs", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.ExecStatusType ExecStatusValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ExecStatus-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ExecStatus property is specified.</para>
@@ -16766,9 +16773,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("exr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("exr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.ExecResultType ExecResultValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ExecResult-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ExecResult property is specified.</para>
@@ -16799,9 +16806,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("exd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("exd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool ExecDisableValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ExecDisable-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ExecDisable property is specified.</para>
@@ -16829,16 +16836,16 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("ext")]
-		[XmlElementAttribute("ext", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token")]
+		[XmlElementAttribute("ext", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "token")]
 		public string ExecTarget { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("exm", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("exm", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.ExecModeType ExecModeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ExecMode-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ExecMode property is specified.</para>
@@ -16869,9 +16876,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("exf", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="duration")]
+		[XmlElementAttribute("exf", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "duration")]
 		public System.TimeSpan ExecFrequencyValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ExecFrequency-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ExecFrequency property is specified.</para>
@@ -16902,9 +16909,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("exy", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="duration")]
+		[XmlElementAttribute("exy", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "duration")]
 		public System.TimeSpan ExecDelayValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ExecDelay-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ExecDelay property is specified.</para>
@@ -16935,9 +16942,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("exn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("exn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long ExecNumberValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ExecNumber-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ExecNumber property is specified.</para>
@@ -16965,13 +16972,13 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("exra")]
-		[XmlElementAttribute("exra", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("exra", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.ExecReqArgsListType ExecReqArgs { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -16984,9 +16991,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -17001,20 +17008,20 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("lcp", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("lcp", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:lcp")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("locationPolicy", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("locationPolicy", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class LocationPolicy : Aetheros.Schema.OneM2M.AnnounceableResource
 	{
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("los", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("los", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.LocationSource LocationSourceValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die LocationSource-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the LocationSource property is specified.</para>
@@ -17045,9 +17052,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("lou", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("lou", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public System.TimeSpan LocationUpdatePeriodValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die LocationUpdatePeriod-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the LocationUpdatePeriod property is specified.</para>
@@ -17075,29 +17082,29 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("lot")]
-		[XmlElementAttribute("lot", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token")]
+		[XmlElementAttribute("lot", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "token")]
 		public string LocationTargetID { get; set; }
 
 		[JsonPropertyAttribute("lor")]
-		[XmlElementAttribute("lor", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("lor", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string LocationServer { get; set; }
 
 		[JsonPropertyAttribute("loi")]
-		[XmlElementAttribute("loi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("loi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string LocationContainerID { get; set; }
 
 		[JsonPropertyAttribute("lon")]
-		[XmlElementAttribute("lon", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("lon", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string LocationContainerName { get; set; }
 
 		[JsonPropertyAttribute("lost")]
-		[XmlElementAttribute("lost", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("lost", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string LocationStatus { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -17110,9 +17117,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -17127,21 +17134,21 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("stcg", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("stcg", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:stcg")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("statsConfig", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("statsConfig", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class StatsConfig : Aetheros.Schema.OneM2M.RegularResource
 	{
 		[JsonPropertyAttribute("cr")]
-		[XmlElementAttribute("cr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("cr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string Creator { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -17154,9 +17161,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:evcg")]
-		[XmlElementAttribute("evcg", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("evcg", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<EventConfig> EventConfig { get; set; } = System.Array.Empty<EventConfig>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die EventConfig-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the EventConfig collection is empty.</para>
@@ -17169,9 +17176,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool EventConfigSpecified => (this.EventConfig.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -17186,28 +17193,28 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("evcg", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("evcg", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:evcg")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("eventConfig", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("eventConfig", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class EventConfig : Aetheros.Schema.OneM2M.RegularResource
 	{
 		[JsonPropertyAttribute("cr")]
-		[XmlElementAttribute("cr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("cr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string Creator { get; set; }
 
 		[JsonPropertyAttribute("evi")]
-		[XmlElementAttribute("evi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("evi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string EventID { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("evt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("evt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.EventType EventTypeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die EventType-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the EventType property is specified.</para>
@@ -17238,9 +17245,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("evs", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("evs", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset EventStartValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die EventStart-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the EventStart property is specified.</para>
@@ -17271,9 +17278,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("eve", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("eve", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset EventEndValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die EventEnd-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the EventEnd property is specified.</para>
@@ -17304,9 +17311,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("opt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("opt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long OperationTypeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die OperationType-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the OperationType property is specified.</para>
@@ -17337,9 +17344,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("ds", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ds", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long DataSizeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die DataSize-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the DataSize property is specified.</para>
@@ -17367,9 +17374,9 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -17382,9 +17389,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -17399,36 +17406,36 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("stcl", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("stcl", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:stcl")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("statsCollect", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("statsCollect", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class StatsCollect : Aetheros.Schema.OneM2M.RegularResource
 	{
 		[JsonPropertyAttribute("cr")]
-		[XmlElementAttribute("cr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("cr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string Creator { get; set; }
 
 		[JsonPropertyAttribute("sci")]
-		[XmlElementAttribute("sci", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("sci", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string StatsCollectID { get; set; }
 
 		[JsonPropertyAttribute("cei")]
-		[XmlElementAttribute("cei", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("cei", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string CollectingEntityID { get; set; }
 
 		[JsonPropertyAttribute("cdi")]
-		[XmlElementAttribute("cdi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("cdi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string CollectedEntityID { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("srs", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("srs", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.StatsRuleStatusType StatsRuleStatusValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die StatsRuleStatus-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the StatsRuleStatus property is specified.</para>
@@ -17459,9 +17466,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("sm", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sm", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.StatModelType StatModelValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die StatModel-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the StatModel property is specified.</para>
@@ -17487,16 +17494,16 @@ namespace Aetheros.Schema.OneM2M
 				this.StatModelValueSpecified = value.HasValue;
 			}
 		}
-		
+
 		/// <summary>
 		/// <para xml:lang="en">Pattern: (([*]|[1-5]?\d([,-/][1-5]?\d)*)\s+){2}([*]|((1?\d|2[0-3])([,-/](1?\d|2[0-3]))*))\s+([*]|(([1-9]|1\d|2\d|3[01])([,-/]([1-9]|1\d|2\d|3[01]))*))\s+([*]|(([1-9]|1[0-2])([,-/]([1-9]|1[0-2]))*))\s+([*]|([0-6]([,-/][0-6])*))\s+([*]|([2-9]\d\d\d)(([,-]([2-9]\d\d\d)([/][\d]?[\d]?[\d]?[\d])?)*)).</para>
 		/// </summary>
 		[System.ComponentModel.DataAnnotations.RegularExpressionAttribute(@"(([*]|[1-5]?\d([,-/][1-5]?\d)*)\s+){2}([*]|((1?\d|2[0-3])([,-/](1?\d|2[0-3]))*))\s+([*]|(([1-9]|1\d|2\d|3[01])([,-/]([1-9]|1\d|2\d|3[01]))*))\s+([*]|(([1-9]|1[0-2])([,-/]([1-9]|1[0-2]))*))\s+([*]|([0-6]([,-/][0-6])*))\s+([*]|([2-9]\d\d\d)(([,-]([2-9]\d\d\d)([/][\d]?[\d]?[\d]?[\d])?)*))")]
 		[JsonPropertyAttribute("cp")]
-		[XmlArrayAttribute("cp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-		[XmlArrayItemAttribute("sce", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlArrayAttribute("cp", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayItemAttribute("sce", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public ICollection<string> CollectPeriod { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die CollectPeriod-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the CollectPeriod collection is empty.</para>
@@ -17509,13 +17516,13 @@ namespace Aetheros.Schema.OneM2M
 		public bool CollectPeriodSpecified => (this.CollectPeriod.Count != 0);
 
 		[JsonPropertyAttribute("evi")]
-		[XmlElementAttribute("evi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("evi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string EventID { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -17528,9 +17535,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -17545,24 +17552,24 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("req", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("req", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:req")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("request", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("request", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class Request<TPrimitiveContent> : Aetheros.Schema.OneM2M.RegularResource where TPrimitiveContent : PrimitiveContent
 	{
 		[JsonPropertyAttribute("st")]
-		[XmlElementAttribute("st", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("st", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long StateTag { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("op", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("op", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.Operation OperationValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Operation-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the Operation property is specified.</para>
@@ -17590,32 +17597,32 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("tg")]
-		[XmlElementAttribute("tg", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("tg", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string Target { get; set; }
 
 		[JsonPropertyAttribute("org")]
-		[XmlElementAttribute("org", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("org", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string Originator { get; set; }
 
 		[JsonPropertyAttribute("rid")]
-		[XmlElementAttribute("rid", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token")]
+		[XmlElementAttribute("rid", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "token")]
 		public string RequestID { get; set; }
 
 		[JsonPropertyAttribute("mi")]
-		[XmlElementAttribute("mi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("mi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.MetaInformation MetaInformation { get; set; }
 
 		[JsonPropertyAttribute("pc")]
-		[XmlElementAttribute("pc", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-	public TPrimitiveContent PrimitiveContent { get; set; }
+		[XmlElementAttribute("pc", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		public TPrimitiveContent PrimitiveContent { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("rs", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("rs", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.RequestStatus RequestStatusValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die RequestStatus-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the RequestStatus property is specified.</para>
@@ -17643,13 +17650,13 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("ors")]
-		[XmlElementAttribute("ors", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ors", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.OperationResult<TPrimitiveContent> OperationResult { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -17662,9 +17669,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -17679,47 +17686,47 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("dlv", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("dlv", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:dlv")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("delivery", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("delivery", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class Delivery<TPrimitiveContent> : Aetheros.Schema.OneM2M.RegularResource where TPrimitiveContent : PrimitiveContent
 	{
 		[JsonPropertyAttribute("st")]
-		[XmlElementAttribute("st", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("st", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public long StateTag { get; set; }
 
 		[JsonPropertyAttribute("sr")]
-		[XmlElementAttribute("sr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("sr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string Source { get; set; }
 
 		[JsonPropertyAttribute("tg")]
-		[XmlElementAttribute("tg", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("tg", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string Target { get; set; }
 
 		[JsonPropertyAttribute("ls")]
-		[XmlElementAttribute("ls", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("ls", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset Lifespan { get; set; }
 
 		[JsonPropertyAttribute("ec")]
-		[XmlElementAttribute("ec", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ec", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public string EventCat { get; set; }
 
 		[JsonPropertyAttribute("dmd")]
-		[XmlElementAttribute("dmd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("dmd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.DeliveryMetaData DeliveryMetaData { get; set; }
 
 		[JsonPropertyAttribute("arq")]
 		[JsonConverter(typeof(JsonArrayItem<AggregatedRequestRequest>), "req")]
-		[XmlArrayAttribute("arq", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-		[XmlArrayItemAttribute("req", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayAttribute("arq", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayItemAttribute("req", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.AggregatedRequestRequest<TPrimitiveContent>> AggregatedRequest { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -17732,9 +17739,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -17749,17 +17756,17 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("mssp", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("mssp", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:mssp")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("m2mServiceSubscriptionProfile", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("m2mServiceSubscriptionProfile", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class M2MServiceSubscriptionProfile : Aetheros.Schema.OneM2M.RegularResource
 	{
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -17772,9 +17779,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:svsn")]
-		[XmlElementAttribute("svsn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("svsn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<ServiceSubscribedNode> ServiceSubscribedNode { get; set; } = System.Array.Empty<ServiceSubscribedNode>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ServiceSubscribedNode-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ServiceSubscribedNode collection is empty.</para>
@@ -17787,9 +17794,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ServiceSubscribedNodeSpecified => (this.ServiceSubscribedNode.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -17804,29 +17811,29 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("svsn", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("svsn", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:svsn")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("serviceSubscribedNode", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("serviceSubscribedNode", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class ServiceSubscribedNode : Aetheros.Schema.OneM2M.RegularResource
 	{
 		[JsonPropertyAttribute("ni")]
-		[XmlElementAttribute("ni", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token")]
+		[XmlElementAttribute("ni", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "token")]
 		public string NodeID { get; set; }
 
 		[JsonPropertyAttribute("csi")]
-		[XmlElementAttribute("csi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("csi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string CSE_ID { get; set; }
 
 		[JsonPropertyAttribute("di")]
-		[XmlElementAttribute("di", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("di", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public string[] DeviceIdentifier { get; set; }
 
 		[JsonPropertyAttribute("rlk")]
-		[XmlElementAttribute("rlk", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("rlk", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> RuleLinks { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die RuleLinks-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the RuleLinks collection is empty.</para>
@@ -17839,9 +17846,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool RuleLinksSpecified => (this.RuleLinks.Count != 0);
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -17854,9 +17861,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -17871,17 +17878,17 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("asar", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("asar", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:asar")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("serviceSubscribedAppRule", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("serviceSubscribedAppRule", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class ServiceSubscribedAppRule : Aetheros.Schema.OneM2M.RegularResource
 	{
 		[JsonPropertyAttribute("apci")]
-		[XmlElementAttribute("apci", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("apci", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> ApplicableCredIDs { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ApplicableCredIDs-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ApplicableCredIDs collection is empty.</para>
@@ -17894,9 +17901,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ApplicableCredIDsSpecified => (this.ApplicableCredIDs.Count != 0);
 
 		[JsonPropertyAttribute("aai")]
-		[XmlElementAttribute("aai", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("aai", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> AllowedApp_IDs { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AllowedApp_IDs-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AllowedApp_IDs collection is empty.</para>
@@ -17909,9 +17916,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool AllowedApp_IDsSpecified => (this.AllowedApp_IDs.Count != 0);
 
 		[JsonPropertyAttribute("aae")]
-		[XmlElementAttribute("aae", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("aae", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> AllowedAEs { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AllowedAEs-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AllowedAEs collection is empty.</para>
@@ -17924,9 +17931,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool AllowedAEsSpecified => (this.AllowedAEs.Count != 0);
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -17939,9 +17946,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -17956,11 +17963,11 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("rol", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("rol", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:rol")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("role", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("role", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class Role : Aetheros.Schema.OneM2M.RegularResource
 	{
 		/// <summary>
@@ -17968,37 +17975,37 @@ namespace Aetheros.Schema.OneM2M
 		/// </summary>
 		[System.ComponentModel.DataAnnotations.RegularExpressionAttribute("([a-zA-Z0-9\\.\\-,_]*)@([A-Za-z0-9\\-_]*)(\\.([A-Za-z0-9\\-_])*)*")]
 		[JsonPropertyAttribute("rlid")]
-		[XmlElementAttribute("rlid", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("rlid", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string RoleID { get; set; }
 
 		[JsonPropertyAttribute("tkis")]
-		[XmlElementAttribute("tkis", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("tkis", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string Issuer { get; set; }
 
 		[JsonPropertyAttribute("tkhd")]
-		[XmlElementAttribute("tkhd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("tkhd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string Holder { get; set; }
 
 		[JsonPropertyAttribute("tknb")]
-		[XmlElementAttribute("tknb", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("tknb", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset NotBefore { get; set; }
 
 		[JsonPropertyAttribute("tkna")]
-		[XmlElementAttribute("tkna", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("tkna", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset NotAfter { get; set; }
 
 		[JsonPropertyAttribute("rlnm")]
-		[XmlElementAttribute("rlnm", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("rlnm", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string RoleName { get; set; }
 
 		[JsonPropertyAttribute("rltl")]
-		[XmlElementAttribute("rltl", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("rltl", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string TokenLink { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -18011,9 +18018,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -18028,11 +18035,11 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("tk", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("tk", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:tk")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("token", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("token", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class Token : Aetheros.Schema.OneM2M.RegularResource
 	{
 		/// <summary>
@@ -18040,36 +18047,36 @@ namespace Aetheros.Schema.OneM2M
 		/// </summary>
 		[System.ComponentModel.DataAnnotations.RegularExpressionAttribute("([a-zA-Z0-9\\.\\-,_]*)@([A-Za-z0-9\\-_]*)(\\.([A-Za-z0-9\\-_])*)*")]
 		[JsonPropertyAttribute("tkid")]
-		[XmlElementAttribute("tkid", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("tkid", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string TokenID { get; set; }
 
 		[JsonPropertyAttribute("tkob")]
-		[XmlElementAttribute("tkob", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("tkob", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public string TokenObject { get; set; }
 
 		[JsonPropertyAttribute("vr")]
-		[XmlElementAttribute("vr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("vr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string Version { get; set; }
 
 		[JsonPropertyAttribute("tkis")]
-		[XmlElementAttribute("tkis", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("tkis", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string Issuer { get; set; }
 
 		[JsonPropertyAttribute("tkhd")]
-		[XmlElementAttribute("tkhd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("tkhd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string Holder { get; set; }
 
 		[JsonPropertyAttribute("tknb")]
-		[XmlElementAttribute("tknb", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("tknb", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset NotBefore { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("tkna", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("tkna", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset NotAfterValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die NotAfter-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the NotAfter property is specified.</para>
@@ -18097,13 +18104,13 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("tknm")]
-		[XmlElementAttribute("tknm", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("tknm", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string TokenName { get; set; }
 
 		[JsonPropertyAttribute("tkau")]
-		[XmlElementAttribute("tkau", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("tkau", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> Audience { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Audience-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Audience collection is empty.</para>
@@ -18116,17 +18123,17 @@ namespace Aetheros.Schema.OneM2M
 		public bool AudienceSpecified => (this.Audience.Count != 0);
 
 		[JsonPropertyAttribute("tkps")]
-		[XmlElementAttribute("tkps", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("tkps", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public TokenPermissionsItem Permissions { get; set; }
 
 		[JsonPropertyAttribute("tkex")]
-		[XmlElementAttribute("tkex", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("tkex", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string Extension { get; set; }
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -18139,9 +18146,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -18156,41 +18163,41 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("TokenPermissionsItem", Namespace="http://www.onem2m.org/xml/protocols", AnonymousType=true)]
+	[XmlTypeAttribute("TokenPermissionsItem", Namespace = "http://www.onem2m.org/xml/protocols", AnonymousType = true)]
 	[JsonObjectAttribute("TokenPermissionsItem")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	public partial class TokenPermissionsItem
 	{
 		[JsonPropertyAttribute("pm")]
-		[XmlElementAttribute("pm", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("pm", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.TokenPermission Permission { get; set; }
 	}
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("dac", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("dac", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:dac")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("dynamicAuthorizationConsultation", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("dynamicAuthorizationConsultation", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class DynamicAuthorizationConsultation : Aetheros.Schema.OneM2M.RegularResource
 	{
 		[JsonPropertyAttribute("dae")]
-		[XmlElementAttribute("dae", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("dae", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool DynamicAuthorizationEnabled { get; set; }
 
 		[JsonPropertyAttribute("dap")]
-		[XmlElementAttribute("dap", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("dap", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public ICollection<string> DynamicAuthorizationPoA { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("dal", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("dal", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset DynamicAuthorizationLifetimeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die DynamicAuthorizationLifetime-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the DynamicAuthorizationLifetime property is specified.</para>
@@ -18220,27 +18227,27 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("gio", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("gio", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("gio")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("genericInterworkingOperationInstance", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("genericInterworkingOperationInstance", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class GenericInterworkingOperationInstance : Aetheros.Schema.OneM2M.FlexContainerResource
 	{
 		[JsonPropertyAttribute("gion")]
-		[XmlElementAttribute("gion", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("gion", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string OperationName { get; set; }
 
 		[JsonPropertyAttribute("gios")]
-		[XmlElementAttribute("gios", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("gios", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string OperationState { get; set; }
 
 		[JsonPropertyAttribute("giip")]
 		[JsonConverter(typeof(JsonArrayItem<DataLink>), "dle")]
-		[XmlArrayAttribute("giip", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-		[XmlArrayItemAttribute("dle", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayAttribute("giip", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayItemAttribute("dle", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.DataLink> InputDataPointLinks { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.DataLink>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die InputDataPointLinks-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the InputDataPointLinks collection is empty.</para>
@@ -18254,10 +18261,10 @@ namespace Aetheros.Schema.OneM2M
 
 		[JsonPropertyAttribute("giop")]
 		[JsonConverter(typeof(JsonArrayItem<DataLink>), "dle")]
-		[XmlArrayAttribute("giop", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-		[XmlArrayItemAttribute("dle", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayAttribute("giop", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayItemAttribute("dle", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.DataLink> OutputDataPointLinks { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.DataLink>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die OutputDataPointLinks-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the OutputDataPointLinks collection is empty.</para>
@@ -18271,10 +18278,10 @@ namespace Aetheros.Schema.OneM2M
 
 		[JsonPropertyAttribute("giil")]
 		[JsonConverter(typeof(JsonArrayItem<DataLink>), "dle")]
-		[XmlArrayAttribute("giil", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-		[XmlArrayItemAttribute("dle", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayAttribute("giil", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayItemAttribute("dle", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.DataLink> InputLinks { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.DataLink>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die InputLinks-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the InputLinks collection is empty.</para>
@@ -18288,10 +18295,10 @@ namespace Aetheros.Schema.OneM2M
 
 		[JsonPropertyAttribute("giol")]
 		[JsonConverter(typeof(JsonArrayItem<DataLink>), "dle")]
-		[XmlArrayAttribute("giol", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-		[XmlArrayItemAttribute("dle", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayAttribute("giol", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayItemAttribute("dle", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.DataLink> OutputLinks { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.DataLink>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die OutputLinks-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the OutputLinks collection is empty.</para>
@@ -18304,9 +18311,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool OutputLinksSpecified => (this.OutputLinks.Count != 0);
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -18319,9 +18326,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smd")]
-		[XmlElementAttribute("smd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.SemanticDescriptor> SemanticDescriptor { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.SemanticDescriptor>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptor-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptor collection is empty.</para>
@@ -18334,9 +18341,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorSpecified => (this.SemanticDescriptor.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -18351,27 +18358,27 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("gioa", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("gioa", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("gioa")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("genericInterworkingOperationInstanceAnnc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("genericInterworkingOperationInstanceAnnc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class GenericInterworkingOperationInstanceAnnc : Aetheros.Schema.OneM2M.AnnouncedFlexContainerResource
 	{
 		[JsonPropertyAttribute("gion")]
-		[XmlElementAttribute("gion", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("gion", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string OperationName { get; set; }
 
 		[JsonPropertyAttribute("gios")]
-		[XmlElementAttribute("gios", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("gios", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string OperationState { get; set; }
 
 		[JsonPropertyAttribute("giip")]
 		[JsonConverter(typeof(JsonArrayItem<DataLink>), "dle")]
-		[XmlArrayAttribute("giip", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-		[XmlArrayItemAttribute("dle", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayAttribute("giip", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayItemAttribute("dle", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.DataLink> InputDataPointLinks { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.DataLink>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die InputDataPointLinks-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the InputDataPointLinks collection is empty.</para>
@@ -18385,10 +18392,10 @@ namespace Aetheros.Schema.OneM2M
 
 		[JsonPropertyAttribute("giop")]
 		[JsonConverter(typeof(JsonArrayItem<DataLink>), "dle")]
-		[XmlArrayAttribute("giop", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-		[XmlArrayItemAttribute("dle", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayAttribute("giop", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayItemAttribute("dle", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.DataLink> OutputDataPointLinks { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.DataLink>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die OutputDataPointLinks-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the OutputDataPointLinks collection is empty.</para>
@@ -18402,10 +18409,10 @@ namespace Aetheros.Schema.OneM2M
 
 		[JsonPropertyAttribute("giil")]
 		[JsonConverter(typeof(JsonArrayItem<DataLink>), "dle")]
-		[XmlArrayAttribute("giil", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-		[XmlArrayItemAttribute("dle", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayAttribute("giil", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayItemAttribute("dle", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.DataLink> InputLinks { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.DataLink>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die InputLinks-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the InputLinks collection is empty.</para>
@@ -18419,10 +18426,10 @@ namespace Aetheros.Schema.OneM2M
 
 		[JsonPropertyAttribute("giol")]
 		[JsonConverter(typeof(JsonArrayItem<DataLink>), "dle")]
-		[XmlArrayAttribute("giol", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-		[XmlArrayItemAttribute("dle", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayAttribute("giol", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayItemAttribute("dle", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.DataLink> OutputLinks { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.DataLink>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die OutputLinks-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the OutputLinks collection is empty.</para>
@@ -18435,9 +18442,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool OutputLinksSpecified => (this.OutputLinks.Count != 0);
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -18450,9 +18457,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smd")]
-		[XmlElementAttribute("smd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.SemanticDescriptor> SemanticDescriptor { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.SemanticDescriptor>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptor-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptor collection is empty.</para>
@@ -18465,9 +18472,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorSpecified => (this.SemanticDescriptor.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smdA")]
-		[XmlElementAttribute("smdA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smdA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.SemanticDescriptorAnnc> SemanticDescriptorAnnc { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.SemanticDescriptorAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptorAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptorAnnc collection is empty.</para>
@@ -18480,9 +18487,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorAnncSpecified => (this.SemanticDescriptorAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -18497,25 +18504,25 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("gis", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("gis", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("gis")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("genericInterworkingService", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("genericInterworkingService", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class GenericInterworkingService : Aetheros.Schema.OneM2M.FlexContainerResource
 	{
 		[JsonPropertyAttribute("gisn")]
-		[XmlElementAttribute("gisn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("gisn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string ServiceName { get; set; }
 
 		[JsonPropertyAttribute("giip")]
-		[XmlElementAttribute("giip", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("giip", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string InputDataPointLinks { get; set; }
 
 		[JsonPropertyAttribute("giop")]
-		[XmlElementAttribute("giop", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("giop", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public ICollection<string> OutputDataPointLinks { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die OutputDataPointLinks-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the OutputDataPointLinks collection is empty.</para>
@@ -18528,9 +18535,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool OutputDataPointLinksSpecified => (this.OutputDataPointLinks.Count != 0);
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -18543,9 +18550,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("gis")]
-		[XmlElementAttribute("gis", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("gis", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<GenericInterworkingService> GenericInterworkingServiceProperty { get; set; } = System.Array.Empty<GenericInterworkingService>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die GenericInterworkingServiceProperty-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the GenericInterworkingServiceProperty collection is empty.</para>
@@ -18558,9 +18565,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool GenericInterworkingServicePropertySpecified => (this.GenericInterworkingServiceProperty.Count != 0);
 
 		[JsonPropertyAttribute("gio")]
-		[XmlElementAttribute("gio", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("gio", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.GenericInterworkingOperationInstance> GenericInterworkingOperationInstance { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.GenericInterworkingOperationInstance>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die GenericInterworkingOperationInstance-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the GenericInterworkingOperationInstance collection is empty.</para>
@@ -18573,9 +18580,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool GenericInterworkingOperationInstanceSpecified => (this.GenericInterworkingOperationInstance.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smd")]
-		[XmlElementAttribute("smd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.SemanticDescriptor> SemanticDescriptor { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.SemanticDescriptor>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptor-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptor collection is empty.</para>
@@ -18588,9 +18595,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorSpecified => (this.SemanticDescriptor.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -18605,23 +18612,23 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("gisa", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("gisa", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("gisa")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("genericInterworkingServiceAnnc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("genericInterworkingServiceAnnc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class GenericInterworkingServiceAnnc : Aetheros.Schema.OneM2M.AnnouncedFlexContainerResource
 	{
 		[JsonPropertyAttribute("gisn")]
-		[XmlElementAttribute("gisn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("gisn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string ServiceName { get; set; }
 
 		[JsonPropertyAttribute("giip")]
 		[JsonConverter(typeof(JsonArrayItem<DataLink>), "dle")]
-		[XmlArrayAttribute("giip", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-		[XmlArrayItemAttribute("dle", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayAttribute("giip", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayItemAttribute("dle", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.DataLink> InputDataPointLinks { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.DataLink>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die InputDataPointLinks-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the InputDataPointLinks collection is empty.</para>
@@ -18635,10 +18642,10 @@ namespace Aetheros.Schema.OneM2M
 
 		[JsonPropertyAttribute("giop")]
 		[JsonConverter(typeof(JsonArrayItem<DataLink>), "dle")]
-		[XmlArrayAttribute("giop", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-		[XmlArrayItemAttribute("dle", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayAttribute("giop", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlArrayItemAttribute("dle", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.DataLink> OutputDataPointLinks { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.DataLink>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die OutputDataPointLinks-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the OutputDataPointLinks collection is empty.</para>
@@ -18651,9 +18658,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool OutputDataPointLinksSpecified => (this.OutputDataPointLinks.Count != 0);
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -18666,9 +18673,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("gisa")]
-		[XmlElementAttribute("gisa", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("gisa", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<GenericInterworkingServiceAnnc> GenericInterworkingServiceAnncProperty { get; set; } = System.Array.Empty<GenericInterworkingServiceAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die GenericInterworkingServiceAnncProperty-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the GenericInterworkingServiceAnncProperty collection is empty.</para>
@@ -18681,9 +18688,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool GenericInterworkingServiceAnncPropertySpecified => (this.GenericInterworkingServiceAnncProperty.Count != 0);
 
 		[JsonPropertyAttribute("gioa")]
-		[XmlElementAttribute("gioa", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("gioa", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.GenericInterworkingOperationInstanceAnnc> GenericInterworkingOperationInstanceAnnc { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.GenericInterworkingOperationInstanceAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die GenericInterworkingOperationInstanceAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the GenericInterworkingOperationInstanceAnnc collection is empty.</para>
@@ -18696,9 +18703,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool GenericInterworkingOperationInstanceAnncSpecified => (this.GenericInterworkingOperationInstanceAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smd")]
-		[XmlElementAttribute("smd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.SemanticDescriptor> SemanticDescriptor { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.SemanticDescriptor>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptor-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptor collection is empty.</para>
@@ -18711,9 +18718,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorSpecified => (this.SemanticDescriptor.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smdA")]
-		[XmlElementAttribute("smdA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smdA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.SemanticDescriptorAnnc> SemanticDescriptorAnnc { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.SemanticDescriptorAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptorAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptorAnnc collection is empty.</para>
@@ -18726,9 +18733,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorAnncSpecified => (this.SemanticDescriptorAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -18743,24 +18750,24 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("ntp", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("ntp", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:ntp")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("notificationTargetPolicy", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("notificationTargetPolicy", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class NotificationTargetPolicy : Aetheros.Schema.OneM2M.RegularResource
 	{
 		[JsonPropertyAttribute("cr")]
-		[XmlElementAttribute("cr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("cr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string Creator { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("ac", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ac", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.NotificationTargetPolicyAction ActionValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Action-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the Action property is specified.</para>
@@ -18788,16 +18795,16 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("plbl")]
-		[XmlElementAttribute("plbl", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token")]
+		[XmlElementAttribute("plbl", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "token")]
 		public string PolicyLabel { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("rrs", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("rrs", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.LogicalOperator RulesRelationshipValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die RulesRelationship-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the RulesRelationship property is specified.</para>
@@ -18825,9 +18832,9 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -18840,9 +18847,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:pdr")]
-		[XmlElementAttribute("pdr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("pdr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<PolicyDeletionRules> PolicyDeletionRules { get; set; } = System.Array.Empty<PolicyDeletionRules>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die PolicyDeletionRules-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the PolicyDeletionRules collection is empty.</para>
@@ -18855,9 +18862,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool PolicyDeletionRulesSpecified => (this.PolicyDeletionRules.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -18872,24 +18879,24 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("pdr", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("pdr", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("m2m:pdr")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("policyDeletionRules", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("policyDeletionRules", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class PolicyDeletionRules : Aetheros.Schema.OneM2M.RegularResource
 	{
 		[JsonPropertyAttribute("dr")]
-		[XmlElementAttribute("dr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("dr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.DeletionContexts DeletionRules { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("drr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("drr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.LogicalOperator DeletionRulesRelationValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die DeletionRulesRelation-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the DeletionRulesRelation property is specified.</para>
@@ -18917,9 +18924,9 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -18932,9 +18939,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -18949,20 +18956,20 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("rqp", Namespace="http://www.onem2m.org/xml/protocols", AnonymousType=true)]
+	[XmlTypeAttribute("rqp", Namespace = "http://www.onem2m.org/xml/protocols", AnonymousType = true)]
 	[JsonObjectAttribute("rqp")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("requestPrimitive", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("requestPrimitive", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class RequestPrimitive<TPrimitiveContent> where TPrimitiveContent : PrimitiveContent
 	{
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("op", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("op", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.Operation OperationValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Operation-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the Operation property is specified.</para>
@@ -18990,24 +18997,24 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("to")]
-		[XmlElementAttribute("to", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("to", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string To { get; set; }
 
 		[JsonPropertyAttribute("fr")]
-		[XmlElementAttribute("fr", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
+		[XmlElementAttribute("fr", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "anyURI")]
 		public string From { get; set; }
 
 		[JsonPropertyAttribute("rqi")]
-		[XmlElementAttribute("rqi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token")]
+		[XmlElementAttribute("rqi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "token")]
 		public string RequestIdentifier { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("ty", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ty", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.ResourceType ResourceTypeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ResourceType-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ResourceType property is specified.</para>
@@ -19035,17 +19042,17 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("pc")]
-		[XmlElementAttribute("pc", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-	public TPrimitiveContent PrimitiveContent { get; set; }
-		
+		[XmlElementAttribute("pc", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		public TPrimitiveContent PrimitiveContent { get; set; }
+
 		/// <summary>
 		/// <para xml:lang="en">Pattern: ([a-zA-Z0-9\.\-,_]*)@([A-Za-z0-9\-_]*)(\.([A-Za-z0-9\-_])*)*.</para>
 		/// </summary>
 		[System.ComponentModel.DataAnnotations.RegularExpressionAttribute("([a-zA-Z0-9\\.\\-,_]*)@([A-Za-z0-9\\-_]*)(\\.([A-Za-z0-9\\-_])*)*")]
 		[JsonPropertyAttribute("rids")]
-		[XmlElementAttribute("rids", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("rids", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public ICollection<string> RoleIDs { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die RoleIDs-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the RoleIDs collection is empty.</para>
@@ -19061,9 +19068,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("ot", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="dateTime")]
+		[XmlElementAttribute("ot", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "dateTime")]
 		public System.DateTimeOffset OriginatingTimestampValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die OriginatingTimestamp-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the OriginatingTimestamp property is specified.</para>
@@ -19091,32 +19098,32 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("rqet")]
-		[XmlElementAttribute("rqet", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("rqet", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public string RequestExpirationTimestamp { get; set; }
 
 		[JsonPropertyAttribute("rset")]
-		[XmlElementAttribute("rset", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("rset", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public string ResultExpirationTimestamp { get; set; }
 
 		[JsonPropertyAttribute("oet")]
-		[XmlElementAttribute("oet", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("oet", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public string OperationExecutionTime { get; set; }
 
 		[JsonPropertyAttribute("rt")]
-		[XmlElementAttribute("rt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("rt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.ResponseTypeInfo ResponseType { get; set; }
 
 		[JsonPropertyAttribute("rp")]
-		[XmlElementAttribute("rp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("rp", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public string ResultPersistence { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("rcn", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("rcn", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.ResultContent ResultContentValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ResultContent-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the ResultContent property is specified.</para>
@@ -19144,16 +19151,16 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("ec")]
-		[XmlElementAttribute("ec", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ec", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public string EventCategory { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("da", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("da", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool DeliveryAggregationValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die DeliveryAggregation-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the DeliveryAggregation property is specified.</para>
@@ -19181,20 +19188,20 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("gid")]
-		[XmlElementAttribute("gid", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("gid", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string GroupRequestIdentifier { get; set; }
 
 		[JsonPropertyAttribute("fc")]
-		[XmlElementAttribute("fc", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("fc", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.FilterCriteria FilterCriteria { get; set; }
 
 		[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("drt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("drt", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public Aetheros.Schema.OneM2M.DiscResType DiscoveryResultTypeValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die DiscoveryResultType-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the DiscoveryResultType property is specified.</para>
@@ -19222,21 +19229,21 @@ namespace Aetheros.Schema.OneM2M
 		}
 
 		[JsonPropertyAttribute("tkns")]
-		[XmlElementAttribute("tkns", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("tkns", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public string Tokens { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="en">Pattern: ([a-zA-Z0-9\.\-,_]*)@([A-Za-z0-9\-_]*)(\.([A-Za-z0-9\-_])*)*.</para>
 		/// </summary>
 		[System.ComponentModel.DataAnnotations.RegularExpressionAttribute("([a-zA-Z0-9\\.\\-,_]*)@([A-Za-z0-9\\-_]*)(\\.([A-Za-z0-9\\-_])*)*")]
 		[JsonPropertyAttribute("tids")]
-		[XmlElementAttribute("tids", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
+		[XmlElementAttribute("tids", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "string")]
 		public string TokenIDs { get; set; }
 
 		[JsonPropertyAttribute("ltids")]
-		[XmlElementAttribute("ltids", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="NCName")]
+		[XmlElementAttribute("ltids", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "NCName")]
 		public ICollection<string> LocalTokenIDs { get; set; } = System.Array.Empty<System.String>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die LocalTokenIDs-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the LocalTokenIDs collection is empty.</para>
@@ -19252,9 +19259,9 @@ namespace Aetheros.Schema.OneM2M
 		[System.Diagnostics.DebuggerHiddenAttribute()]
 		[System.Diagnostics.DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState.Never)]
 		[JsonIgnoreAttribute()]
-		[XmlElementAttribute("tqi", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="boolean")]
+		[XmlElementAttribute("tqi", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "boolean")]
 		public bool TokenReqIndicatorValue { get; set; }
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die TokenReqIndicator-Eigenschaft spezifiziert ist, oder legt diesen fest.</para>
 		/// <para xml:lang="en">Gets or sets a value indicating whether the TokenReqIndicator property is specified.</para>
@@ -19284,17 +19291,17 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("ajfw", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("ajfw", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("ajfw")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("svcFwWrapper", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("svcFwWrapper", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class SvcFwWrapper : Aetheros.Schema.OneM2M.FlexContainerResource
 	{
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -19307,9 +19314,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smd")]
-		[XmlElementAttribute("smd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.SemanticDescriptor> SemanticDescriptor { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.SemanticDescriptor>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptor-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptor collection is empty.</para>
@@ -19322,9 +19329,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorSpecified => (this.SemanticDescriptor.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -19339,17 +19346,17 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("ajfwa", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("ajfwa", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("ajfwa")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("svcFwWrapperAnnc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("svcFwWrapperAnnc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class SvcFwWrapperAnnc : Aetheros.Schema.OneM2M.AnnouncedFlexContainerResource
 	{
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -19362,9 +19369,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smd")]
-		[XmlElementAttribute("smd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.SemanticDescriptor> SemanticDescriptor { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.SemanticDescriptor>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptor-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptor collection is empty.</para>
@@ -19377,9 +19384,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorSpecified => (this.SemanticDescriptor.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smdA")]
-		[XmlElementAttribute("smdA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smdA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.SemanticDescriptorAnnc> SemanticDescriptorAnnc { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.SemanticDescriptorAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptorAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptorAnnc collection is empty.</para>
@@ -19392,9 +19399,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorAnncSpecified => (this.SemanticDescriptorAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -19409,17 +19416,17 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("ajsw", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("ajsw", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("ajsw")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("svcObjWrapper", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("svcObjWrapper", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class SvcObjWrapper : Aetheros.Schema.OneM2M.FlexContainerResource
 	{
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -19432,9 +19439,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smd")]
-		[XmlElementAttribute("smd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.SemanticDescriptor> SemanticDescriptor { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.SemanticDescriptor>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptor-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptor collection is empty.</para>
@@ -19447,9 +19454,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorSpecified => (this.SemanticDescriptor.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -19462,9 +19469,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SubscriptionSpecified => (this.Subscription.Count != 0);
 
 		[JsonPropertyAttribute("ajap")]
-		[XmlElementAttribute("ajap", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ajap", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.AllJoynApp> AllJoynApp { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.AllJoynApp>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AllJoynApp-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AllJoynApp collection is empty.</para>
@@ -19479,17 +19486,17 @@ namespace Aetheros.Schema.OneM2M
 
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
 	[System.SerializableAttribute()]
-	[XmlTypeAttribute("ajswa", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlTypeAttribute("ajswa", Namespace = "http://www.onem2m.org/xml/protocols")]
 	[JsonObjectAttribute("ajswa")]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[XmlRootAttribute("svcObjWrapperAnnc", Namespace="http://www.onem2m.org/xml/protocols")]
+	[XmlRootAttribute("svcObjWrapperAnnc", Namespace = "http://www.onem2m.org/xml/protocols")]
 	public partial class SvcObjWrapperAnnc : Aetheros.Schema.OneM2M.AnnouncedFlexContainerResource
 	{
 		[JsonPropertyAttribute("ch")]
-		[XmlElementAttribute("ch", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ch", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.ChildResourceRef> ChildResource { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.ChildResourceRef>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ChildResource-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the ChildResource collection is empty.</para>
@@ -19502,9 +19509,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool ChildResourceSpecified => (this.ChildResource.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smd")]
-		[XmlElementAttribute("smd", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smd", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.SemanticDescriptor> SemanticDescriptor { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.SemanticDescriptor>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptor-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptor collection is empty.</para>
@@ -19517,9 +19524,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorSpecified => (this.SemanticDescriptor.Count != 0);
 
 		[JsonPropertyAttribute("m2m:smdA")]
-		[XmlElementAttribute("smdA", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("smdA", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.SemanticDescriptorAnnc> SemanticDescriptorAnnc { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.SemanticDescriptorAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die SemanticDescriptorAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the SemanticDescriptorAnnc collection is empty.</para>
@@ -19532,9 +19539,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SemanticDescriptorAnncSpecified => (this.SemanticDescriptorAnnc.Count != 0);
 
 		[JsonPropertyAttribute("m2m:sub")]
-		[XmlElementAttribute("sub", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("sub", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.Subscription> Subscription { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.Subscription>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Subscription-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the Subscription collection is empty.</para>
@@ -19547,9 +19554,9 @@ namespace Aetheros.Schema.OneM2M
 		public bool SubscriptionSpecified => (this.Subscription.Count != 0);
 
 		[JsonPropertyAttribute("ajapa")]
-		[XmlElementAttribute("ajapa", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+		[XmlElementAttribute("ajapa", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
 		public ICollection<Aetheros.Schema.OneM2M.AllJoynAppAnnc> AllJoynAppAnnc { get; set; } = System.Array.Empty<Aetheros.Schema.OneM2M.AllJoynAppAnnc>();
-		
+
 		/// <summary>
 		/// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die AllJoynAppAnnc-Collection leer ist.</para>
 		/// <para xml:lang="en">Gets a value indicating whether the AllJoynAppAnnc collection is empty.</para>

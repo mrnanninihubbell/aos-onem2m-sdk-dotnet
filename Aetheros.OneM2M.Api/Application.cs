@@ -196,6 +196,12 @@ namespace Aetheros.OneM2M.Api
 				return null;
 			}
 
+			// If we're creating container outside of AE at root of CSE
+			if (prim?.CSEBase != null)
+			{
+				return null;
+			}
+
 			string parentName = "";
 
 			int ichLast = name.LastIndexOf('/');

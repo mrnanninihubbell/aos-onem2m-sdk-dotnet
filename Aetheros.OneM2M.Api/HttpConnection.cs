@@ -1,6 +1,8 @@
 using Aetheros.Schema.OneM2M;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using Org.BouncyCastle.Crypto.Prng;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -71,27 +73,13 @@ namespace Aetheros.OneM2M.Api
 			//_pnClient.DefaultRequestHeaders.Connection.ParseAdd("keep-alive");
 		}
 
-		public async Task<ResponseContent<TPrimitiveContent>> GetResponseAsync(HttpRequestMessage request)
-		{
-			using var response = await _pnClient.SendAsync(request);
-			var responseContent = await response.DeserializeAsync<ResponseContent<TPrimitiveContent>>() ??
-				throw new InvalidDataException("The returned response did not match type 'ResponseContent'");
-
-			if (response.Headers.TryGetValues("X-M2M-RSC", out IEnumerable<string>? statusCodeHeaders))
-			{
-				var statusCodeHeader = statusCodeHeaders.FirstOrDefault();
-				if (statusCodeHeader == null && Enum.TryParse<ResponseStatusCode>(statusCodeHeader, out ResponseStatusCode statusCode))
-					responseContent.ResponseStatusCode = statusCode;
-			}
-			return responseContent;
-		}
-
 		public async Task<T> GetResponseAsync<T>(HttpRequestMessage request)
 			where T : class, new()
 		{
 			using var response = await _pnClient.SendAsync(request);
 			return await response.DeserializeAsync<T>() ??
-				throw new InvalidDataException("The returned response did not match type 'ResponseContent'");
+				// This will never throw because the extension already DeserializeAsync already throws
+				throw new InvalidDataException($"The returned response did not match type {typeof(T).Name}");
 		}
 
 		public override async Task<T> GetResponseAsync<T>(RequestPrimitive<TPrimitiveContent> body)
@@ -217,7 +205,7 @@ namespace Aetheros.OneM2M.Api
 				_pnClient?.Dispose();
 			base.Dispose(disposing);
 		}
-		
+
 	}
 
 	public class HttpStatusException : Exception
@@ -239,11 +227,11 @@ namespace Aetheros.OneM2M.Api
 			where T : class, new()
 		{
 			var body = await response.Content.ReadAsStringAsync();
-
+			ResponseStatusCode statusCode = default;
 			if (response.Headers.TryGetValues("X-M2M-RSC", out IEnumerable<string>? statusCodeHeaders))
 			{
-				var statusCodeHeader = statusCodeHeaders.FirstOrDefault();
-				if (Enum.TryParse<ResponseStatusCode>(statusCodeHeader, out ResponseStatusCode statusCode))
+				var statusCodeHeader = statusCodeHeaders?.FirstOrDefault();
+				if (statusCodeHeader != null && Enum.TryParse<ResponseStatusCode>(statusCodeHeader, out statusCode))
 				{
 					if (statusCode >= ResponseStatusCode.BadRequest)
 					{
@@ -251,7 +239,7 @@ namespace Aetheros.OneM2M.Api
 						try
 						{
 							var errorResponse = Connection.DeserializeJson<ResponseContent<PrimitiveContent>>(body);
-							msg = errorResponse?.DebugInfo;
+							msg = errorResponse?.DebugInfo ?? "Unknown Error";
 						}
 						catch (Exception e)
 						{
@@ -270,8 +258,19 @@ namespace Aetheros.OneM2M.Api
 			if (string.IsNullOrWhiteSpace(body))
 				throw new InvalidDataException("An empty response was returned");
 
-			return Connection.DeserializeJson<T>(body)
-				?? throw new InvalidDataException($"The response did not match Type '{typeof(T).Name}'");
+			var content = Connection.DeserializeJson<T>(body) ?? throw new InvalidDataException($"The response did not match Type '{typeof(T).Name}'");
+
+			//Perform reflection voodoo to assign status code
+			var contentType = typeof(T);
+
+			var statusCodeProps = contentType.GetProperty("ResponseStatusCode");
+			if (statusCodeProps?.CanWrite ?? false)
+			{
+				statusCodeProps!.SetValue(content, statusCode);
+			}
+
+			return content;
+
 		}
 	}
 
