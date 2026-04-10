@@ -4,7 +4,7 @@
     <TargetFramework>net9.0</TargetFramework>
     <LangVersion>latest</LangVersion>
 	  <GenerateFullPaths>true</GenerateFullPaths>
-    <Version>0.0.1</Version>
+    <Version>0.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
