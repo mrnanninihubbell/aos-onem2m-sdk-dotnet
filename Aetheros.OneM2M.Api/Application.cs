@@ -115,7 +115,7 @@ namespace Aetheros.OneM2M.Api
 			});
 
 
-		public async Task DeleteAsync(params string[] urls) => await DeleteAsync((IEnumerable<string>) urls);
+		public async Task DeleteAsync(params string[] urls) => await DeleteAsync((IEnumerable<string>)urls);
 
 		public async Task DeleteAsync(IEnumerable<string> urls)
 		{
@@ -156,6 +156,12 @@ namespace Aetheros.OneM2M.Api
 
 		public async Task<Container?> EnsureContainerAsync(string name, string? aclUri = null)
 		{
+
+			return await EnsureContainerAsync(name, (aclUri == null) ? [] : [aclUri]);
+		}
+
+		public async Task<Container?> EnsureContainerAsync(string name, ICollection<string> aclUris)
+		{
 			if (name == "." || name == "/")
 				return null;
 
@@ -163,25 +169,36 @@ namespace Aetheros.OneM2M.Api
 			var prim = await TryGetPrimitiveAsync(name);
 
 			// If the primitive exists and is a container, we try adding the AccessControlPolicy to it and/or return it
-			var container = prim?.Container;;
+			var container = prim?.Container; ;
 			if (container != null)
 			{
-				if (aclUri != null)
+				if (aclUris.Count > 0)
 				{
-					if (container.AccessControlPolicyIDs == null || !container.AccessControlPolicyIDs.Contains(aclUri))
+					//if (container.AccessControlPolicyIDs == null || !container.AccessControlPolicyIDs.Contains(aclUri))
 					{
 						var accessControlPolicyIDs = container.AccessControlPolicyIDs?.ToList() ?? [];
-						accessControlPolicyIDs.Add(aclUri);
-
-						Trace.WriteLine($"Adding ACL '{aclUri}' to container '{name}'");
-						container = (await UpdateResourceAsync(name, pc =>
+						bool atLeastOne = false;
+						foreach (var item in aclUris)
 						{
-							pc.Container = new Container
+							if (!accessControlPolicyIDs.Contains(item))
 							{
-								AccessControlPolicyIDs = accessControlPolicyIDs
-							};
-							return pc;
-						})).Container;
+								atLeastOne = true;
+								accessControlPolicyIDs.Add(item);
+							}
+						}
+
+						if (atLeastOne)
+						{
+							Trace.WriteLine($"Adding ACL(s) '{aclUris}' to container '{name}'");
+							container = (await UpdateResourceAsync(name, pc =>
+							{
+								pc.Container = new Container
+								{
+									AccessControlPolicyIDs = accessControlPolicyIDs
+								};
+								return pc;
+							})).Container;
+						}
 					}
 				}
 				return container;
@@ -222,11 +239,9 @@ namespace Aetheros.OneM2M.Api
 					pc.Container = new Container
 					{
 						ResourceName = name,
+						AccessControlPolicyIDs = aclUris
 					};
-					if (!string.IsNullOrWhiteSpace(aclUri))
-					{
-						pc.Container.AccessControlPolicyIDs = [aclUri];
-					}
+
 					return pc;
 				}
 			)).Container;
@@ -291,7 +306,8 @@ namespace Aetheros.OneM2M.Api
 				var subscriptionResponse = await CreateResourceAsync(
 					resourceId,
 					ResourceType.Subscription,
-					pc => {
+					pc =>
+					{
 						pc.Subscription = new Subscription
 						{
 							ResourceName = subscriptionName,
@@ -409,7 +425,7 @@ namespace Aetheros.OneM2M.Api
 				RemoteCertificateValidationCallback = delegate { return true; },
 				CipherSuitesPolicy = new CipherSuitesPolicy(Enum.GetValues<TlsCipherSuite>())
 			};
-			var socketsHttpHandler = new SocketsHttpHandler { SslOptions = sslOptions };			
+			var socketsHttpHandler = new SocketsHttpHandler { SslOptions = sslOptions };
 			var loggingHandler = new TraceMessageHandler(socketsHttpHandler);
 
 			using var client = new HttpClient(loggingHandler);
@@ -496,7 +512,7 @@ namespace Aetheros.OneM2M.Api
 			public string? AEId { get; set; }
 		}
 
-		public Application(Connection<PrimitiveContent> con, AE ae, string urlPrefix) : base(con, ae, urlPrefix) {}
+		public Application(Connection<PrimitiveContent> con, AE ae, string urlPrefix) : base(con, ae, urlPrefix) { }
 	}
 
 }
